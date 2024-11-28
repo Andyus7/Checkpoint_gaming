@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\winformsproyectofinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\WinFormsProyectoFinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -45,15 +45,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WinFormsProyectoFinal",
+              "Title": "WinFormsProyectoFinal.csproj",
               "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\WinFormsProyectoFinal\\WinFormsProyectoFinal.csproj",
               "RelativeDocumentMoniker": "WinFormsProyectoFinal.csproj",
               "ToolTip": "C:\\Users\\pache\\source\\repos\\WinFormsProyectoFinal\\WinFormsProyectoFinal.csproj",
               "RelativeToolTip": "WinFormsProyectoFinal.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-28T23:01:15.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T23:01:15.185Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "ToolTip": "C:\\Users\\pache\\source\\repos\\WinFormsProyectoFinal\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T21:07:42.474Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-28T21:07:42.474Z"
             }
           ]
         }
