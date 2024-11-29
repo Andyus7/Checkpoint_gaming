@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             panelSideMenu = new Panel();
-            btnLogout = new Button();
-            btnHelp = new Button();
+            btnDischarge = new Button();
+            btnUnsubscribe = new Button();
+            button10 = new Button();
             panelAccesoriesSubMenu = new Panel();
             button7 = new Button();
             button8 = new Button();
@@ -47,9 +48,9 @@
             button2 = new Button();
             btnConsoles = new Button();
             panelLogo = new Panel();
-            panelContenedor = new Panel();
-            panel1 = new Panel();
+            lblName = new Label();
             labelTitle = new Label();
+            panelContenedor = new Panel();
             panelSideMenu.SuspendLayout();
             panelAccesoriesSubMenu.SuspendLayout();
             panelVideoGamesSubMenu.SuspendLayout();
@@ -61,8 +62,9 @@
             // 
             panelSideMenu.AutoScroll = true;
             panelSideMenu.BackColor = Color.FromArgb(25, 30, 41);
-            panelSideMenu.Controls.Add(btnLogout);
-            panelSideMenu.Controls.Add(btnHelp);
+            panelSideMenu.Controls.Add(btnDischarge);
+            panelSideMenu.Controls.Add(btnUnsubscribe);
+            panelSideMenu.Controls.Add(button10);
             panelSideMenu.Controls.Add(panelAccesoriesSubMenu);
             panelSideMenu.Controls.Add(btnAccesories);
             panelSideMenu.Controls.Add(panelVideoGamesSubMenu);
@@ -76,37 +78,51 @@
             panelSideMenu.Size = new Size(250, 785);
             panelSideMenu.TabIndex = 0;
             // 
-            // btnLogout
+            // btnDischarge
             // 
-            btnLogout.Dock = DockStyle.Bottom;
-            btnLogout.FlatAppearance.BorderSize = 0;
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(0, 695);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Padding = new Padding(10, 0, 0, 0);
-            btnLogout.Size = new Size(250, 45);
-            btnLogout.TabIndex = 9;
-            btnLogout.Text = "Log Out";
-            btnLogout.TextAlign = ContentAlignment.MiddleLeft;
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnLogout_Click;
+            btnDischarge.Dock = DockStyle.Bottom;
+            btnDischarge.FlatAppearance.BorderSize = 0;
+            btnDischarge.FlatStyle = FlatStyle.Flat;
+            btnDischarge.ForeColor = Color.White;
+            btnDischarge.Location = new Point(0, 650);
+            btnDischarge.Name = "btnDischarge";
+            btnDischarge.Padding = new Padding(10, 0, 0, 0);
+            btnDischarge.Size = new Size(250, 45);
+            btnDischarge.TabIndex = 12;
+            btnDischarge.Text = "Discharge";
+            btnDischarge.TextAlign = ContentAlignment.MiddleLeft;
+            btnDischarge.UseVisualStyleBackColor = true;
             // 
-            // btnHelp
+            // btnUnsubscribe
             // 
-            btnHelp.Dock = DockStyle.Bottom;
-            btnHelp.FlatAppearance.BorderSize = 0;
-            btnHelp.FlatStyle = FlatStyle.Flat;
-            btnHelp.ForeColor = Color.White;
-            btnHelp.Location = new Point(0, 740);
-            btnHelp.Name = "btnHelp";
-            btnHelp.Padding = new Padding(10, 0, 0, 0);
-            btnHelp.Size = new Size(250, 45);
-            btnHelp.TabIndex = 8;
-            btnHelp.Text = "Help";
-            btnHelp.TextAlign = ContentAlignment.MiddleLeft;
-            btnHelp.UseVisualStyleBackColor = true;
-            btnHelp.Click += btnHelp_Click;
+            btnUnsubscribe.Dock = DockStyle.Bottom;
+            btnUnsubscribe.FlatAppearance.BorderSize = 0;
+            btnUnsubscribe.FlatStyle = FlatStyle.Flat;
+            btnUnsubscribe.ForeColor = Color.White;
+            btnUnsubscribe.Location = new Point(0, 695);
+            btnUnsubscribe.Name = "btnUnsubscribe";
+            btnUnsubscribe.Padding = new Padding(10, 0, 0, 0);
+            btnUnsubscribe.Size = new Size(250, 45);
+            btnUnsubscribe.TabIndex = 11;
+            btnUnsubscribe.Text = "Unsubscribe";
+            btnUnsubscribe.TextAlign = ContentAlignment.MiddleLeft;
+            btnUnsubscribe.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            button10.Dock = DockStyle.Bottom;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.ForeColor = Color.White;
+            button10.Location = new Point(0, 740);
+            button10.Name = "button10";
+            button10.Padding = new Padding(10, 0, 0, 0);
+            button10.Size = new Size(250, 45);
+            button10.TabIndex = 10;
+            button10.Text = "Log Out";
+            button10.TextAlign = ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // panelAccesoriesSubMenu
             // 
@@ -115,7 +131,7 @@
             panelAccesoriesSubMenu.Controls.Add(button8);
             panelAccesoriesSubMenu.Controls.Add(button9);
             panelAccesoriesSubMenu.Dock = DockStyle.Top;
-            panelAccesoriesSubMenu.Location = new Point(0, 512);
+            panelAccesoriesSubMenu.Location = new Point(0, 479);
             panelAccesoriesSubMenu.Name = "panelAccesoriesSubMenu";
             panelAccesoriesSubMenu.Size = new Size(250, 126);
             panelAccesoriesSubMenu.TabIndex = 6;
@@ -177,7 +193,7 @@
             btnAccesories.FlatAppearance.BorderSize = 0;
             btnAccesories.FlatStyle = FlatStyle.Flat;
             btnAccesories.ForeColor = Color.White;
-            btnAccesories.Location = new Point(0, 467);
+            btnAccesories.Location = new Point(0, 434);
             btnAccesories.Name = "btnAccesories";
             btnAccesories.Padding = new Padding(10, 0, 0, 0);
             btnAccesories.Size = new Size(250, 45);
@@ -194,7 +210,7 @@
             panelVideoGamesSubMenu.Controls.Add(button5);
             panelVideoGamesSubMenu.Controls.Add(button6);
             panelVideoGamesSubMenu.Dock = DockStyle.Top;
-            panelVideoGamesSubMenu.Location = new Point(0, 341);
+            panelVideoGamesSubMenu.Location = new Point(0, 308);
             panelVideoGamesSubMenu.Name = "panelVideoGamesSubMenu";
             panelVideoGamesSubMenu.Size = new Size(250, 126);
             panelVideoGamesSubMenu.TabIndex = 4;
@@ -256,7 +272,7 @@
             btnVideoGames.FlatAppearance.BorderSize = 0;
             btnVideoGames.FlatStyle = FlatStyle.Flat;
             btnVideoGames.ForeColor = Color.White;
-            btnVideoGames.Location = new Point(0, 296);
+            btnVideoGames.Location = new Point(0, 263);
             btnVideoGames.Name = "btnVideoGames";
             btnVideoGames.Padding = new Padding(10, 0, 0, 0);
             btnVideoGames.Size = new Size(250, 45);
@@ -273,7 +289,7 @@
             panelConsolesSubMenu.Controls.Add(button3);
             panelConsolesSubMenu.Controls.Add(button2);
             panelConsolesSubMenu.Dock = DockStyle.Top;
-            panelConsolesSubMenu.Location = new Point(0, 170);
+            panelConsolesSubMenu.Location = new Point(0, 137);
             panelConsolesSubMenu.Name = "panelConsolesSubMenu";
             panelConsolesSubMenu.Size = new Size(250, 126);
             panelConsolesSubMenu.TabIndex = 2;
@@ -335,7 +351,7 @@
             btnConsoles.FlatAppearance.BorderSize = 0;
             btnConsoles.FlatStyle = FlatStyle.Flat;
             btnConsoles.ForeColor = Color.White;
-            btnConsoles.Location = new Point(0, 125);
+            btnConsoles.Location = new Point(0, 92);
             btnConsoles.Name = "btnConsoles";
             btnConsoles.Padding = new Padding(10, 0, 0, 0);
             btnConsoles.Size = new Size(250, 45);
@@ -349,12 +365,37 @@
             // 
             panelLogo.BackColor = Color.Transparent;
             panelLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelLogo.Controls.Add(lblName);
             panelLogo.Controls.Add(labelTitle);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(250, 125);
+            panelLogo.Size = new Size(250, 92);
             panelLogo.TabIndex = 0;
+            // 
+            // lblName
+            // 
+            lblName.Dock = DockStyle.Top;
+            lblName.ForeColor = Color.White;
+            lblName.Location = new Point(0, 50);
+            lblName.Name = "lblName";
+            lblName.Padding = new Padding(10, 0, 0, 0);
+            lblName.Size = new Size(250, 30);
+            lblName.TabIndex = 0;
+            lblName.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // labelTitle
+            // 
+            labelTitle.Dock = DockStyle.Top;
+            labelTitle.FlatStyle = FlatStyle.Flat;
+            labelTitle.Font = new Font("GodOfWar", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTitle.ForeColor = Color.White;
+            labelTitle.Location = new Point(0, 0);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(250, 50);
+            labelTitle.TabIndex = 1;
+            labelTitle.Text = "Checkpoint Gaming";
+            labelTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panelContenedor
             // 
@@ -366,41 +407,21 @@
             panelContenedor.TabIndex = 1;
             panelContenedor.Paint += panelContenedor_Paint;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(25, 30, 41);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(250, 675);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(802, 110);
-            panel1.TabIndex = 2;
-            // 
-            // labelTitle
-            // 
-            labelTitle.AutoSize = true;
-            labelTitle.Location = new Point(80, 41);
-            labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(83, 40);
-            labelTitle.TabIndex = 3;
-            labelTitle.Text = "Checkpoint\r\nGames";
-            labelTitle.Click += label1_Click;
-            // 
-            // Form1
+            // MenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1052, 785);
-            Controls.Add(panel1);
             Controls.Add(panelContenedor);
             Controls.Add(panelSideMenu);
-            Name = "Form1";
+            Name = "MenuForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panelSideMenu.ResumeLayout(false);
             panelAccesoriesSubMenu.ResumeLayout(false);
             panelVideoGamesSubMenu.ResumeLayout(false);
             panelConsolesSubMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
-            panelLogo.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -413,8 +434,6 @@
         private Button button3;
         private Button button2;
         private Button btnConsoles;
-        private Button btnLogout;
-        private Button btnHelp;
         private Panel panelAccesoriesSubMenu;
         private Button button7;
         private Button button8;
@@ -426,7 +445,10 @@
         private Button button6;
         private Button btnVideoGames;
         private Panel panelContenedor;
-        private Panel panel1;
+        private Button btnDischarge;
+        private Button btnUnsubscribe;
+        private Button button10;
+        private Label lblName;
         private Label labelTitle;
     }
 }

@@ -1,11 +1,20 @@
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace WinFormsProyectoFinal
 {
     public partial class MenuForm : Form
     {
-        public MenuForm()
+        private string usuario;
+        private string nombre;
+        private string rol;
+        public MenuForm(string usuario, string nombre, string rol)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            this.nombre = nombre;
+            this.rol = rol;
             customizeDesign();
+            CargarDatos();
         }
         private void customizeDesign()
         {
@@ -122,7 +131,25 @@ namespace WinFormsProyectoFinal
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
+        }
 
+
+        private void CargarDatos()
+        {
+            lblName.Text = $"Welcome: {nombre}";
+
+            if (rol == "admin")
+            {
+                // Mostrar opciones de administrador
+                btnDischarge.Visible = true;
+                btnUnsubscribe.Visible = true;
+            }
+            else
+            {
+                // Ocultar opciones de administrador
+                btnDischarge.Visible = false;
+                btnUnsubscribe.Visible = false;
+            }
         }
 
         //Todo para cargar formularios hijos
@@ -135,12 +162,25 @@ namespace WinFormsProyectoFinal
             acitveForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock =  DockStyle.Fill;
+            childForm.Dock = DockStyle.Fill;
             panelContenedor.Controls.Add(childForm);
             panelContenedor.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            // Volver al formulario de login
+            LogInForm loginForm = new LogInForm();
+            loginForm.Show();
+            this.Close(); // Cierra el formulario actual
         }
     }
 }

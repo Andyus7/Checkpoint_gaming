@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WinFormsProyectoFinal
 {
-    public partial class LoginForm : Form
+    public partial class LogInForm : Form
     {
         private AdmonBD adminBD;
-        public LoginForm()
+        public LogInForm()
         {
             InitializeComponent();
             adminBD = new AdmonBD();
@@ -21,22 +21,31 @@ namespace WinFormsProyectoFinal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string usuario = txtBoxId.Text;
+            string usuario = txtBoxName.Text;
             string contraseña = txtBoxPassword.Text;
 
             if (adminBD.ValidarUsuario(usuario, contraseña))
             {
-                MessageBox.Show("Inicio de sesión exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string rol = adminBD.ObtenerRol(usuario);
+                string nombre = adminBD.ObtenerNombre(usuario);
 
-                // Abre el siguiente formulario
-                MenuForm form1 = new MenuForm();
-                form1.Show();
-                this.Hide();
+                // Mensaje de bienvenida
+                MessageBox.Show($"Bienvenido, {nombre}", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Abrir el formulario correspondiente según el rol
+                MenuForm menuForm = new MenuForm(usuario, nombre, rol);
+                menuForm.Show();
+                this.Hide(); // Oculta el formulario de login
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

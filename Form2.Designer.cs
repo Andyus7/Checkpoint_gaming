@@ -34,10 +34,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(784, 738);
+            ClientSize = new Size(802, 785);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             ResumeLayout(false);
         }
 
