@@ -10,14 +10,31 @@ using System.Windows.Forms;
 
 namespace WinFormsProyectoFinal
 {
-    public partial class Form2 : Form
+    public partial class childForm : Form
     {
-        public Form2()
+
+        
+        public childForm()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
 
         }
