@@ -3,12 +3,12 @@
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,410 +23,211 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            panelSideMenu = new Panel();
-            btnLogout = new Button();
-            btnHelp = new Button();
-            panelAccesoriesSubMenu = new Panel();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            btnAccesories = new Button();
-            panelVideoGamesSubMenu = new Panel();
-            button1 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            btnVideoGames = new Button();
-            panelConsolesSubMenu = new Panel();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            btnConsoles = new Button();
-            panelLogo = new Panel();
-            panelContenedor = new Panel();
-            panel1 = new Panel();
-            labelTitle = new Label();
-            panelSideMenu.SuspendLayout();
-            panelAccesoriesSubMenu.SuspendLayout();
-            panelVideoGamesSubMenu.SuspendLayout();
-            panelConsolesSubMenu.SuspendLayout();
-            panelLogo.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            buttonSystem = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // panelSideMenu
+            // pictureBox1
             // 
-            panelSideMenu.AutoScroll = true;
-            panelSideMenu.BackColor = Color.FromArgb(25, 30, 41);
-            panelSideMenu.Controls.Add(btnLogout);
-            panelSideMenu.Controls.Add(btnHelp);
-            panelSideMenu.Controls.Add(panelAccesoriesSubMenu);
-            panelSideMenu.Controls.Add(btnAccesories);
-            panelSideMenu.Controls.Add(panelVideoGamesSubMenu);
-            panelSideMenu.Controls.Add(btnVideoGames);
-            panelSideMenu.Controls.Add(panelConsolesSubMenu);
-            panelSideMenu.Controls.Add(btnConsoles);
-            panelSideMenu.Controls.Add(panelLogo);
-            panelSideMenu.Dock = DockStyle.Left;
-            panelSideMenu.Location = new Point(0, 0);
-            panelSideMenu.Name = "panelSideMenu";
-            panelSideMenu.Size = new Size(250, 785);
-            panelSideMenu.TabIndex = 0;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.Uaa1;
+            pictureBox1.Location = new Point(363, 76);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(300, 180);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
-            // btnLogout
+            // label1
             // 
-            btnLogout.Dock = DockStyle.Bottom;
-            btnLogout.FlatAppearance.BorderSize = 0;
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(0, 695);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Padding = new Padding(10, 0, 0, 0);
-            btnLogout.Size = new Size(250, 45);
-            btnLogout.TabIndex = 9;
-            btnLogout.Text = "Log Out";
-            btnLogout.TextAlign = ContentAlignment.MiddleLeft;
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnLogout_Click;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(227, 304);
+            label1.Name = "label1";
+            label1.Size = new Size(281, 32);
+            label1.TabIndex = 1;
+            label1.Text = "PROGRAMACION II";
             // 
-            // btnHelp
+            // label2
             // 
-            btnHelp.Dock = DockStyle.Bottom;
-            btnHelp.FlatAppearance.BorderSize = 0;
-            btnHelp.FlatStyle = FlatStyle.Flat;
-            btnHelp.ForeColor = Color.White;
-            btnHelp.Location = new Point(0, 740);
-            btnHelp.Name = "btnHelp";
-            btnHelp.Padding = new Padding(10, 0, 0, 0);
-            btnHelp.Size = new Size(250, 45);
-            btnHelp.TabIndex = 8;
-            btnHelp.Text = "Help";
-            btnHelp.TextAlign = ContentAlignment.MiddleLeft;
-            btnHelp.UseVisualStyleBackColor = true;
-            btnHelp.Click += btnHelp_Click;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(227, 364);
+            label2.Name = "label2";
+            label2.Size = new Size(232, 23);
+            label2.TabIndex = 2;
+            label2.Text = "CHECKPOINT GAMING";
             // 
-            // panelAccesoriesSubMenu
+            // label3
             // 
-            panelAccesoriesSubMenu.BackColor = Color.FromArgb(19, 45, 70);
-            panelAccesoriesSubMenu.Controls.Add(button7);
-            panelAccesoriesSubMenu.Controls.Add(button8);
-            panelAccesoriesSubMenu.Controls.Add(button9);
-            panelAccesoriesSubMenu.Dock = DockStyle.Top;
-            panelAccesoriesSubMenu.Location = new Point(0, 512);
-            panelAccesoriesSubMenu.Name = "panelAccesoriesSubMenu";
-            panelAccesoriesSubMenu.Size = new Size(250, 126);
-            panelAccesoriesSubMenu.TabIndex = 6;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(227, 439);
+            label3.Name = "label3";
+            label3.Size = new Size(93, 23);
+            label3.TabIndex = 3;
+            label3.Text = "Maestra: ";
             // 
-            // button7
+            // label4
             // 
-            button7.Dock = DockStyle.Top;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(0, 80);
-            button7.Name = "button7";
-            button7.Padding = new Padding(35, 0, 0, 0);
-            button7.Size = new Size(250, 40);
-            button7.TabIndex = 3;
-            button7.Text = "button7";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Times New Roman", 12F);
+            label4.Location = new Point(315, 440);
+            label4.Name = "label4";
+            label4.Size = new Size(209, 22);
+            label4.TabIndex = 4;
+            label4.Text = "Georgina Salazar Partida";
             // 
-            // button8
+            // label5
             // 
-            button8.Dock = DockStyle.Top;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.ForeColor = Color.White;
-            button8.Location = new Point(0, 40);
-            button8.Name = "button8";
-            button8.Padding = new Padding(35, 0, 0, 0);
-            button8.Size = new Size(250, 40);
-            button8.TabIndex = 2;
-            button8.Text = "button8";
-            button8.TextAlign = ContentAlignment.MiddleLeft;
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(227, 501);
+            label5.Name = "label5";
+            label5.Size = new Size(119, 23);
+            label5.TabIndex = 5;
+            label5.Text = "Integrantes: ";
             // 
-            // button9
+            // label6
             // 
-            button9.Dock = DockStyle.Top;
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(0, 0);
-            button9.Name = "button9";
-            button9.Padding = new Padding(35, 0, 0, 0);
-            button9.Size = new Size(250, 40);
-            button9.TabIndex = 1;
-            button9.Text = "button9";
-            button9.TextAlign = ContentAlignment.MiddleLeft;
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Times New Roman", 12F);
+            label6.Location = new Point(227, 542);
+            label6.Name = "label6";
+            label6.Size = new Size(267, 22);
+            label6.TabIndex = 6;
+            label6.Text = "Brayan Alejandro Pamila Torres";
             // 
-            // btnAccesories
+            // label7
             // 
-            btnAccesories.Dock = DockStyle.Top;
-            btnAccesories.FlatAppearance.BorderSize = 0;
-            btnAccesories.FlatStyle = FlatStyle.Flat;
-            btnAccesories.ForeColor = Color.White;
-            btnAccesories.Location = new Point(0, 467);
-            btnAccesories.Name = "btnAccesories";
-            btnAccesories.Padding = new Padding(10, 0, 0, 0);
-            btnAccesories.Size = new Size(250, 45);
-            btnAccesories.TabIndex = 5;
-            btnAccesories.Text = "Accesories";
-            btnAccesories.TextAlign = ContentAlignment.MiddleLeft;
-            btnAccesories.UseVisualStyleBackColor = true;
-            btnAccesories.Click += btnAccesories_Click;
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Times New Roman", 12F);
+            label7.Location = new Point(227, 586);
+            label7.Name = "label7";
+            label7.Size = new Size(193, 22);
+            label7.TabIndex = 7;
+            label7.Text = "Joseph Pacheco Carlos";
             // 
-            // panelVideoGamesSubMenu
+            // label8
             // 
-            panelVideoGamesSubMenu.BackColor = Color.FromArgb(19, 45, 70);
-            panelVideoGamesSubMenu.Controls.Add(button1);
-            panelVideoGamesSubMenu.Controls.Add(button5);
-            panelVideoGamesSubMenu.Controls.Add(button6);
-            panelVideoGamesSubMenu.Dock = DockStyle.Top;
-            panelVideoGamesSubMenu.Location = new Point(0, 341);
-            panelVideoGamesSubMenu.Name = "panelVideoGamesSubMenu";
-            panelVideoGamesSubMenu.Size = new Size(250, 126);
-            panelVideoGamesSubMenu.TabIndex = 4;
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Times New Roman", 12F);
+            label8.Location = new Point(227, 628);
+            label8.Name = "label8";
+            label8.Size = new Size(247, 22);
+            label8.TabIndex = 8;
+            label8.Text = "Obed Alejandro Loera Quiroz";
             // 
-            // button1
+            // label9
             // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 80);
-            button1.Name = "button1";
-            button1.Padding = new Padding(35, 0, 0, 0);
-            button1.Size = new Size(250, 40);
-            button1.TabIndex = 3;
-            button1.Text = "button1";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Times New Roman", 12F);
+            label9.Location = new Point(227, 673);
+            label9.Name = "label9";
+            label9.Size = new Size(229, 22);
+            label9.TabIndex = 9;
+            label9.Text = "Osvaldo Yair Serna Salazar";
             // 
-            // button5
+            // label10
             // 
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 40);
-            button5.Name = "button5";
-            button5.Padding = new Padding(35, 0, 0, 0);
-            button5.Size = new Size(250, 40);
-            button5.TabIndex = 2;
-            button5.Text = "button5";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(227, 740);
+            label10.Name = "label10";
+            label10.Size = new Size(167, 23);
+            label10.TabIndex = 10;
+            label10.Text = "Fecha de entrega: ";
             // 
-            // button6
+            // label11
             // 
-            button6.Dock = DockStyle.Top;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 0);
-            button6.Name = "button6";
-            button6.Padding = new Padding(35, 0, 0, 0);
-            button6.Size = new Size(250, 40);
-            button6.TabIndex = 1;
-            button6.Text = "button6";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Times New Roman", 12F);
+            label11.Location = new Point(385, 741);
+            label11.Name = "label11";
+            label11.Size = new Size(208, 22);
+            label11.TabIndex = 11;
+            label11.Text = "17 de diciembre de 2024";
             // 
-            // btnVideoGames
+            // buttonSystem
             // 
-            btnVideoGames.Dock = DockStyle.Top;
-            btnVideoGames.FlatAppearance.BorderSize = 0;
-            btnVideoGames.FlatStyle = FlatStyle.Flat;
-            btnVideoGames.ForeColor = Color.White;
-            btnVideoGames.Location = new Point(0, 296);
-            btnVideoGames.Name = "btnVideoGames";
-            btnVideoGames.Padding = new Padding(10, 0, 0, 0);
-            btnVideoGames.Size = new Size(250, 45);
-            btnVideoGames.TabIndex = 3;
-            btnVideoGames.Text = "VideoGames";
-            btnVideoGames.TextAlign = ContentAlignment.MiddleLeft;
-            btnVideoGames.UseVisualStyleBackColor = true;
-            btnVideoGames.Click += btnVideoGames_Click;
-            // 
-            // panelConsolesSubMenu
-            // 
-            panelConsolesSubMenu.BackColor = Color.FromArgb(19, 45, 70);
-            panelConsolesSubMenu.Controls.Add(button4);
-            panelConsolesSubMenu.Controls.Add(button3);
-            panelConsolesSubMenu.Controls.Add(button2);
-            panelConsolesSubMenu.Dock = DockStyle.Top;
-            panelConsolesSubMenu.Location = new Point(0, 170);
-            panelConsolesSubMenu.Name = "panelConsolesSubMenu";
-            panelConsolesSubMenu.Size = new Size(250, 126);
-            panelConsolesSubMenu.TabIndex = 2;
-            // 
-            // button4
-            // 
-            button4.Dock = DockStyle.Top;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 80);
-            button4.Name = "button4";
-            button4.Padding = new Padding(35, 0, 0, 0);
-            button4.Size = new Size(250, 40);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button3
-            // 
-            button3.Dock = DockStyle.Top;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 40);
-            button3.Name = "button3";
-            button3.Padding = new Padding(35, 0, 0, 0);
-            button3.Size = new Size(250, 40);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 0);
-            button2.Name = "button2";
-            button2.Padding = new Padding(35, 0, 0, 0);
-            button2.Size = new Size(250, 40);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // btnConsoles
-            // 
-            btnConsoles.Dock = DockStyle.Top;
-            btnConsoles.FlatAppearance.BorderSize = 0;
-            btnConsoles.FlatStyle = FlatStyle.Flat;
-            btnConsoles.ForeColor = Color.White;
-            btnConsoles.Location = new Point(0, 125);
-            btnConsoles.Name = "btnConsoles";
-            btnConsoles.Padding = new Padding(10, 0, 0, 0);
-            btnConsoles.Size = new Size(250, 45);
-            btnConsoles.TabIndex = 1;
-            btnConsoles.Text = "Consoles";
-            btnConsoles.TextAlign = ContentAlignment.MiddleLeft;
-            btnConsoles.UseVisualStyleBackColor = true;
-            btnConsoles.Click += btnConsoles_Click;
-            // 
-            // panelLogo
-            // 
-            panelLogo.BackColor = Color.Transparent;
-            panelLogo.BackgroundImageLayout = ImageLayout.Stretch;
-            panelLogo.Controls.Add(labelTitle);
-            panelLogo.Dock = DockStyle.Top;
-            panelLogo.Location = new Point(0, 0);
-            panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(250, 125);
-            panelLogo.TabIndex = 0;
-            // 
-            // panelContenedor
-            // 
-            panelContenedor.BackColor = Color.FromArgb(19, 45, 70);
-            panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(250, 0);
-            panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(802, 785);
-            panelContenedor.TabIndex = 1;
-            panelContenedor.Paint += panelContenedor_Paint;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(25, 30, 41);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(250, 675);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(802, 110);
-            panel1.TabIndex = 2;
-            // 
-            // labelTitle
-            // 
-            labelTitle.AutoSize = true;
-            labelTitle.Location = new Point(80, 41);
-            labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(83, 40);
-            labelTitle.TabIndex = 3;
-            labelTitle.Text = "Checkpoint\r\nGames";
-            labelTitle.Click += label1_Click;
+            buttonSystem.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSystem.Location = new Point(627, 911);
+            buttonSystem.Name = "buttonSystem";
+            buttonSystem.Size = new Size(115, 29);
+            buttonSystem.TabIndex = 14;
+            buttonSystem.Text = "Ir al sistema";
+            buttonSystem.UseVisualStyleBackColor = true;
+            buttonSystem.Click += buttonSystem_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1052, 785);
-            Controls.Add(panel1);
-            Controls.Add(panelContenedor);
-            Controls.Add(panelSideMenu);
+            BackgroundImage = Properties.Resources.Portada2;
+            ClientSize = new Size(754, 952);
+            Controls.Add(buttonSystem);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            panelSideMenu.ResumeLayout(false);
-            panelAccesoriesSubMenu.ResumeLayout(false);
-            panelVideoGamesSubMenu.ResumeLayout(false);
-            panelConsolesSubMenu.ResumeLayout(false);
-            panelLogo.ResumeLayout(false);
-            panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Panel panelSideMenu;
-        private Panel panelLogo;
-        private Panel panelConsolesSubMenu;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button btnConsoles;
-        private Button btnLogout;
-        private Button btnHelp;
-        private Panel panelAccesoriesSubMenu;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button btnAccesories;
-        private Panel panelVideoGamesSubMenu;
-        private Button button1;
-        private Button button5;
-        private Button button6;
-        private Button btnVideoGames;
-        private Panel panelContenedor;
-        private Panel panel1;
-        private Label labelTitle;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Button buttonSystem;
     }
 }
