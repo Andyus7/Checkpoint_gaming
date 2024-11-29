@@ -43,6 +43,42 @@ namespace WinFormsProyectoFinal
             }
         }
 
+        public string ObtenerRol(string idUsuario)
+        {
+            try
+            {
+                string query = "SELECT rol FROM usuarios WHERE id = @idUsuario";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                object result = cmd.ExecuteScalar();
+                return result?.ToString() ?? "usuario"; // Devuelve "usuario" si no se encuentra.
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener el rol: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "usuario";
+            }
+        }
+
+        public string ObtenerNombre(string idUsuario)
+        {
+            try
+            {
+                string query = "SELECT nombre FROM usuarios WHERE id = @idUsuario";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                object result = cmd.ExecuteScalar();
+                return result?.ToString() ?? "Desconocido";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener el nombre: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "Desconocido";
+            }
+        }
+
 
 
 
