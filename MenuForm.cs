@@ -52,7 +52,7 @@ namespace WinFormsProyectoFinal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form2());
+            openChildForm(new childForm());
             hideSubmenu();
         }
 

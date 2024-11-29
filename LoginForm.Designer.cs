@@ -44,13 +44,13 @@
             // 
             txtBoxName.BorderStyle = BorderStyle.None;
             txtBoxName.Cursor = Cursors.IBeam;
-            txtBoxName.Font = new Font("GodOfWar", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxName.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxName.Location = new Point(280, 39);
             txtBoxName.MaxLength = 30;
             txtBoxName.Name = "txtBoxName";
             txtBoxName.PlaceholderText = "ID";
             txtBoxName.RightToLeft = RightToLeft.No;
-            txtBoxName.Size = new Size(241, 20);
+            txtBoxName.Size = new Size(241, 23);
             txtBoxName.TabIndex = 0;
             txtBoxName.TextAlign = HorizontalAlignment.Center;
             // 
@@ -58,13 +58,13 @@
             // 
             txtBoxPassword.BorderStyle = BorderStyle.None;
             txtBoxPassword.Cursor = Cursors.IBeam;
-            txtBoxPassword.Font = new Font("GodOfWar", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxPassword.Location = new Point(280, 96);
             txtBoxPassword.MaxLength = 30;
             txtBoxPassword.Name = "txtBoxPassword";
             txtBoxPassword.PasswordChar = '*';
             txtBoxPassword.PlaceholderText = "Password";
-            txtBoxPassword.Size = new Size(241, 20);
+            txtBoxPassword.Size = new Size(241, 23);
             txtBoxPassword.TabIndex = 1;
             txtBoxPassword.TextAlign = HorizontalAlignment.Center;
             // 
@@ -75,7 +75,7 @@
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("GodOfWar", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(329, 544);
             btnLogin.Name = "btnLogin";
@@ -89,7 +89,7 @@
             // 
             labelTitle.BackColor = Color.FromArgb(25, 30, 41);
             labelTitle.Dock = DockStyle.Top;
-            labelTitle.Font = new Font("GodOfWar", 35F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTitle.Font = new Font("Microsoft Sans Serif", 35F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelTitle.ForeColor = Color.White;
             labelTitle.Location = new Point(0, 0);
             labelTitle.Name = "labelTitle";
@@ -125,7 +125,7 @@
             // label1
             // 
             label1.Dock = DockStyle.Top;
-            label1.Font = new Font("GodOfWar", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 189);
             label1.Name = "label1";
