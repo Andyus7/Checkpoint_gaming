@@ -93,7 +93,7 @@
             labelTitle.ForeColor = Color.White;
             labelTitle.Location = new Point(0, 0);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(784, 189);
+            labelTitle.Size = new Size(1262, 189);
             labelTitle.TabIndex = 3;
             labelTitle.Text = "Checkpoint Games";
             labelTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -108,7 +108,7 @@
             panelPrincipal.Dock = DockStyle.Fill;
             panelPrincipal.Location = new Point(0, 0);
             panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(784, 739);
+            panelPrincipal.Size = new Size(1262, 673);
             panelPrincipal.TabIndex = 4;
             // 
             // panelTxtBoxs
@@ -118,7 +118,7 @@
             panelTxtBoxs.Dock = DockStyle.Top;
             panelTxtBoxs.Location = new Point(0, 328);
             panelTxtBoxs.Name = "panelTxtBoxs";
-            panelTxtBoxs.Size = new Size(784, 161);
+            panelTxtBoxs.Size = new Size(1262, 161);
             panelTxtBoxs.TabIndex = 5;
             panelTxtBoxs.Paint += panel1_Paint;
             // 
@@ -129,7 +129,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 189);
             label1.Name = "label1";
-            label1.Size = new Size(784, 139);
+            label1.Size = new Size(1262, 139);
             label1.TabIndex = 4;
             label1.Text = "Log In";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -139,7 +139,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(784, 739);
+            ClientSize = new Size(1262, 673);
             Controls.Add(panelPrincipal);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");

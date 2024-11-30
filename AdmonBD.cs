@@ -11,6 +11,10 @@ namespace WinFormsProyectoFinal
     {
         private MySqlConnection connection;
 
+        public MySqlConnection GetConnection()
+        {
+            return connection;
+        }
         public AdmonBD()
         {
             this.Connect();
