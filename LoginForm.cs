@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
 
 namespace WinFormsProyectoFinal
 {
@@ -33,8 +34,8 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"Bienvenido, {nombre}", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Abrir el formulario correspondiente según el rol
-                MenuForm menuForm = new MenuForm(usuario, nombre, rol);
-                menuForm.Show();
+                MenuForm menu = new MenuForm(usuario, nombre, rol);
+                menu.Show();
                 this.Hide(); // Oculta el formulario de login
             }
             else
@@ -46,6 +47,22 @@ namespace WinFormsProyectoFinal
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.label4.Text = DateTime.Now.ToString("hh:mm:ss");
+            this.label5.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

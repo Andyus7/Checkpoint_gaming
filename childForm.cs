@@ -129,5 +129,15 @@ namespace WinFormsProyectoFinal
         {
 
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPrice1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
