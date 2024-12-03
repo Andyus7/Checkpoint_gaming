@@ -99,5 +99,18 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"Error al conectar con la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void Connect2()
+        {
+            string cadena = "Server=localhost; Database=proyectox; User=root; Password=; SslMode=none;";
+            try
+            {
+                connection = new MySqlConnection(cadena);
+                connection.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al conectar con la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -82,8 +82,9 @@
             panelSideMenu.Controls.Add(panelLogo);
             panelSideMenu.Dock = DockStyle.Left;
             panelSideMenu.Location = new Point(0, 0);
+            panelSideMenu.Margin = new Padding(3, 2, 3, 2);
             panelSideMenu.Name = "panelSideMenu";
-            panelSideMenu.Size = new Size(263, 973);
+            panelSideMenu.Size = new Size(230, 562);
             panelSideMenu.TabIndex = 0;
             panelSideMenu.Paint += panelSideMenu_Paint;
             // 
@@ -96,9 +97,10 @@
             panelAdminSubMenu.Controls.Add(btnProductList);
             panelAdminSubMenu.Controls.Add(btnGraphic);
             panelAdminSubMenu.Dock = DockStyle.Top;
-            panelAdminSubMenu.Location = new Point(0, 398);
+            panelAdminSubMenu.Location = new Point(0, 300);
+            panelAdminSubMenu.Margin = new Padding(3, 2, 3, 2);
             panelAdminSubMenu.Name = "panelAdminSubMenu";
-            panelAdminSubMenu.Size = new Size(263, 230);
+            panelAdminSubMenu.Size = new Size(230, 172);
             panelAdminSubMenu.TabIndex = 16;
             // 
             // btnUnsubscribe
@@ -109,10 +111,11 @@
             btnUnsubscribe.FlatStyle = FlatStyle.Flat;
             btnUnsubscribe.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnUnsubscribe.ForeColor = Color.White;
-            btnUnsubscribe.Location = new Point(0, 5);
+            btnUnsubscribe.Location = new Point(0, 2);
+            btnUnsubscribe.Margin = new Padding(3, 2, 3, 2);
             btnUnsubscribe.Name = "btnUnsubscribe";
-            btnUnsubscribe.Padding = new Padding(35, 0, 0, 0);
-            btnUnsubscribe.Size = new Size(263, 45);
+            btnUnsubscribe.Padding = new Padding(31, 0, 0, 0);
+            btnUnsubscribe.Size = new Size(230, 34);
             btnUnsubscribe.TabIndex = 20;
             btnUnsubscribe.Text = "Unsubscribe";
             btnUnsubscribe.TextAlign = ContentAlignment.MiddleLeft;
@@ -127,10 +130,11 @@
             btnDischarge.FlatStyle = FlatStyle.Flat;
             btnDischarge.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDischarge.ForeColor = Color.White;
-            btnDischarge.Location = new Point(0, 50);
+            btnDischarge.Location = new Point(0, 36);
+            btnDischarge.Margin = new Padding(3, 2, 3, 2);
             btnDischarge.Name = "btnDischarge";
-            btnDischarge.Padding = new Padding(35, 0, 0, 0);
-            btnDischarge.Size = new Size(263, 45);
+            btnDischarge.Padding = new Padding(31, 0, 0, 0);
+            btnDischarge.Size = new Size(230, 34);
             btnDischarge.TabIndex = 19;
             btnDischarge.Text = "Discharge";
             btnDischarge.TextAlign = ContentAlignment.MiddleLeft;
@@ -145,10 +149,11 @@
             btnSalesConsultation.FlatStyle = FlatStyle.Flat;
             btnSalesConsultation.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalesConsultation.ForeColor = Color.White;
-            btnSalesConsultation.Location = new Point(0, 95);
+            btnSalesConsultation.Location = new Point(0, 70);
+            btnSalesConsultation.Margin = new Padding(3, 2, 3, 2);
             btnSalesConsultation.Name = "btnSalesConsultation";
-            btnSalesConsultation.Padding = new Padding(35, 0, 0, 0);
-            btnSalesConsultation.Size = new Size(263, 45);
+            btnSalesConsultation.Padding = new Padding(31, 0, 0, 0);
+            btnSalesConsultation.Size = new Size(230, 34);
             btnSalesConsultation.TabIndex = 18;
             btnSalesConsultation.Text = "Sales Consultation";
             btnSalesConsultation.TextAlign = ContentAlignment.MiddleLeft;
@@ -162,10 +167,11 @@
             btnProductList.FlatStyle = FlatStyle.Flat;
             btnProductList.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProductList.ForeColor = Color.White;
-            btnProductList.Location = new Point(0, 140);
+            btnProductList.Location = new Point(0, 104);
+            btnProductList.Margin = new Padding(3, 2, 3, 2);
             btnProductList.Name = "btnProductList";
-            btnProductList.Padding = new Padding(35, 0, 0, 0);
-            btnProductList.Size = new Size(263, 45);
+            btnProductList.Padding = new Padding(31, 0, 0, 0);
+            btnProductList.Size = new Size(230, 34);
             btnProductList.TabIndex = 17;
             btnProductList.Text = "Product List";
             btnProductList.TextAlign = ContentAlignment.MiddleLeft;
@@ -179,10 +185,11 @@
             btnGraphic.FlatStyle = FlatStyle.Flat;
             btnGraphic.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGraphic.ForeColor = Color.White;
-            btnGraphic.Location = new Point(0, 185);
+            btnGraphic.Location = new Point(0, 138);
+            btnGraphic.Margin = new Padding(3, 2, 3, 2);
             btnGraphic.Name = "btnGraphic";
-            btnGraphic.Padding = new Padding(35, 0, 0, 0);
-            btnGraphic.Size = new Size(263, 45);
+            btnGraphic.Padding = new Padding(31, 0, 0, 0);
+            btnGraphic.Size = new Size(230, 34);
             btnGraphic.TabIndex = 16;
             btnGraphic.Text = "Graphic";
             btnGraphic.TextAlign = ContentAlignment.MiddleLeft;
@@ -196,10 +203,11 @@
             btnAdmin.FlatStyle = FlatStyle.Flat;
             btnAdmin.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdmin.ForeColor = Color.White;
-            btnAdmin.Location = new Point(0, 353);
+            btnAdmin.Location = new Point(0, 266);
+            btnAdmin.Margin = new Padding(3, 2, 3, 2);
             btnAdmin.Name = "btnAdmin";
-            btnAdmin.Padding = new Padding(10, 0, 0, 0);
-            btnAdmin.Size = new Size(263, 45);
+            btnAdmin.Padding = new Padding(9, 0, 0, 0);
+            btnAdmin.Size = new Size(230, 34);
             btnAdmin.TabIndex = 11;
             btnAdmin.Text = "Admin Options";
             btnAdmin.TextAlign = ContentAlignment.MiddleLeft;
@@ -213,10 +221,11 @@
             button10.FlatStyle = FlatStyle.Flat;
             button10.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button10.ForeColor = Color.White;
-            button10.Location = new Point(0, 928);
+            button10.Location = new Point(0, 528);
+            button10.Margin = new Padding(3, 2, 3, 2);
             button10.Name = "button10";
-            button10.Padding = new Padding(10, 0, 0, 0);
-            button10.Size = new Size(263, 45);
+            button10.Padding = new Padding(9, 0, 0, 0);
+            button10.Size = new Size(230, 34);
             button10.TabIndex = 10;
             button10.Text = "Log Out";
             button10.TextAlign = ContentAlignment.MiddleLeft;
@@ -229,9 +238,10 @@
             panelVideoGamesSubMenu.Controls.Add(btnXboxGames);
             panelVideoGamesSubMenu.Controls.Add(btnPlayStationGames);
             panelVideoGamesSubMenu.Dock = DockStyle.Top;
-            panelVideoGamesSubMenu.Location = new Point(0, 268);
+            panelVideoGamesSubMenu.Location = new Point(0, 202);
+            panelVideoGamesSubMenu.Margin = new Padding(3, 2, 3, 2);
             panelVideoGamesSubMenu.Name = "panelVideoGamesSubMenu";
-            panelVideoGamesSubMenu.Size = new Size(263, 85);
+            panelVideoGamesSubMenu.Size = new Size(230, 64);
             panelVideoGamesSubMenu.TabIndex = 4;
             // 
             // btnXboxGames
@@ -242,10 +252,11 @@
             btnXboxGames.FlatStyle = FlatStyle.Flat;
             btnXboxGames.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnXboxGames.ForeColor = Color.White;
-            btnXboxGames.Location = new Point(0, 40);
+            btnXboxGames.Location = new Point(0, 30);
+            btnXboxGames.Margin = new Padding(3, 2, 3, 2);
             btnXboxGames.Name = "btnXboxGames";
-            btnXboxGames.Padding = new Padding(35, 0, 0, 0);
-            btnXboxGames.Size = new Size(263, 40);
+            btnXboxGames.Padding = new Padding(31, 0, 0, 0);
+            btnXboxGames.Size = new Size(230, 30);
             btnXboxGames.TabIndex = 2;
             btnXboxGames.Text = "Xbox";
             btnXboxGames.TextAlign = ContentAlignment.MiddleLeft;
@@ -261,9 +272,10 @@
             btnPlayStationGames.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPlayStationGames.ForeColor = Color.White;
             btnPlayStationGames.Location = new Point(0, 0);
+            btnPlayStationGames.Margin = new Padding(3, 2, 3, 2);
             btnPlayStationGames.Name = "btnPlayStationGames";
-            btnPlayStationGames.Padding = new Padding(35, 0, 0, 0);
-            btnPlayStationGames.Size = new Size(263, 40);
+            btnPlayStationGames.Padding = new Padding(31, 0, 0, 0);
+            btnPlayStationGames.Size = new Size(230, 30);
             btnPlayStationGames.TabIndex = 1;
             btnPlayStationGames.Text = "PlayStation";
             btnPlayStationGames.TextAlign = ContentAlignment.MiddleLeft;
@@ -278,10 +290,11 @@
             btnVideoGames.FlatStyle = FlatStyle.Flat;
             btnVideoGames.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVideoGames.ForeColor = Color.White;
-            btnVideoGames.Location = new Point(0, 223);
+            btnVideoGames.Location = new Point(0, 168);
+            btnVideoGames.Margin = new Padding(3, 2, 3, 2);
             btnVideoGames.Name = "btnVideoGames";
-            btnVideoGames.Padding = new Padding(10, 0, 0, 0);
-            btnVideoGames.Size = new Size(263, 45);
+            btnVideoGames.Padding = new Padding(9, 0, 0, 0);
+            btnVideoGames.Size = new Size(230, 34);
             btnVideoGames.TabIndex = 3;
             btnVideoGames.Text = "VideoGames";
             btnVideoGames.TextAlign = ContentAlignment.MiddleLeft;
@@ -294,9 +307,10 @@
             panelConsolesSubMenu.Controls.Add(btnXboxs);
             panelConsolesSubMenu.Controls.Add(btnPlayStation);
             panelConsolesSubMenu.Dock = DockStyle.Top;
-            panelConsolesSubMenu.Location = new Point(0, 138);
+            panelConsolesSubMenu.Location = new Point(0, 104);
+            panelConsolesSubMenu.Margin = new Padding(3, 2, 3, 2);
             panelConsolesSubMenu.Name = "panelConsolesSubMenu";
-            panelConsolesSubMenu.Size = new Size(263, 85);
+            panelConsolesSubMenu.Size = new Size(230, 64);
             panelConsolesSubMenu.TabIndex = 2;
             // 
             // btnXboxs
@@ -307,14 +321,16 @@
             btnXboxs.FlatStyle = FlatStyle.Flat;
             btnXboxs.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnXboxs.ForeColor = Color.White;
-            btnXboxs.Location = new Point(0, 40);
+            btnXboxs.Location = new Point(0, 30);
+            btnXboxs.Margin = new Padding(3, 2, 3, 2);
             btnXboxs.Name = "btnXboxs";
-            btnXboxs.Padding = new Padding(35, 0, 0, 0);
-            btnXboxs.Size = new Size(263, 40);
+            btnXboxs.Padding = new Padding(31, 0, 0, 0);
+            btnXboxs.Size = new Size(230, 30);
             btnXboxs.TabIndex = 3;
             btnXboxs.Text = "Xbox";
             btnXboxs.TextAlign = ContentAlignment.MiddleLeft;
             btnXboxs.UseVisualStyleBackColor = true;
+            btnXboxs.Click += btnXboxs_Click;
             // 
             // btnPlayStation
             // 
@@ -325,9 +341,10 @@
             btnPlayStation.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPlayStation.ForeColor = Color.White;
             btnPlayStation.Location = new Point(0, 0);
+            btnPlayStation.Margin = new Padding(3, 2, 3, 2);
             btnPlayStation.Name = "btnPlayStation";
-            btnPlayStation.Padding = new Padding(35, 0, 0, 0);
-            btnPlayStation.Size = new Size(263, 40);
+            btnPlayStation.Padding = new Padding(31, 0, 0, 0);
+            btnPlayStation.Size = new Size(230, 30);
             btnPlayStation.TabIndex = 1;
             btnPlayStation.Text = "PlayStation";
             btnPlayStation.TextAlign = ContentAlignment.MiddleLeft;
@@ -342,10 +359,11 @@
             btnConsoles.FlatStyle = FlatStyle.Flat;
             btnConsoles.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConsoles.ForeColor = Color.White;
-            btnConsoles.Location = new Point(0, 93);
+            btnConsoles.Location = new Point(0, 70);
+            btnConsoles.Margin = new Padding(3, 2, 3, 2);
             btnConsoles.Name = "btnConsoles";
-            btnConsoles.Padding = new Padding(10, 0, 0, 0);
-            btnConsoles.Size = new Size(263, 45);
+            btnConsoles.Padding = new Padding(9, 0, 0, 0);
+            btnConsoles.Size = new Size(230, 34);
             btnConsoles.TabIndex = 1;
             btnConsoles.Text = "Consoles";
             btnConsoles.TextAlign = ContentAlignment.MiddleLeft;
@@ -359,17 +377,19 @@
             panelLogo.Controls.Add(pictureBox1);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
+            panelLogo.Margin = new Padding(3, 2, 3, 2);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(263, 93);
+            panelLogo.Size = new Size(230, 70);
             panelLogo.TabIndex = 0;
             panelLogo.Paint += panelLogo_Paint_1;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Logos3;
-            pictureBox1.Location = new Point(56, 16);
+            pictureBox1.Location = new Point(49, 12);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(138, 70);
+            pictureBox1.Size = new Size(121, 52);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -383,8 +403,9 @@
             buttonName.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonName.ForeColor = Color.White;
             buttonName.Location = new Point(0, 0);
+            buttonName.Margin = new Padding(3, 2, 3, 2);
             buttonName.Name = "buttonName";
-            buttonName.Size = new Size(298, 90);
+            buttonName.Size = new Size(261, 68);
             buttonName.TabIndex = 17;
             buttonName.Text = "button";
             buttonName.UseVisualStyleBackColor = true;
@@ -396,16 +417,18 @@
             panel2.Controls.Add(button5);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1639, 90);
+            panel2.Size = new Size(1397, 68);
             panel2.TabIndex = 6;
             // 
             // panel1
             // 
             panel1.Controls.Add(buttonName);
-            panel1.Location = new Point(1338, 0);
+            panel1.Location = new Point(1171, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(298, 90);
+            panel1.Size = new Size(261, 68);
             panel1.TabIndex = 18;
             // 
             // button5
@@ -416,10 +439,11 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 3);
+            button5.Location = new Point(0, 2);
+            button5.Margin = new Padding(3, 2, 3, 2);
             button5.Name = "button5";
-            button5.Padding = new Padding(35, 0, 0, 0);
-            button5.Size = new Size(288, 90);
+            button5.Padding = new Padding(31, 0, 0, 0);
+            button5.Size = new Size(252, 68);
             button5.TabIndex = 9;
             button5.Text = "Checkpoint Games";
             button5.TextAlign = ContentAlignment.MiddleLeft;
@@ -431,9 +455,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(1379, 928);
+            label2.Location = new Point(1207, 696);
             label2.Name = "label2";
-            label2.Size = new Size(53, 20);
+            label2.Size = new Size(45, 17);
             label2.TabIndex = 3;
             label2.Text = "label2";
             // 
@@ -442,9 +466,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(1545, 928);
+            label1.Location = new Point(1352, 696);
             label1.Name = "label1";
-            label1.Size = new Size(53, 20);
+            label1.Size = new Size(45, 17);
             label1.TabIndex = 2;
             label1.Text = "label1";
             label1.Click += label1_Click_1;
@@ -464,9 +488,10 @@
             panelMenu2.Controls.Add(label1);
             panelMenu2.Controls.Add(label2);
             panelMenu2.Dock = DockStyle.Fill;
-            panelMenu2.Location = new Point(263, 0);
+            panelMenu2.Location = new Point(230, 0);
+            panelMenu2.Margin = new Padding(3, 2, 3, 2);
             panelMenu2.Name = "panelMenu2";
-            panelMenu2.Size = new Size(1639, 973);
+            panelMenu2.Size = new Size(969, 562);
             panelMenu2.TabIndex = 1;
             panelMenu2.Paint += panelContenedor_Paint;
             // 
@@ -478,11 +503,12 @@
             // 
             // MenuForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 973);
+            ClientSize = new Size(1199, 562);
             Controls.Add(panelMenu2);
             Controls.Add(panelSideMenu);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";

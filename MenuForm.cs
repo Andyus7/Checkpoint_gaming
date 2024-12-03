@@ -157,6 +157,20 @@ namespace WinFormsProyectoFinal
             childForm.Show();
 
         }
+        private void openDischarge(Form Discharge)
+        {
+            if (acitveForm != null)
+                acitveForm.Close();
+            acitveForm = Discharge;
+            Discharge.TopLevel = false;
+            Discharge.FormBorderStyle = FormBorderStyle.None;
+            Discharge.Dock = DockStyle.Fill;
+            panelMenu2.Controls.Add(Discharge);
+            panelMenu2.Tag = Discharge;
+            Discharge.BringToFront();
+           Discharge.Show();
+
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -245,7 +259,7 @@ namespace WinFormsProyectoFinal
             this.Close(); // Cierra el formulario actual
         }
 
- 
+
 
         private void btnUnsubscribe_Click(object sender, EventArgs e)
         {
@@ -257,6 +271,10 @@ namespace WinFormsProyectoFinal
 
         }
 
-
+        private void btnXboxs_Click(object sender, EventArgs e)
+        {
+            openDischarge(new DischargeForm());
+            hideSubmenu();
+        }
     }
 }

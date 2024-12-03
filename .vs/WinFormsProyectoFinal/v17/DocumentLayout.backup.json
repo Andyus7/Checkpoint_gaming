@@ -1,22 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\",
+  "WorkspaceRootPath": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\obedl\\onedrive\\escritorio\\checkpoint_gaming\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\discharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:discharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\discharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:discharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\obedl\\onedrive\\escritorio\\checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\discharge.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:discharge.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\productosx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:productosx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:admonbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\osval\\source\\repos\\proyectos\\checkpoint_gaming\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +46,122 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\LoginForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentIndex": 3,
+              "Title": "childForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\childForm.cs",
+              "RelativeDocumentMoniker": "childForm.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\childForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "childForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T06:31:36.151Z",
+              "WhenOpened": "2024-12-03T00:05:12.182Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MenuForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\MenuForm.cs",
-              "RelativeDocumentMoniker": "MenuForm.cs",
-              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\MenuForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "MenuForm.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "Discharge.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Discharge.Designer.cs",
+              "RelativeDocumentMoniker": "Discharge.Designer.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Discharge.Designer.cs*",
+              "RelativeToolTip": "Discharge.Designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T01:09:25.276Z"
+              "WhenOpened": "2024-12-02T23:42:55.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "childForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs",
-              "RelativeDocumentMoniker": "childForm.cs",
-              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "childForm.cs [Dise\u00F1o]",
+              "DocumentIndex": 5,
+              "Title": "Productosx.cs",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Productosx.cs",
+              "RelativeDocumentMoniker": "Productosx.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Productosx.cs",
+              "RelativeToolTip": "Productosx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T23:21:16.208Z"
+              "WhenOpened": "2024-12-02T22:28:35.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T22:27:36.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Producto.cs",
+              "RelativeDocumentMoniker": "Producto.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Producto.cs",
+              "RelativeToolTip": "Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T22:27:24.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdmonBD.cs",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\AdmonBD.cs",
+              "RelativeDocumentMoniker": "AdmonBD.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\AdmonBD.cs",
+              "RelativeToolTip": "AdmonBD.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T22:26:32.347Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "childForm.cs",
-              "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs",
-              "RelativeDocumentMoniker": "childForm.cs",
-              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs",
-              "RelativeToolTip": "childForm.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwIsAAAAAAAAAAAAAAA==",
+              "Title": "MenuForm.cs",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\MenuForm.cs",
+              "RelativeDocumentMoniker": "MenuForm.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\MenuForm.cs",
+              "RelativeToolTip": "MenuForm.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwEUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T03:09:54.882Z"
+              "WhenOpened": "2024-12-02T14:59:34.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Discharge.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Discharge.cs",
+              "RelativeDocumentMoniker": "Discharge.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Discharge.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Discharge.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T14:59:21.084Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Discharge.cs",
+              "DocumentMoniker": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Discharge.cs",
+              "RelativeDocumentMoniker": "Discharge.cs",
+              "ToolTip": "C:\\Users\\Osval\\source\\repos\\proyectos\\Checkpoint_gaming\\Discharge.cs*",
+              "RelativeToolTip": "Discharge.cs*",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:46:26.061Z",
+              "EditorCaption": ""
             }
           ]
         }
