@@ -41,7 +41,7 @@ namespace WinFormsProyectoFinal
             pictureBoxPrincipal.SizeMode = PictureBoxSizeMode.StretchImage;
 
             imageSwitcherTimer = new System.Windows.Forms.Timer();
-            imageSwitcherTimer.Interval = 3000; // 3000 ms = 3 segundos
+            imageSwitcherTimer.Interval = 3000; // 3000 ms = 3 seconds
             imageSwitcherTimer.Tick += OnTimerTick;
             imageSwitcherTimer.Start();
         }
@@ -50,12 +50,12 @@ namespace WinFormsProyectoFinal
         {
             if (imagePaths.Count == 0) return;
 
-            // Actualizar el índice
+            //Update the index
             currentIndex = (currentIndex + 1) % imagePaths.Count;
 
-            // Cargar la siguiente imagen en el PictureBox
+            //Load the following image into the PictureBox
             pictureBoxPrincipal.Image = Image.FromFile(imagePaths[currentIndex]);
-            pictureBoxPrincipal.SizeMode = PictureBoxSizeMode.StretchImage; // Opcional: ajustar el tamaño
+            pictureBoxPrincipal.SizeMode = PictureBoxSizeMode.StretchImage; //Adjust the size
 
         }
 

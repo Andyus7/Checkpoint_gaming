@@ -79,7 +79,7 @@ namespace WinFormsProyectoFinal
         #region VideogamesPanel
         private void btnVideoGames_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -242,7 +242,7 @@ namespace WinFormsProyectoFinal
             this.Close(); // Cierra el formulario actual
         }
 
- 
+
 
         private void btnUnsubscribe_Click(object sender, EventArgs e)
         {
@@ -257,6 +257,16 @@ namespace WinFormsProyectoFinal
 
         }
 
+        private void btnProductList_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ProductList());
+            hideSubmenu();
+        }
 
+        private void btnSalesConsultation_Click(object sender, EventArgs e)
+        {
+            openChildForm(new SalesConsultation());
+            hideSubmenu();
+        }
     }
 }

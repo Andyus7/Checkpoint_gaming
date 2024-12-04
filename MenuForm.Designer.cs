@@ -145,6 +145,7 @@
             btnSalesConsultation.Text = "Sales Consultation";
             btnSalesConsultation.TextAlign = ContentAlignment.MiddleLeft;
             btnSalesConsultation.UseVisualStyleBackColor = true;
+            btnSalesConsultation.Click += btnSalesConsultation_Click;
             // 
             // btnProductList
             // 
@@ -162,6 +163,7 @@
             btnProductList.Text = "Product List";
             btnProductList.TextAlign = ContentAlignment.MiddleLeft;
             btnProductList.UseVisualStyleBackColor = true;
+            btnProductList.Click += btnProductList_Click;
             // 
             // btnGraphic
             // 
