@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             panelPrincipal = new Panel();
+            panel6 = new Panel();
+            label2 = new Label();
+            label3 = new Label();
+            button6 = new Button();
+            pictureBox6 = new PictureBox();
+            label4 = new Label();
             button5 = new Button();
             label1 = new Label();
             panel5 = new Panel();
@@ -61,7 +67,33 @@
             btnAdd1 = new Button();
             pictureBox1 = new PictureBox();
             labelName1 = new Label();
+            panel7 = new Panel();
+            label5 = new Label();
+            label6 = new Label();
+            button7 = new Button();
+            pictureBox7 = new PictureBox();
+            label7 = new Label();
+            panel8 = new Panel();
+            label8 = new Label();
+            label9 = new Label();
+            button8 = new Button();
+            pictureBox8 = new PictureBox();
+            label10 = new Label();
+            panel9 = new Panel();
+            label11 = new Label();
+            label12 = new Label();
+            button9 = new Button();
+            pictureBox9 = new PictureBox();
+            label13 = new Label();
+            panel10 = new Panel();
+            label14 = new Label();
+            label15 = new Label();
+            button10 = new Button();
+            pictureBox10 = new PictureBox();
+            label16 = new Label();
             panelPrincipal.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel4.SuspendLayout();
@@ -72,13 +104,27 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panelPrincipal
             // 
             panelPrincipal.AutoScroll = true;
+            panelPrincipal.AutoScrollMinSize = new Size(1649, 1500);
             panelPrincipal.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelPrincipal.BackColor = Color.White;
+            panelPrincipal.Controls.Add(panel10);
+            panelPrincipal.Controls.Add(panel9);
+            panelPrincipal.Controls.Add(panel8);
+            panelPrincipal.Controls.Add(panel7);
+            panelPrincipal.Controls.Add(panel6);
             panelPrincipal.Controls.Add(button5);
             panelPrincipal.Controls.Add(label1);
             panelPrincipal.Controls.Add(panel5);
@@ -92,6 +138,97 @@
             panelPrincipal.Size = new Size(1649, 1033);
             panelPrincipal.TabIndex = 6;
             panelPrincipal.Paint += panelPrincipal_Paint;
+            // 
+            // panel6
+            // 
+            panel6.AllowDrop = true;
+            panel6.BackColor = Color.FromArgb(19, 45, 70);
+            panel6.Controls.Add(label2);
+            panel6.Controls.Add(label3);
+            panel6.Controls.Add(button6);
+            panel6.Controls.Add(pictureBox6);
+            panel6.Controls.Add(label4);
+            panel6.Location = new Point(60, 1076);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(242, 363);
+            panel6.TabIndex = 74;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.FromArgb(19, 45, 70);
+            label2.BorderStyle = BorderStyle.FixedSingle;
+            label2.Dock = DockStyle.Top;
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(0, 334);
+            label2.Margin = new Padding(0);
+            label2.Name = "label2";
+            label2.Size = new Size(242, 29);
+            label2.TabIndex = 58;
+            label2.Text = "$";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.FromArgb(19, 45, 70);
+            label3.BorderStyle = BorderStyle.FixedSingle;
+            label3.Dock = DockStyle.Top;
+            label3.FlatStyle = FlatStyle.Flat;
+            label3.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(0, 284);
+            label3.Margin = new Padding(0);
+            label3.Name = "label3";
+            label3.Size = new Size(242, 50);
+            label3.TabIndex = 57;
+            label3.Text = "Label";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(25, 30, 41);
+            button6.Cursor = Cursors.Hand;
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(0, 256);
+            button6.Margin = new Padding(0);
+            button6.Name = "button6";
+            button6.Size = new Size(242, 28);
+            button6.TabIndex = 42;
+            button6.Text = "Agregar al carro";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox6.Cursor = Cursors.Hand;
+            pictureBox6.Dock = DockStyle.Top;
+            pictureBox6.Location = new Point(0, 29);
+            pictureBox6.Margin = new Padding(0);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(242, 227);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 41;
+            pictureBox6.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.FromArgb(19, 45, 70);
+            label4.BorderStyle = BorderStyle.FixedSingle;
+            label4.Dock = DockStyle.Top;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(0, 0);
+            label4.Margin = new Padding(0);
+            label4.Name = "label4";
+            label4.Size = new Size(242, 29);
+            label4.TabIndex = 39;
+            label4.Text = "Name";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button5
             // 
@@ -569,6 +706,370 @@
             labelName1.Text = "Name";
             labelName1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // panel7
+            // 
+            panel7.AllowDrop = true;
+            panel7.BackColor = Color.FromArgb(19, 45, 70);
+            panel7.Controls.Add(label5);
+            panel7.Controls.Add(label6);
+            panel7.Controls.Add(button7);
+            panel7.Controls.Add(pictureBox7);
+            panel7.Controls.Add(label7);
+            panel7.Location = new Point(374, 1076);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(242, 363);
+            panel7.TabIndex = 75;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.FromArgb(19, 45, 70);
+            label5.BorderStyle = BorderStyle.FixedSingle;
+            label5.Dock = DockStyle.Top;
+            label5.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(0, 334);
+            label5.Margin = new Padding(0);
+            label5.Name = "label5";
+            label5.Size = new Size(242, 29);
+            label5.TabIndex = 58;
+            label5.Text = "$";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.FromArgb(19, 45, 70);
+            label6.BorderStyle = BorderStyle.FixedSingle;
+            label6.Dock = DockStyle.Top;
+            label6.FlatStyle = FlatStyle.Flat;
+            label6.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(0, 284);
+            label6.Margin = new Padding(0);
+            label6.Name = "label6";
+            label6.Size = new Size(242, 50);
+            label6.TabIndex = 57;
+            label6.Text = "Label";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.FromArgb(25, 30, 41);
+            button7.Cursor = Cursors.Hand;
+            button7.Dock = DockStyle.Top;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(0, 256);
+            button7.Margin = new Padding(0);
+            button7.Name = "button7";
+            button7.Size = new Size(242, 28);
+            button7.TabIndex = 42;
+            button7.Text = "Agregar al carro";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox7.Cursor = Cursors.Hand;
+            pictureBox7.Dock = DockStyle.Top;
+            pictureBox7.Location = new Point(0, 29);
+            pictureBox7.Margin = new Padding(0);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(242, 227);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 41;
+            pictureBox7.TabStop = false;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.FromArgb(19, 45, 70);
+            label7.BorderStyle = BorderStyle.FixedSingle;
+            label7.Dock = DockStyle.Top;
+            label7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(0, 0);
+            label7.Margin = new Padding(0);
+            label7.Name = "label7";
+            label7.Size = new Size(242, 29);
+            label7.TabIndex = 39;
+            label7.Text = "Name";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel8
+            // 
+            panel8.AllowDrop = true;
+            panel8.BackColor = Color.FromArgb(19, 45, 70);
+            panel8.Controls.Add(label8);
+            panel8.Controls.Add(label9);
+            panel8.Controls.Add(button8);
+            panel8.Controls.Add(pictureBox8);
+            panel8.Controls.Add(label10);
+            panel8.Location = new Point(706, 1076);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(242, 363);
+            panel8.TabIndex = 76;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.FromArgb(19, 45, 70);
+            label8.BorderStyle = BorderStyle.FixedSingle;
+            label8.Dock = DockStyle.Top;
+            label8.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(0, 334);
+            label8.Margin = new Padding(0);
+            label8.Name = "label8";
+            label8.Size = new Size(242, 29);
+            label8.TabIndex = 58;
+            label8.Text = "$";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.FromArgb(19, 45, 70);
+            label9.BorderStyle = BorderStyle.FixedSingle;
+            label9.Dock = DockStyle.Top;
+            label9.FlatStyle = FlatStyle.Flat;
+            label9.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(0, 284);
+            label9.Margin = new Padding(0);
+            label9.Name = "label9";
+            label9.Size = new Size(242, 50);
+            label9.TabIndex = 57;
+            label9.Text = "Label";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(25, 30, 41);
+            button8.Cursor = Cursors.Hand;
+            button8.Dock = DockStyle.Top;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(0, 256);
+            button8.Margin = new Padding(0);
+            button8.Name = "button8";
+            button8.Size = new Size(242, 28);
+            button8.TabIndex = 42;
+            button8.Text = "Agregar al carro";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox8.Cursor = Cursors.Hand;
+            pictureBox8.Dock = DockStyle.Top;
+            pictureBox8.Location = new Point(0, 29);
+            pictureBox8.Margin = new Padding(0);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(242, 227);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 41;
+            pictureBox8.TabStop = false;
+            // 
+            // label10
+            // 
+            label10.BackColor = Color.FromArgb(19, 45, 70);
+            label10.BorderStyle = BorderStyle.FixedSingle;
+            label10.Dock = DockStyle.Top;
+            label10.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(0, 0);
+            label10.Margin = new Padding(0);
+            label10.Name = "label10";
+            label10.Size = new Size(242, 29);
+            label10.TabIndex = 39;
+            label10.Text = "Name";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            panel9.AllowDrop = true;
+            panel9.BackColor = Color.FromArgb(19, 45, 70);
+            panel9.Controls.Add(label11);
+            panel9.Controls.Add(label12);
+            panel9.Controls.Add(button9);
+            panel9.Controls.Add(pictureBox9);
+            panel9.Controls.Add(label13);
+            panel9.Location = new Point(1036, 1076);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(242, 363);
+            panel9.TabIndex = 77;
+            // 
+            // label11
+            // 
+            label11.BackColor = Color.FromArgb(19, 45, 70);
+            label11.BorderStyle = BorderStyle.FixedSingle;
+            label11.Dock = DockStyle.Top;
+            label11.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(0, 334);
+            label11.Margin = new Padding(0);
+            label11.Name = "label11";
+            label11.Size = new Size(242, 29);
+            label11.TabIndex = 58;
+            label11.Text = "$";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            label12.BackColor = Color.FromArgb(19, 45, 70);
+            label12.BorderStyle = BorderStyle.FixedSingle;
+            label12.Dock = DockStyle.Top;
+            label12.FlatStyle = FlatStyle.Flat;
+            label12.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(0, 284);
+            label12.Margin = new Padding(0);
+            label12.Name = "label12";
+            label12.Size = new Size(242, 50);
+            label12.TabIndex = 57;
+            label12.Text = "Label";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.FromArgb(25, 30, 41);
+            button9.Cursor = Cursors.Hand;
+            button9.Dock = DockStyle.Top;
+            button9.FlatAppearance.BorderSize = 0;
+            button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(0, 256);
+            button9.Margin = new Padding(0);
+            button9.Name = "button9";
+            button9.Size = new Size(242, 28);
+            button9.TabIndex = 42;
+            button9.Text = "Agregar al carro";
+            button9.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox9.Cursor = Cursors.Hand;
+            pictureBox9.Dock = DockStyle.Top;
+            pictureBox9.Location = new Point(0, 29);
+            pictureBox9.Margin = new Padding(0);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(242, 227);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 41;
+            pictureBox9.TabStop = false;
+            // 
+            // label13
+            // 
+            label13.BackColor = Color.FromArgb(19, 45, 70);
+            label13.BorderStyle = BorderStyle.FixedSingle;
+            label13.Dock = DockStyle.Top;
+            label13.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(0, 0);
+            label13.Margin = new Padding(0);
+            label13.Name = "label13";
+            label13.Size = new Size(242, 29);
+            label13.TabIndex = 39;
+            label13.Text = "Name";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel10
+            // 
+            panel10.AllowDrop = true;
+            panel10.BackColor = Color.FromArgb(19, 45, 70);
+            panel10.Controls.Add(label14);
+            panel10.Controls.Add(label15);
+            panel10.Controls.Add(button10);
+            panel10.Controls.Add(pictureBox10);
+            panel10.Controls.Add(label16);
+            panel10.Location = new Point(1339, 1076);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(242, 363);
+            panel10.TabIndex = 78;
+            // 
+            // label14
+            // 
+            label14.BackColor = Color.FromArgb(19, 45, 70);
+            label14.BorderStyle = BorderStyle.FixedSingle;
+            label14.Dock = DockStyle.Top;
+            label14.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(0, 334);
+            label14.Margin = new Padding(0);
+            label14.Name = "label14";
+            label14.Size = new Size(242, 29);
+            label14.TabIndex = 58;
+            label14.Text = "$";
+            label14.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.FromArgb(19, 45, 70);
+            label15.BorderStyle = BorderStyle.FixedSingle;
+            label15.Dock = DockStyle.Top;
+            label15.FlatStyle = FlatStyle.Flat;
+            label15.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(0, 284);
+            label15.Margin = new Padding(0);
+            label15.Name = "label15";
+            label15.Size = new Size(242, 50);
+            label15.TabIndex = 57;
+            label15.Text = "Label";
+            label15.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button10
+            // 
+            button10.BackColor = Color.FromArgb(25, 30, 41);
+            button10.Cursor = Cursors.Hand;
+            button10.Dock = DockStyle.Top;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button10.ForeColor = Color.White;
+            button10.Location = new Point(0, 256);
+            button10.Margin = new Padding(0);
+            button10.Name = "button10";
+            button10.Size = new Size(242, 28);
+            button10.TabIndex = 42;
+            button10.Text = "Agregar al carro";
+            button10.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox10.Cursor = Cursors.Hand;
+            pictureBox10.Dock = DockStyle.Top;
+            pictureBox10.Location = new Point(0, 29);
+            pictureBox10.Margin = new Padding(0);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(242, 227);
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox10.TabIndex = 41;
+            pictureBox10.TabStop = false;
+            // 
+            // label16
+            // 
+            label16.BackColor = Color.FromArgb(19, 45, 70);
+            label16.BorderStyle = BorderStyle.FixedSingle;
+            label16.Dock = DockStyle.Top;
+            label16.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(0, 0);
+            label16.Margin = new Padding(0);
+            label16.Name = "label16";
+            label16.Size = new Size(242, 29);
+            label16.TabIndex = 39;
+            label16.Text = "Name";
+            label16.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // childForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -581,6 +1082,8 @@
             Load += Form2_Load;
             panelPrincipal.ResumeLayout(false);
             panelPrincipal.PerformLayout();
+            panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel4.ResumeLayout(false);
@@ -591,6 +1094,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -628,5 +1139,35 @@
         private Label labelName5;
         private Label label1;
         private Button button5;
+        private Panel panel6;
+        private Label label2;
+        private Label label3;
+        private Button button6;
+        private PictureBox pictureBox6;
+        private Label label4;
+        private Panel panel8;
+        private Label label8;
+        private Label label9;
+        private Button button8;
+        private PictureBox pictureBox8;
+        private Label label10;
+        private Panel panel7;
+        private Label label5;
+        private Label label6;
+        private Button button7;
+        private PictureBox pictureBox7;
+        private Label label7;
+        private Panel panel10;
+        private Label label14;
+        private Label label15;
+        private Button button10;
+        private PictureBox pictureBox10;
+        private Label label16;
+        private Panel panel9;
+        private Label label11;
+        private Label label12;
+        private Button button9;
+        private PictureBox pictureBox9;
+        private Label label13;
     }
 }
