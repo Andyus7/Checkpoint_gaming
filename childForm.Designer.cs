@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panelPrincipal = new Panel();
-            button5 = new Button();
             label1 = new Label();
             panel5 = new Panel();
             labelPrice5 = new Label();
@@ -61,6 +60,7 @@
             btnAdd1 = new Button();
             pictureBox1 = new PictureBox();
             labelName1 = new Label();
+            pictureBoxPrincipal = new PictureBox();
             panelPrincipal.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -72,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPrincipal).BeginInit();
             SuspendLayout();
             // 
             // panelPrincipal
@@ -79,7 +80,7 @@
             panelPrincipal.AutoScroll = true;
             panelPrincipal.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelPrincipal.BackColor = Color.White;
-            panelPrincipal.Controls.Add(button5);
+            panelPrincipal.Controls.Add(pictureBoxPrincipal);
             panelPrincipal.Controls.Add(label1);
             panelPrincipal.Controls.Add(panel5);
             panelPrincipal.Controls.Add(panel4);
@@ -92,15 +93,6 @@
             panelPrincipal.Size = new Size(1649, 1033);
             panelPrincipal.TabIndex = 6;
             panelPrincipal.Paint += panelPrincipal_Paint;
-            // 
-            // button5
-            // 
-            button5.BackgroundImage = Properties.Resources.Play1;
-            button5.Location = new Point(405, 106);
-            button5.Name = "button5";
-            button5.Size = new Size(800, 450);
-            button5.TabIndex = 73;
-            button5.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -569,6 +561,16 @@
             labelName1.Text = "Name";
             labelName1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxPrincipal
+            // 
+            pictureBoxPrincipal.Location = new Point(478, 144);
+            pictureBoxPrincipal.Name = "pictureBoxPrincipal";
+            pictureBoxPrincipal.Size = new Size(710, 391);
+            pictureBoxPrincipal.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxPrincipal.TabIndex = 72;
+            pictureBoxPrincipal.TabStop = false;
+            pictureBoxPrincipal.Click += pictureBoxPrincipal_Click;
+            // 
             // childForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -591,6 +593,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPrincipal).EndInit();
             ResumeLayout(false);
         }
 
@@ -627,6 +630,6 @@
         private PictureBox pictureBox5;
         private Label labelName5;
         private Label label1;
-        private Button button5;
+        private PictureBox pictureBoxPrincipal;
     }
 }

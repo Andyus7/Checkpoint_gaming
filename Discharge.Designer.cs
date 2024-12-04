@@ -38,7 +38,6 @@
             txtBoxDescription = new TextBox();
             txtBoxName = new TextBox();
             txtBoxId = new TextBox();
-            txtBoxBD = new TextBox();
             bindingSource1 = new BindingSource(components);
             panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
@@ -54,7 +53,6 @@
             panelPrincipal.Controls.Add(txtBoxDescription);
             panelPrincipal.Controls.Add(txtBoxName);
             panelPrincipal.Controls.Add(txtBoxId);
-            panelPrincipal.Controls.Add(txtBoxBD);
             panelPrincipal.Dock = DockStyle.Fill;
             panelPrincipal.Location = new Point(0, 0);
             panelPrincipal.Name = "panelPrincipal";
@@ -166,19 +164,6 @@
             txtBoxId.TabIndex = 1;
             txtBoxId.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtBoxBD
-            // 
-            txtBoxBD.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txtBoxBD.BorderStyle = BorderStyle.FixedSingle;
-            txtBoxBD.Cursor = Cursors.IBeam;
-            txtBoxBD.Font = new Font("Arial Narrow", 12F);
-            txtBoxBD.Location = new Point(463, 121);
-            txtBoxBD.Name = "txtBoxBD";
-            txtBoxBD.PlaceholderText = "Table Name";
-            txtBoxBD.Size = new Size(322, 30);
-            txtBoxBD.TabIndex = 0;
-            txtBoxBD.TextAlign = HorizontalAlignment.Center;
-            // 
             // DischargeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -196,7 +181,6 @@
         #endregion
 
         private Panel panelPrincipal;
-        private TextBox txtBoxBD;
         private Label labelTitle;
         private TextBox txtBoxImageName;
         private TextBox txtBoxStocks;

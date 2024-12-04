@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="ImagesSwitcher\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +33,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ImagesSwitcher\Play1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ImagesSwitcher\Play2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ImagesSwitcher\Play2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ImagesSwitcher\Play3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Images\PlayStation1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -45,6 +58,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Images\PlayStation5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Playstation6.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

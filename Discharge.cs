@@ -29,38 +29,37 @@ namespace WinFormsProyectoFinal
             AdmonBD db = new AdmonBD();
             try
             {
-                if (string.IsNullOrWhiteSpace(txtBoxBD.Text) || string.IsNullOrWhiteSpace(txtBoxId.Text) ||
-                    string.IsNullOrWhiteSpace(txtBoxName.Text) || string.IsNullOrWhiteSpace(txtBoxDescription.Text) ||
-                    string.IsNullOrWhiteSpace(txtBoxPrice.Text) || string.IsNullOrWhiteSpace(txtBoxStocks.Text) || string.IsNullOrWhiteSpace(txtBoxImageName.Text))
+                // Verificar si algún campo está vacío
+                if (string.IsNullOrWhiteSpace(txtBoxId.Text) ||
+                    string.IsNullOrWhiteSpace(txtBoxName.Text) ||
+                    string.IsNullOrWhiteSpace(txtBoxDescription.Text) ||
+                    string.IsNullOrWhiteSpace(txtBoxPrice.Text) ||
+                    string.IsNullOrWhiteSpace(txtBoxStocks.Text) ||
+                    string.IsNullOrWhiteSpace(txtBoxImageName.Text))
                 {
                     MessageBox.Show("Please fill in all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Validar datos
-                if (!int.TryParse(txtBoxId.Text, out int id) || !int.TryParse(txtBoxStocks.Text, out int stocks) ||
+                // Validar los datos numéricos
+                if (!int.TryParse(txtBoxId.Text, out int id) ||
+                    !int.TryParse(txtBoxStocks.Text, out int stocks) ||
                     !decimal.TryParse(txtBoxPrice.Text, out decimal price))
                 {
                     MessageBox.Show("Please enter valid numeric values for ID, Price, and Stocks.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
+                // Capturar los demás datos
                 string name = txtBoxName.Text;
                 string description = txtBoxDescription.Text;
                 string imageName = txtBoxImageName.Text;
-                string table = txtBoxBD.Text;
 
-                // Validar tabla permitida
-                List<string> allowedTables = new List<string> { "consolesplay" }; // Agrega más si es necesario
-                if (!allowedTables.Contains(table))
-                {
-                    MessageBox.Show("Invalid table name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                string query = $"INSERT INTO {table} (id, nombre, descripcion, precio, existencias, imagen) " +
+                // Consulta SQL para insertar datos en la tabla 'consolesplay'
+                string query = $"INSERT INTO consolesplay (id, nombre, descripcion, precio, existencias, imagen) " +
                                "VALUES (@id, @name, @description, @price, @stocks, @imageName)";
 
+                // Ejecutar la consulta con parámetros
                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
@@ -82,6 +81,7 @@ namespace WinFormsProyectoFinal
             {
                 MessageBox.Show("Error when adding the product: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
     }
 }

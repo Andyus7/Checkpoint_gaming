@@ -31,7 +31,7 @@ namespace WinFormsProyectoFinal
                 string nombre = adminBD.ObtenerNombre(usuario);
 
                 // Mensaje de bienvenida
-                MessageBox.Show($"Bienvenido, {nombre}", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Welcome, {nombre}", "Successful login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Abrir el formulario correspondiente según el rol
                 MenuForm menu = new MenuForm(usuario, nombre, rol);
@@ -40,7 +40,7 @@ namespace WinFormsProyectoFinal
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
