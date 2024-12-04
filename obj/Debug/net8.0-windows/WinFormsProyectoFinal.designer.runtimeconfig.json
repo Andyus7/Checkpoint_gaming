@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\obedl\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\obedl\\.nuget\\packages",
+      "C:\\Users\\pache\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pache\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

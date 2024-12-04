@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\obedl\\onedrive\\escritorio\\checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\obedl\\onedrive\\escritorio\\checkpoint_gaming\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\obedl\\onedrive\\escritorio\\checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +35,48 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\LoginForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "LoginForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:31:36.151Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\MenuForm.cs",
+              "RelativeDocumentMoniker": "MenuForm.cs",
+              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\MenuForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MenuForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T01:09:25.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "childForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs",
               "RelativeDocumentMoniker": "childForm.cs",
-              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "childForm.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "childForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T01:52:10.33Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-01T23:21:16.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "childForm.cs",
+              "DocumentMoniker": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs",
+              "RelativeDocumentMoniker": "childForm.cs",
+              "ToolTip": "C:\\Users\\obedl\\OneDrive\\Escritorio\\Checkpoint_gaming\\childForm.cs",
+              "RelativeToolTip": "childForm.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T03:09:54.882Z"
             }
           ]
         }
