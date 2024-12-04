@@ -26,7 +26,6 @@ namespace WinFormsProyectoFinal
         private void customizeDesign()
         {
             panelConsolesSubMenu.Visible = false;
-            panelVideoGamesSubMenu.Visible = false;
             panelAdminSubMenu.Visible = false;
 
         }
@@ -36,8 +35,6 @@ namespace WinFormsProyectoFinal
 
             if (panelConsolesSubMenu.Visible == true)
                 panelConsolesSubMenu.Visible = false;
-            if (panelVideoGamesSubMenu.Visible == true)
-                panelVideoGamesSubMenu.Visible = false;
             if (panelAdminSubMenu.Visible == true)
                 panelAdminSubMenu.Visible = false;
         }
@@ -82,7 +79,7 @@ namespace WinFormsProyectoFinal
         #region VideogamesPanel
         private void btnVideoGames_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelVideoGamesSubMenu);
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -254,6 +251,8 @@ namespace WinFormsProyectoFinal
 
         private void btnDischarge_Click(object sender, EventArgs e)
         {
+            openChildForm(new DischargeForm());
+            hideSubmenu();
 
         }
 

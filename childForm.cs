@@ -31,7 +31,7 @@ namespace WinFormsProyectoFinal
             try
             {
                 // Consulta para obtener los datos de los productos
-                string query = "SELECT nombre, descripcion, precio, imagen FROM productos";
+                string query = "SELECT nombre, descripcion, precio, imagen FROM consolesplay";
                 MySqlCommand cmd = new MySqlCommand(query, adminBD.GetConnection());
                 MySqlDataReader reader = cmd.ExecuteReader();
 

@@ -38,12 +38,7 @@
             btnGraphic = new Button();
             btnAdmin = new Button();
             button10 = new Button();
-            panelVideoGamesSubMenu = new Panel();
-            btnXboxGames = new Button();
-            btnPlayStationGames = new Button();
-            btnVideoGames = new Button();
             panelConsolesSubMenu = new Panel();
-            btnXboxs = new Button();
             btnPlayStation = new Button();
             btnConsoles = new Button();
             panelLogo = new Panel();
@@ -59,7 +54,6 @@
             timer1 = new System.Windows.Forms.Timer(components);
             panelSideMenu.SuspendLayout();
             panelAdminSubMenu.SuspendLayout();
-            panelVideoGamesSubMenu.SuspendLayout();
             panelConsolesSubMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -75,8 +69,6 @@
             panelSideMenu.Controls.Add(panelAdminSubMenu);
             panelSideMenu.Controls.Add(btnAdmin);
             panelSideMenu.Controls.Add(button10);
-            panelSideMenu.Controls.Add(panelVideoGamesSubMenu);
-            panelSideMenu.Controls.Add(btnVideoGames);
             panelSideMenu.Controls.Add(panelConsolesSubMenu);
             panelSideMenu.Controls.Add(btnConsoles);
             panelSideMenu.Controls.Add(panelLogo);
@@ -96,7 +88,7 @@
             panelAdminSubMenu.Controls.Add(btnProductList);
             panelAdminSubMenu.Controls.Add(btnGraphic);
             panelAdminSubMenu.Dock = DockStyle.Top;
-            panelAdminSubMenu.Location = new Point(0, 398);
+            panelAdminSubMenu.Location = new Point(0, 228);
             panelAdminSubMenu.Name = "panelAdminSubMenu";
             panelAdminSubMenu.Size = new Size(263, 230);
             panelAdminSubMenu.TabIndex = 16;
@@ -196,7 +188,7 @@
             btnAdmin.FlatStyle = FlatStyle.Flat;
             btnAdmin.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdmin.ForeColor = Color.White;
-            btnAdmin.Location = new Point(0, 353);
+            btnAdmin.Location = new Point(0, 183);
             btnAdmin.Name = "btnAdmin";
             btnAdmin.Padding = new Padding(10, 0, 0, 0);
             btnAdmin.Size = new Size(263, 45);
@@ -223,98 +215,15 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
-            // panelVideoGamesSubMenu
-            // 
-            panelVideoGamesSubMenu.BackColor = Color.FromArgb(19, 45, 70);
-            panelVideoGamesSubMenu.Controls.Add(btnXboxGames);
-            panelVideoGamesSubMenu.Controls.Add(btnPlayStationGames);
-            panelVideoGamesSubMenu.Dock = DockStyle.Top;
-            panelVideoGamesSubMenu.Location = new Point(0, 268);
-            panelVideoGamesSubMenu.Name = "panelVideoGamesSubMenu";
-            panelVideoGamesSubMenu.Size = new Size(263, 85);
-            panelVideoGamesSubMenu.TabIndex = 4;
-            // 
-            // btnXboxGames
-            // 
-            btnXboxGames.Dock = DockStyle.Top;
-            btnXboxGames.FlatAppearance.BorderSize = 0;
-            btnXboxGames.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            btnXboxGames.FlatStyle = FlatStyle.Flat;
-            btnXboxGames.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnXboxGames.ForeColor = Color.White;
-            btnXboxGames.Location = new Point(0, 40);
-            btnXboxGames.Name = "btnXboxGames";
-            btnXboxGames.Padding = new Padding(35, 0, 0, 0);
-            btnXboxGames.Size = new Size(263, 40);
-            btnXboxGames.TabIndex = 2;
-            btnXboxGames.Text = "Xbox";
-            btnXboxGames.TextAlign = ContentAlignment.MiddleLeft;
-            btnXboxGames.UseVisualStyleBackColor = true;
-            btnXboxGames.Click += button5_Click;
-            // 
-            // btnPlayStationGames
-            // 
-            btnPlayStationGames.Dock = DockStyle.Top;
-            btnPlayStationGames.FlatAppearance.BorderSize = 0;
-            btnPlayStationGames.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            btnPlayStationGames.FlatStyle = FlatStyle.Flat;
-            btnPlayStationGames.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPlayStationGames.ForeColor = Color.White;
-            btnPlayStationGames.Location = new Point(0, 0);
-            btnPlayStationGames.Name = "btnPlayStationGames";
-            btnPlayStationGames.Padding = new Padding(35, 0, 0, 0);
-            btnPlayStationGames.Size = new Size(263, 40);
-            btnPlayStationGames.TabIndex = 1;
-            btnPlayStationGames.Text = "PlayStation";
-            btnPlayStationGames.TextAlign = ContentAlignment.MiddleLeft;
-            btnPlayStationGames.UseVisualStyleBackColor = true;
-            btnPlayStationGames.Click += button6_Click;
-            // 
-            // btnVideoGames
-            // 
-            btnVideoGames.Dock = DockStyle.Top;
-            btnVideoGames.FlatAppearance.BorderSize = 0;
-            btnVideoGames.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            btnVideoGames.FlatStyle = FlatStyle.Flat;
-            btnVideoGames.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVideoGames.ForeColor = Color.White;
-            btnVideoGames.Location = new Point(0, 223);
-            btnVideoGames.Name = "btnVideoGames";
-            btnVideoGames.Padding = new Padding(10, 0, 0, 0);
-            btnVideoGames.Size = new Size(263, 45);
-            btnVideoGames.TabIndex = 3;
-            btnVideoGames.Text = "VideoGames";
-            btnVideoGames.TextAlign = ContentAlignment.MiddleLeft;
-            btnVideoGames.UseVisualStyleBackColor = true;
-            btnVideoGames.Click += btnVideoGames_Click;
-            // 
             // panelConsolesSubMenu
             // 
             panelConsolesSubMenu.BackColor = Color.FromArgb(19, 45, 70);
-            panelConsolesSubMenu.Controls.Add(btnXboxs);
             panelConsolesSubMenu.Controls.Add(btnPlayStation);
             panelConsolesSubMenu.Dock = DockStyle.Top;
             panelConsolesSubMenu.Location = new Point(0, 138);
             panelConsolesSubMenu.Name = "panelConsolesSubMenu";
-            panelConsolesSubMenu.Size = new Size(263, 85);
+            panelConsolesSubMenu.Size = new Size(263, 45);
             panelConsolesSubMenu.TabIndex = 2;
-            // 
-            // btnXboxs
-            // 
-            btnXboxs.Dock = DockStyle.Top;
-            btnXboxs.FlatAppearance.BorderSize = 0;
-            btnXboxs.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            btnXboxs.FlatStyle = FlatStyle.Flat;
-            btnXboxs.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnXboxs.ForeColor = Color.White;
-            btnXboxs.Location = new Point(0, 40);
-            btnXboxs.Name = "btnXboxs";
-            btnXboxs.Padding = new Padding(35, 0, 0, 0);
-            btnXboxs.Size = new Size(263, 40);
-            btnXboxs.TabIndex = 3;
-            btnXboxs.Text = "Xbox";
-            btnXboxs.TextAlign = ContentAlignment.MiddleLeft;
-            btnXboxs.UseVisualStyleBackColor = true;
             // 
             // btnPlayStation
             // 
@@ -489,7 +398,6 @@
             Load += MenuForm_Load;
             panelSideMenu.ResumeLayout(false);
             panelAdminSubMenu.ResumeLayout(false);
-            panelVideoGamesSubMenu.ResumeLayout(false);
             panelConsolesSubMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -507,10 +415,6 @@
         private Button button3;
         private Button btnPlayStation;
         private Button btnConsoles;
-        private Panel panelVideoGamesSubMenu;
-        private Button btnXboxGames;
-        private Button btnPlayStationGames;
-        private Button btnVideoGames;
         private Panel panelMenu2;
         private Button button10;
         private Panel panelAdminSubMenu;
@@ -520,7 +424,6 @@
         private Button btnGraphic;
         private Button btnAdmin;
         private Button btnUnsubscribe;
-        private Button btnXboxs;
         private Label label2;
         private Label label1;
         private System.Windows.Forms.Timer timer1;
