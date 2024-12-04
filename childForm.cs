@@ -18,7 +18,7 @@ namespace WinFormsProyectoFinal
         {
             InitializeComponent();
             this.cargar_imagenes();
-            initializeImageSwitcher();
+            this.initializeImageSwitcher();
         }
 
         #region ImageSwitcher
