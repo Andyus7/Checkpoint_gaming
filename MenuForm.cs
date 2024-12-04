@@ -7,6 +7,8 @@ namespace WinFormsProyectoFinal
         private string usuario;
         private string nombre;
         private string rol;
+
+        #region Constructor
         public MenuForm(string usuario, string nombre, string rol)
         {
             InitializeComponent();
@@ -15,22 +17,26 @@ namespace WinFormsProyectoFinal
             this.rol = rol;
             customizeDesign();
             CargarDatos();
+
         }
+
+        #endregion
+
+        #region SubMenus
         private void customizeDesign()
         {
-            panelAccesoriesSubMenu.Visible = false;
             panelConsolesSubMenu.Visible = false;
-            panelVideoGamesSubMenu.Visible = false;
+            panelAdminSubMenu.Visible = false;
+
         }
 
         private void hideSubmenu()
         {
-            if (panelAccesoriesSubMenu.Visible == true)
-                panelAccesoriesSubMenu.Visible = false;
+
             if (panelConsolesSubMenu.Visible == true)
                 panelConsolesSubMenu.Visible = false;
-            if (panelVideoGamesSubMenu.Visible == true)
-                panelVideoGamesSubMenu.Visible = false;
+            if (panelAdminSubMenu.Visible == true)
+                panelAdminSubMenu.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -43,6 +49,8 @@ namespace WinFormsProyectoFinal
             else
                 subMenu.Visible = false;
         }
+
+        #endregion
 
         #region ConsolesPanel
         private void btnConsoles_Click(object sender, EventArgs e)
@@ -71,7 +79,7 @@ namespace WinFormsProyectoFinal
         #region VideogamesPanel
         private void btnVideoGames_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelVideoGamesSubMenu);
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -90,27 +98,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region PanelAccesories
-        private void btnAccesories_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelAccesoriesSubMenu);
-        }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-        #endregion
 
         #region Help_and_Logout_btn
         private void btnHelp_Click(object sender, EventArgs e)
@@ -136,19 +124,16 @@ namespace WinFormsProyectoFinal
 
         private void CargarDatos()
         {
-            lblName.Text = $"Welcome: {nombre}";
+            buttonName.Text = $"{nombre}";
 
             if (rol == "admin")
             {
                 // Mostrar opciones de administrador
-                btnDischarge.Visible = true;
-                btnUnsubscribe.Visible = true;
+                btnAdmin.Visible = true;
             }
             else
             {
-                // Ocultar opciones de administrador
-                btnDischarge.Visible = false;
-                btnUnsubscribe.Visible = false;
+                btnAdmin.Visible = false;
             }
         }
 
@@ -163,8 +148,8 @@ namespace WinFormsProyectoFinal
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelContenedor.Controls.Add(childForm);
-            panelContenedor.Tag = childForm;
+            panelMenu2.Controls.Add(childForm);
+            panelMenu2.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
@@ -182,5 +167,95 @@ namespace WinFormsProyectoFinal
             loginForm.Show();
             this.Close(); // Cierra el formulario actual
         }
+
+        private void panelSideMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+
+
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAdminSubMenu);
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.label1.Text = DateTime.Now.ToString("hh:mm:ss");
+            this.label2.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void labelName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelLogo_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            MenuForm menu = new MenuForm(usuario, nombre, rol);
+            menu.Show();
+            this.Close(); // Cierra el formulario actual
+        }
+
+ 
+
+        private void btnUnsubscribe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDischarge_Click(object sender, EventArgs e)
+        {
+            openChildForm(new DischargeForm());
+            hideSubmenu();
+
+        }
+
+
     }
 }
