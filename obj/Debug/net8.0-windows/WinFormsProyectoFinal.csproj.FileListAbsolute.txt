@@ -191,3 +191,7 @@ C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\obj\Debug\n
 C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.pdb
 C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.genruntimeconfig.cache
 C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\obj\Debug\net8.0-windows\ref\WinFormsProyectoFinal.dll
+C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.Unsubscribe.resources
+C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\bin\Debug\net8.0-windows\Images\Playstation6.jpg
+C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\bin\Debug\net8.0-windows\ImagesSwitcher\Play1.png
+C:\Users\pache\source\repos\Proyectos\rama_Osvaldo\Checkpoint_gaming\bin\Debug\net8.0-windows\ImagesSwitcher\Play2.png

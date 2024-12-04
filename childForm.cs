@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -13,13 +14,52 @@ namespace WinFormsProyectoFinal
 {
     public partial class childForm : Form
     {
-
-
         public childForm()
         {
             InitializeComponent();
             this.cargar_imagenes();
+            initializeImageSwitcher();
         }
+
+        #region ImageSwitcher
+
+        private List<string> imagePaths = new List<string>();
+        private int currentIndex = 0;
+        private System.Windows.Forms.Timer imageSwitcherTimer;
+
+        private void initializeImageSwitcher()
+        {
+            string imageFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ImagesSwitcher");
+
+            if (Directory.Exists(imageFolder))
+            {
+                // Cargar todas las imágenes de la carpeta
+                imagePaths.AddRange(Directory.GetFiles(imageFolder, "*.png"));
+            }
+
+            pictureBoxPrincipal.Image = Image.FromFile(imagePaths[currentIndex]);
+            pictureBoxPrincipal.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            imageSwitcherTimer = new System.Windows.Forms.Timer();
+            imageSwitcherTimer.Interval = 3000; // 3000 ms = 3 segundos
+            imageSwitcherTimer.Tick += OnTimerTick;
+            imageSwitcherTimer.Start();
+        }
+
+        private void OnTimerTick(object sender, EventArgs e)
+        {
+            if (imagePaths.Count == 0) return;
+
+            // Actualizar el índice
+            currentIndex = (currentIndex + 1) % imagePaths.Count;
+
+            // Cargar la siguiente imagen en el PictureBox
+            pictureBoxPrincipal.Image = Image.FromFile(imagePaths[currentIndex]);
+            pictureBoxPrincipal.SizeMode = PictureBoxSizeMode.StretchImage; // Opcional: ajustar el tamaño
+
+        }
+
+        #endregion
 
         private void cargar_imagenes()
         {
@@ -55,7 +95,7 @@ namespace WinFormsProyectoFinal
             }
 
             // Mostrar los productos en los controles
-            for (int i = 0; i < productos.Count && i < 5; i++)
+            for (int i = 0; i < productos.Count && i < 10; i++)
             {
                 Producto producto = productos[i];
                 string rutaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", producto.Imagen);
@@ -136,6 +176,11 @@ namespace WinFormsProyectoFinal
         }
 
         private void labelPrice1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxPrincipal_Click(object sender, EventArgs e)
         {
 
         }

@@ -246,7 +246,8 @@ namespace WinFormsProyectoFinal
 
         private void btnUnsubscribe_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Unsubscribe());
+            hideSubmenu();
         }
 
         private void btnDischarge_Click(object sender, EventArgs e)
