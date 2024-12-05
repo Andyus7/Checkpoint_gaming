@@ -248,13 +248,6 @@ namespace WinFormsProyectoFinal
 
             MessageBox.Show("Product successfully added to cart.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void btnCart_Click(object sender, EventArgs e)
-        {
-            userId = adminBD.ObtenerId(usuario);
-            Cart cartForm = new Cart(shoppingCart, adminBD, userId);
-            cartForm.ShowDialog();
-        }
         #endregion
 
         #region Inutiles por ahora

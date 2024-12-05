@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panelPrincipal = new Panel();
-            btnCart = new Button();
             panel10 = new Panel();
             labelPrice10 = new Label();
             labelDesription10 = new Label();
@@ -121,7 +120,6 @@
             panelPrincipal.AutoScroll = true;
             panelPrincipal.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelPrincipal.BackColor = Color.White;
-            panelPrincipal.Controls.Add(btnCart);
             panelPrincipal.Controls.Add(panel10);
             panelPrincipal.Controls.Add(pictureBoxPrincipal);
             panelPrincipal.Controls.Add(panel9);
@@ -140,16 +138,6 @@
             panelPrincipal.Size = new Size(1652, 1102);
             panelPrincipal.TabIndex = 6;
             panelPrincipal.Paint += panelPrincipal_Paint;
-            // 
-            // btnCart
-            // 
-            btnCart.Location = new Point(1176, 39);
-            btnCart.Name = "btnCart";
-            btnCart.Size = new Size(94, 29);
-            btnCart.TabIndex = 76;
-            btnCart.Text = "button10";
-            btnCart.UseVisualStyleBackColor = true;
-            btnCart.Click += btnCart_Click;
             // 
             // panel10
             // 
@@ -1183,6 +1171,5 @@
         private Button btnBuy6;
         private PictureBox pictureBox6;
         private Label labelName6;
-        private Button btnCart;
     }
 }

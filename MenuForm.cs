@@ -11,7 +11,7 @@ namespace WinFormsProyectoFinal
 
         public List<CartItem> shoppingCart { get; private set; } = new List<CartItem>();
 
-        private AdmonBD db;
+        private AdmonBD adminBD = new AdmonBD();
 
         private int currentUserId;
 
@@ -175,7 +175,7 @@ namespace WinFormsProyectoFinal
         #region Cart
         private void button1_Click_2(object sender, EventArgs e)
         {
-            openChildForm(new Cart(shoppingCart,db,currentUserId));
+            openChildForm(new Cart(shoppingCart,adminBD,currentUserId));
             hideSubmenu();
         }
         #endregion
