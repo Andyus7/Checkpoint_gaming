@@ -11,7 +11,12 @@ namespace WinFormsProyectoFinal
     {
         private MySqlConnection connection;
 
-        public MySqlConnection GetConnection()
+        public MySqlConnection? GetConnection()
+        {
+            return connection;
+        }
+
+        public MySqlConnection GetConnection(MySqlConnection? connection)
         {
             if (connection == null || connection.State == System.Data.ConnectionState.Closed)
             {
@@ -19,6 +24,7 @@ namespace WinFormsProyectoFinal
             }
             return connection;
         }
+
         public AdmonBD()
         {
             this.Connect();
@@ -86,9 +92,6 @@ namespace WinFormsProyectoFinal
                 return "Desconocido";
             }
         }
-
-
-
 
         public void Connect()
         {

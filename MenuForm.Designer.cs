@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panelSideMenu = new Panel();
+            button1 = new Button();
             panelAdminSubMenu = new Panel();
             btnUnsubscribe = new Button();
             btnDischarge = new Button();
@@ -66,6 +67,7 @@
             // 
             panelSideMenu.AutoScroll = true;
             panelSideMenu.BackColor = Color.FromArgb(25, 30, 41);
+            panelSideMenu.Controls.Add(button1);
             panelSideMenu.Controls.Add(panelAdminSubMenu);
             panelSideMenu.Controls.Add(btnAdmin);
             panelSideMenu.Controls.Add(button10);
@@ -78,6 +80,24 @@
             panelSideMenu.Size = new Size(263, 973);
             panelSideMenu.TabIndex = 0;
             panelSideMenu.Paint += panelSideMenu_Paint;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 458);
+            button1.Name = "button1";
+            button1.Padding = new Padding(10, 0, 0, 0);
+            button1.Size = new Size(263, 45);
+            button1.TabIndex = 17;
+            button1.Text = "Cart";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_2;
             // 
             // panelAdminSubMenu
             // 
@@ -181,6 +201,7 @@
             btnGraphic.Text = "Graphic";
             btnGraphic.TextAlign = ContentAlignment.MiddleLeft;
             btnGraphic.UseVisualStyleBackColor = true;
+            btnGraphic.Click += btnGraphic_Click;
             // 
             // btnAdmin
             // 
@@ -299,6 +320,7 @@
             buttonName.TabIndex = 17;
             buttonName.Text = "button";
             buttonName.UseVisualStyleBackColor = true;
+            buttonName.Click += buttonName_Click;
             // 
             // panel2
             // 
@@ -394,6 +416,7 @@
             ClientSize = new Size(1902, 973);
             Controls.Add(panelMenu2);
             Controls.Add(panelSideMenu);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "MenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
@@ -435,5 +458,6 @@
         private Button buttonName;
         private PictureBox pictureBox1;
         private Panel panel1;
+        private Button button1;
     }
 }

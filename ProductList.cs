@@ -28,7 +28,7 @@ namespace WinFormsProyectoFinal
             try
             {
                 string query = "SELECT id, nombre, descripcion, precio, existencias, imagen FROM consolesplay";
-                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection(db.GetConnection())))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                     {

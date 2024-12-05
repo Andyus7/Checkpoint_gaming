@@ -1,12 +1,27 @@
+using WinFormsProyectoFinal.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WinFormsProyectoFinal
 {
     public partial class MenuForm : Form
     {
+        #region Variables locales Privadas
+        //Todo para cargar formularios hijos
+        private Form? acitveForm = null;
+
+        private List<CartItem> shoppingCart = new List<CartItem>();
+
+        private AdmonBD db;
+
+        private int currentUserId;
+
         private string usuario;
+
         private string nombre;
+
         private string rol;
+
+        #endregion
 
         #region Constructor
         public MenuForm(string usuario, string nombre, string rol)
@@ -60,86 +75,29 @@ namespace WinFormsProyectoFinal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new childForm());
+            openChildForm(new childForm(rol));
             hideSubmenu();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
 
         #endregion
 
-        #region VideogamesPanel
-        private void btnVideoGames_Click(object sender, EventArgs e)
+        #region Hora
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
+            this.label1.Text = DateTime.Now.ToString("hh:mm:ss");
+            this.label2.Text = DateTime.Now.ToShortDateString();
         }
         #endregion
 
-
-
-        #region Help_and_Logout_btn
-        private void btnHelp_Click(object sender, EventArgs e)
+        #region ChildForm
+        private void button5_Click_1(object sender, EventArgs e)
         {
-            hideSubmenu();
+            MenuForm menu = new MenuForm(usuario, nombre, rol);
+            menu.Show();
+            this.Close(); // Cierra el formulario actual
         }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-        #endregion
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-
-        private void CargarDatos()
-        {
-            buttonName.Text = $"{nombre}";
-
-            if (rol == "admin")
-            {
-                // Mostrar opciones de administrador
-                btnAdmin.Visible = true;
-            }
-            else
-            {
-                btnAdmin.Visible = false;
-            }
-        }
-
-        //Todo para cargar formularios hijos
-        private Form? acitveForm = null;
-
         private void openChildForm(Form childForm)
         {
             if (acitveForm != null)
@@ -155,94 +113,27 @@ namespace WinFormsProyectoFinal
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        #endregion
+
+        #region Admin Options
+        private void CargarDatos()
         {
+            buttonName.Text = $"{nombre}";
 
+            if (rol == "admin")
+            {
+                // Mostrar opciones de administrador
+                btnAdmin.Visible = true;
+            }
+            else
+            {
+                btnAdmin.Visible = false;
+            }
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            // Volver al formulario de login
-            LogInForm loginForm = new LogInForm();
-            loginForm.Show();
-            this.Close(); // Cierra el formulario actual
-        }
-
-        private void panelSideMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
-
-
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             showSubMenu(panelAdminSubMenu);
         }
-
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            this.label1.Text = DateTime.Now.ToString("hh:mm:ss");
-            this.label2.Text = DateTime.Now.ToShortDateString();
-        }
-
-        private void labelName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelLogo_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            MenuForm menu = new MenuForm(usuario, nombre, rol);
-            menu.Show();
-            this.Close(); // Cierra el formulario actual
-        }
-
-
 
         private void btnUnsubscribe_Click(object sender, EventArgs e)
         {
@@ -268,5 +159,131 @@ namespace WinFormsProyectoFinal
             openChildForm(new SalesConsultation());
             hideSubmenu();
         }
+        private void btnGraphic_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region LogOut
+        private void button10_Click(object sender, EventArgs e)
+        {
+            // Volver al formulario de login
+            LogInForm loginForm = new LogInForm();
+            loginForm.Show();
+            this.Close(); // Cierra el formulario actual
+        }
+        #endregion
+
+        #region Cart
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            openChildForm(new Cart(shoppingCart,db,currentUserId));
+            hideSubmenu();
+        }
+        #endregion
+
+        #region Inutil Por ahora
+        private void buttonName_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+        private void panelSideMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+        private void labelName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelLogo_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVideoGames_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+
+        #endregion        
     }
 }

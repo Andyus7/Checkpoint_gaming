@@ -34,7 +34,7 @@ namespace WinFormsProyectoFinal
             {
                 // Consulta para obtener los datos de los usuarios
                 string query = "SELECT id, nombre, contraseña, cuenta, monto, rol FROM usuarios";
-                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection(db.GetConnection())))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                     {

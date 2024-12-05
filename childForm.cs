@@ -9,14 +9,25 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
+using WinFormsProyectoFinal.Models;
 
 namespace WinFormsProyectoFinal
 {
     public partial class childForm : Form
     {
-        public childForm()
+
+        AdmonBD adminBD = new AdmonBD(); // Crea una instancia de AdmonBD
+
+        private List<CartItem> shoppingCart = new List<CartItem>();
+        private int currentUserId;
+        private string rol; // Cambia esto según el rol del usuario (ej. "admin" o "user").
+
+
+        public childForm(string rol)
         {
             InitializeComponent();
+            this.rol = rol; 
             this.cargar_imagenes();
             this.initializeImageSwitcher();
         }
@@ -63,16 +74,21 @@ namespace WinFormsProyectoFinal
 
         private void cargar_imagenes()
         {
-            AdmonBD adminBD = new AdmonBD(); // Crea una instancia de AdmonBD
+            
             adminBD.Connect(); // Establece la conexión con la base de datos
-            // Lista para guardar los datos de los productos
             List<Producto> productos = new List<Producto>();
+
+            if (btnBuy1 != null)
+            {
+                btnBuy1.Tag = productos; // Guardar el producto en el Tag del botón
+                btnBuy1.Click += BtnBuy_Click; // Asignar el mismo evento a todos los botones
+                btnBuy1.Visible = rol != "admin"; // Ocultar el botón si el usuario es admin
+            }
 
             try
             {
-                // Consulta para obtener los datos de los productos
-                string query = "SELECT nombre, descripcion, precio, imagen FROM consolesplay";
-                MySqlCommand cmd = new MySqlCommand(query, adminBD.GetConnection());
+                string query = "SELECT nombre, descripcion, precio, existencias, imagen FROM consolesplay";
+                MySqlCommand cmd = new MySqlCommand(query, adminBD.GetConnection(adminBD.GetConnection()));
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -82,6 +98,7 @@ namespace WinFormsProyectoFinal
                         Nombre = reader.GetString("nombre"),
                         Descripcion = reader.GetString("descripcion"),
                         Precio = reader.GetDecimal("precio"),
+                        Existencias = reader.GetInt32("existencias"),
                         Imagen = reader.GetString("imagen")
                     });
                 }
@@ -95,41 +112,92 @@ namespace WinFormsProyectoFinal
             }
 
             // Mostrar los productos en los controles
-            for (int i = 0; i < productos.Count && i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Producto producto = productos[i];
-                string rutaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", producto.Imagen);
-
-                // Cargar imagen en el PictureBox correspondiente
-                PictureBox? pictureBox = this.Controls.Find($"pictureBox{i + 1}", true).FirstOrDefault() as PictureBox;
-                if (pictureBox != null && File.Exists(rutaImagen))
+                Panel? panel = this.Controls.Find($"panel{i + 1}", true).FirstOrDefault() as Panel;
+                if (i < productos.Count)
                 {
-                    pictureBox.Image = Image.FromFile(rutaImagen);
+                    Producto producto = productos[i];
+                    string rutaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", producto.Imagen);
+
+                    if (panel != null)
+                    {
+                        panel.Visible = true; // Mostrar el panel si se está usando
+
+                        PictureBox? pictureBox = panel.Controls.Find($"pictureBox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null && File.Exists(rutaImagen))
+                        {
+                            pictureBox.Image = Image.FromFile(rutaImagen);
+                        }
+
+                        Label? labelName = panel.Controls.Find($"labelName{i + 1}", true).FirstOrDefault() as Label;
+                        if (labelName != null)
+                        {
+                            labelName.Text = producto.Nombre;
+                        }
+
+                        Label? labelDescription = panel.Controls.Find($"labelDescription{i + 1}", true).FirstOrDefault() as Label;
+                        if (labelDescription != null)
+                        {
+                            labelDescription.Text = producto.Descripcion;
+                        }
+
+                        Label? labelPrice = panel.Controls.Find($"labelPrice{i + 1}", true).FirstOrDefault() as Label;
+                        if (labelPrice != null)
+                        {
+                            labelPrice.Text = $"$ {producto.Precio:F2}";
+                        }
+
+                        Button? btnBuy = panel.Controls.Find($"btnBuy{i + 1}", true).FirstOrDefault() as Button;
+                        if (btnBuy != null)
+                        {
+                            btnBuy.Tag = producto; // Asignar el producto al Tag del botón
+                            btnBuy.Click += BtnBuy_Click; // Asignar el evento
+                            btnBuy.Visible = rol != "admin"; // Ocultar el botón si el usuario es admin
+                        }
+                    }
                 }
-
-                Label? labelName = this.Controls.Find($"labelName{i + 1}", true).FirstOrDefault() as Label;
-                if (labelName != null)
+                else
                 {
-                    labelName.Text = producto.Nombre;
-                }
-
-
-                // Actualizar la descripción y el precio
-                Label? labelDescription = this.Controls.Find($"labelDescription{i + 1}", true).FirstOrDefault() as Label;
-                if (labelDescription != null)
-                {
-                    labelDescription.Text = producto.Descripcion;
-                }
-
-                Label? labelPrice = this.Controls.Find($"labelPrice{i + 1}", true).FirstOrDefault() as Label;
-                if (labelPrice != null)
-                {
-                    labelPrice.Text = $"$ {producto.Precio:F2}";
+                    // Ocultar paneles no utilizados
+                    if (panel != null)
+                    {
+                        panel.Visible = false;
+                    }
                 }
             }
         }
 
 
+        private void BtnBuy_Click(object sender, EventArgs e)
+        {
+            Button btnBuy = sender as Button;
+            if (btnBuy?.Tag is Producto producto) // Recuperar el producto desde el Tag
+            {
+                if (producto.Existencias <= 0)
+                {
+                    MessageBox.Show($"No stock available for {producto.Nombre}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Agregar el producto al carrito
+                shoppingCart.Add(new CartItem
+                {
+                    Name = producto.Nombre,
+                    Price = producto.Precio,
+                    Image = producto.Imagen,
+                    Quantity = 1
+                });
+
+                // Actualizar existencias del producto
+                producto.Existencias--;
+
+                MessageBox.Show($"{producto.Nombre} added to the cart successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+        #region Inutiles por ahora
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -183,6 +251,13 @@ namespace WinFormsProyectoFinal
         private void pictureBoxPrincipal_Click(object sender, EventArgs e)
         {
 
+        }
+
+        #endregion
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            Cart cartForm = new Cart(shoppingCart, adminBD, currentUserId);
+            cartForm.ShowDialog();
         }
     }
 }
