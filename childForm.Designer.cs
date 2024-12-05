@@ -143,7 +143,7 @@
             // 
             // btnCart
             // 
-            btnCart.Location = new Point(1162, 39);
+            btnCart.Location = new Point(1176, 39);
             btnCart.Name = "btnCart";
             btnCart.Size = new Size(94, 29);
             btnCart.TabIndex = 76;
@@ -1053,6 +1053,7 @@
             btnBuy1.TabIndex = 42;
             btnBuy1.Text = "Agregar al carro";
             btnBuy1.UseVisualStyleBackColor = false;
+            btnBuy1.Click += btnBuy1_Click;
             // 
             // pictureBox1
             // 

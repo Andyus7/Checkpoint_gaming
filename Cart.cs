@@ -15,10 +15,17 @@ namespace WinFormsProyectoFinal
 {
     public partial class Cart : Form
     {
+        #region Variables locales privadas
+
         private List<CartItem> cartItems;
+
         private AdmonBD db;
+
         private int currentUserId;
 
+        #endregion
+
+        #region Constructor
         public Cart(List<CartItem> shoppingCart, AdmonBD db, int userId)
         {
             InitializeComponent();
@@ -29,7 +36,9 @@ namespace WinFormsProyectoFinal
             LoadCart();
             ActualizarTotal();
         }
+        #endregion
 
+        #region ListView Config
         private void configListView()
         {
             // Limpiar cualquier configuración previa
@@ -62,8 +71,6 @@ namespace WinFormsProyectoFinal
             // Agregar la fila del total
             cartListView.Items.Add(totalItem);
         }
-
-
         private void LoadCart()
         {
             foreach (var item in cartItems)
@@ -75,36 +82,44 @@ namespace WinFormsProyectoFinal
             }
         }
 
+        #endregion
+
+        #region Button Buy
         private void button1_Click(object sender, EventArgs e)
         {
+            decimal total = cartItems.Sum(item => item.Price * item.Quantity);
+
             try
             {
-                decimal total = cartItems.Sum(item => item.Price * item.Quantity);
+                foreach (var item in cartItems)
+                {
+                    string updateQuery = "UPDATE consolesplay SET existencias = existencias - @cantidad WHERE nombre = @nombre";
+                    using (var cmd = new MySqlCommand(updateQuery, db.GetConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@cantidad", item.Quantity);
+                        cmd.Parameters.AddWithValue("@nombre", item.Name);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
 
-                string query = "UPDATE usuarios SET monto = monto + @total WHERE id = @userId";
-                using (var cmd = new MySqlCommand(query, db.GetConnection()))
+                string userUpdateQuery = "UPDATE usuarios SET monto = monto + @total WHERE id = @userId";
+                using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
                 {
                     cmd.Parameters.AddWithValue("@total", total);
                     cmd.Parameters.AddWithValue("@userId", currentUserId);
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Purchase completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        cartItems.Clear(); // Limpiar carrito después del pago
-                        this.Close(); // Cierra el formulario del carrito
-                    }
-                    else
-                    {
-                        MessageBox.Show("Could not update the user's amount. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    cmd.ExecuteNonQuery();
                 }
+
+                MessageBox.Show("Compra realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                cartItems.Clear(); // Limpiar el carrito
+                this.Close(); // Cerrar el formulario del carrito
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while processing the purchase: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error durante la compra: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        #endregion
     }
 }

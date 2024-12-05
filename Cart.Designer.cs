@@ -30,9 +30,6 @@
         {
             button1 = new Button();
             cartListView = new ListView();
-            Product = new ColumnHeader();
-            Price = new ColumnHeader();
-            Quantity = new ColumnHeader();
             SuspendLayout();
             // 
             // button1
@@ -47,26 +44,12 @@
             // 
             // cartListView
             // 
-            cartListView.Columns.AddRange(new ColumnHeader[] { Product, Price, Quantity });
             cartListView.Location = new Point(269, 81);
             cartListView.Name = "cartListView";
             cartListView.Size = new Size(483, 322);
             cartListView.TabIndex = 1;
             cartListView.UseCompatibleStateImageBehavior = false;
             cartListView.View = View.Details;
-            // 
-            // Product
-            // 
-            Product.Text = "Product";
-            // 
-            // Price
-            // 
-            Price.Text = "Price";
-            Price.TextAlign = HorizontalAlignment.Center;
-            // 
-            // Quantity
-            // 
-            Quantity.Text = "Quantity";
             // 
             // Cart
             // 
@@ -85,8 +68,5 @@
 
         private Button button1;
         private ListView cartListView;
-        private ColumnHeader Product;
-        private ColumnHeader Price;
-        private ColumnHeader Quantity;
     }
 }

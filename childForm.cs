@@ -17,15 +17,23 @@ namespace WinFormsProyectoFinal
 {
     public partial class childForm : Form
     {
-        AdmonBD adminBD = new AdmonBD();// Crea una instancia de AdmonBD
-        
+        #region Variables locales privadas
+
+        private AdmonBD adminBD = new AdmonBD();
 
         private List<CartItem> shoppingCart = new List<CartItem>();
+
+        private List<Producto> productos = new List<Producto>();
+
         private string usuario;
+
         private int userId;
-        private string rol; // Cambia esto según el rol del usuario (ej. "admin" o "user").
 
+        private string rol;
 
+        #endregion
+
+        #region Constructor
         public childForm(string rol, string usuario)
         {
             InitializeComponent();
@@ -33,9 +41,9 @@ namespace WinFormsProyectoFinal
             this.usuario = usuario;
             this.cargar_imagenes();
             this.initializeImageSwitcher();
+            this.AsignarEventosCompra();
         }
-
-        
+        #endregion
 
         #region ImageSwitcher
 
@@ -77,17 +85,11 @@ namespace WinFormsProyectoFinal
 
         #endregion
 
+        #region Load All
         private void cargar_imagenes()
         {
-            adminBD.Connect(); // Establece la conexión con la base de datos
+            adminBD.Connect();
             List<Producto> productos = new List<Producto>();
-
-            if (btnBuy1 != null)
-            {
-                btnBuy1.Tag = productos; // Guardar el producto en el Tag del botón
-                btnBuy1.Click += BtnBuy_Click; // Asignar el mismo evento a todos los botones
-                btnBuy1.Visible = rol != "admin"; // Ocultar el botón si el usuario es admin
-            }
 
             try
             {
@@ -155,28 +157,27 @@ namespace WinFormsProyectoFinal
                         Button? btnBuy = panel.Controls.Find($"btnBuy{i + 1}", true).FirstOrDefault() as Button;
                         if (btnBuy != null)
                         {
-                            btnBuy.Tag = producto; // Asignar el producto al Tag del botón
-                            btnBuy.Click += BtnBuy_Click; // Asignar el evento
-                            btnBuy.Visible = rol != "admin"; // Ocultar el botón si el usuario es admin
+                            btnBuy.Tag = producto;
+                            btnBuy.Click += BtnBuy_Click;
+                            btnBuy.Visible = rol != "admin";
                         }
                     }
                 }
                 else
                 {
-                    // Ocultar paneles no utilizados
-                    if (panel != null)
+                    if (panel != null) // Hide unused panels
                     {
                         panel.Visible = false;
                     }
                 }
             }
         }
-
+        #endregion
 
         #region Buton Buy Options
         private void BtnBuy_Click(object sender, EventArgs e)
         {
-            Button btnBuy = sender as Button;
+            Button? btnBuy = sender as Button;
             if (btnBuy?.Tag is Producto producto) // Recuperar el producto desde el Tag
             {
                 if (producto.Existencias <= 0)
@@ -200,10 +201,66 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"{producto.Nombre} added to the cart successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void AsignarEventosCompra()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Button? button = this.Controls.Find($"btnBuy{i}", true).FirstOrDefault() as Button;
+                if (button != null)
+                {
+                    button.Click -= AgregarAlCarrito; // Quitar cualquier suscripción previa
+                    button.Click += AgregarAlCarrito; // Agregar el evento una sola vez
+                }
+            }
+        }
+
+        private void AgregarAlCarrito(object sender, EventArgs e)
+        {
+            Button? clickedButton = sender as Button;
+
+            if (clickedButton == null)
+                return;
+
+            int indice = int.Parse(clickedButton.Name.Replace("btnBuy", "")) - 1;
+
+            if (indice < 0 || indice >= productos.Count)
+                return;
+
+            Producto productoSeleccionado = productos[indice];
+
+            if (productoSeleccionado.Existencias <= 0)
+            {
+                MessageBox.Show("There is no stock available for this product.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            shoppingCart.Add(new CartItem
+            {
+                Name = productoSeleccionado.Nombre,
+                Price = productoSeleccionado.Precio,
+                Quantity = 1,
+                Image = productoSeleccionado.Imagen
+            });
+
+            productoSeleccionado.Existencias--; // Reducir las existencias locales
+
+            MessageBox.Show("Product successfully added to cart.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            userId = adminBD.ObtenerId(usuario);
+            Cart cartForm = new Cart(shoppingCart, adminBD, userId);
+            cartForm.ShowDialog();
+        }
         #endregion
 
-
         #region Inutiles por ahora
+        private void btnBuy1_Click(object sender, EventArgs e)
+        {
+
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -260,11 +317,5 @@ namespace WinFormsProyectoFinal
         }
 
         #endregion
-        private void btnCart_Click(object sender, EventArgs e)
-        {
-            userId = adminBD.ObtenerId(usuario);
-            Cart cartForm = new Cart(shoppingCart, adminBD, userId);
-            cartForm.ShowDialog();
-        }
     }
 }
