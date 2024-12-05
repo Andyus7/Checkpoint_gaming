@@ -21,7 +21,7 @@ namespace WinFormsProyectoFinal
 
         private AdmonBD adminBD = new AdmonBD();
 
-        private List<CartItem> shoppingCart;
+        private List<CartItem> shoppingCart = new List<CartItem>();
 
         private List<Producto> productos = new List<Producto>();
 
@@ -34,12 +34,11 @@ namespace WinFormsProyectoFinal
         #endregion
 
         #region Constructor
-        public childForm(List<CartItem> shoppingCart, string rol, string usuario)
+        public childForm(string rol, string usuario)
         {
             InitializeComponent();
             this.rol = rol;
-            this.usuario = usuario; 
-            this.shoppingCart = shoppingCart;
+            this.usuario = usuario;
             this.cargar_imagenes();
             this.initializeImageSwitcher();
             this.AsignarEventosCompra();

@@ -6,10 +6,10 @@ namespace WinFormsProyectoFinal
     public partial class MenuForm : Form
     {
         #region Variables locales Privadas
-        //Everything to load child forms
+        //Todo para cargar formularios hijos
         private Form? acitveForm = null;
 
-        public List<CartItem> shoppingCart { get; private set; } = new List<CartItem>();
+        private List<CartItem> shoppingCart = new List<CartItem>();
 
         private AdmonBD db;
 
@@ -75,9 +75,12 @@ namespace WinFormsProyectoFinal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new childForm(this.shoppingCart,rol,usuario));
+            openChildForm(new childForm(rol,usuario));
             hideSubmenu();
         }
+
+
+
         #endregion
 
         #region Hora
