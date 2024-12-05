@@ -11,26 +11,31 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using WinFormsProyectoFinal.Models;
+using Org.BouncyCastle.Asn1.Cmp;
 
 namespace WinFormsProyectoFinal
 {
     public partial class childForm : Form
     {
-
-        AdmonBD adminBD = new AdmonBD(); // Crea una instancia de AdmonBD
+        AdmonBD adminBD = new AdmonBD();// Crea una instancia de AdmonBD
+        
 
         private List<CartItem> shoppingCart = new List<CartItem>();
-        private int currentUserId;
+        private string usuario;
+        private int userId;
         private string rol; // Cambia esto según el rol del usuario (ej. "admin" o "user").
 
 
-        public childForm(string rol)
+        public childForm(string rol, string usuario)
         {
             InitializeComponent();
-            this.rol = rol; 
+            this.rol = rol;
+            this.usuario = usuario;
             this.cargar_imagenes();
             this.initializeImageSwitcher();
         }
+
+        
 
         #region ImageSwitcher
 
@@ -74,7 +79,6 @@ namespace WinFormsProyectoFinal
 
         private void cargar_imagenes()
         {
-            
             adminBD.Connect(); // Establece la conexión con la base de datos
             List<Producto> productos = new List<Producto>();
 
@@ -169,6 +173,7 @@ namespace WinFormsProyectoFinal
         }
 
 
+        #region Buton Buy Options
         private void BtnBuy_Click(object sender, EventArgs e)
         {
             Button btnBuy = sender as Button;
@@ -195,6 +200,7 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"{producto.Nombre} added to the cart successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        #endregion
 
 
         #region Inutiles por ahora
@@ -256,7 +262,8 @@ namespace WinFormsProyectoFinal
         #endregion
         private void btnCart_Click(object sender, EventArgs e)
         {
-            Cart cartForm = new Cart(shoppingCart, adminBD, currentUserId);
+            userId = adminBD.ObtenerId(usuario);
+            Cart cartForm = new Cart(shoppingCart, adminBD, userId);
             cartForm.ShowDialog();
         }
     }

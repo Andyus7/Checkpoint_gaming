@@ -75,7 +75,7 @@ namespace WinFormsProyectoFinal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new childForm(rol));
+            openChildForm(new childForm(rol,usuario));
             hideSubmenu();
         }
 

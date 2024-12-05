@@ -75,6 +75,24 @@ namespace WinFormsProyectoFinal
             }
         }
 
+        public int ObtenerId(string idUsuario)
+        {
+            try
+            {
+                string query = "SELECT id FROM usuarios WHERE id = @idUsuario";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                object result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : -1; // Devuelve -1 si no encuentra el usuario.
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener el ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1; // -1 indica un error al obtener el ID.
+            }
+        }
+
         public string ObtenerNombre(string idUsuario)
         {
             try
