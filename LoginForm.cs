@@ -13,13 +13,21 @@ namespace WinFormsProyectoFinal
 {
     public partial class LogInForm : Form
     {
+        #region Variables locales privadas
+
         private AdmonBD adminBD;
+
+        #endregion
+
+        #region Constructor
         public LogInForm()
         {
             InitializeComponent();
             adminBD = new AdmonBD();
         }
+        #endregion
 
+        #region Button Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string usuario = txtBoxName.Text;
@@ -43,12 +51,15 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        #endregion
 
+        #region Timer Config
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.label4.Text = DateTime.Now.ToString("hh:mm:ss");
             this.label5.Text = DateTime.Now.ToLongDateString();
         }
+        #endregion
 
         #region Inutil Por ahora
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -13,12 +13,15 @@ namespace WinFormsProyectoFinal
 {
     public partial class ProductList : Form
     {
+        #region Constructor
         public ProductList()
         {
             InitializeComponent();
             LoadProducts();
         }
+        #endregion
 
+        #region DataGridView load
         private void LoadProducts()
         {
             dataGridViewProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Ajusta todas las columnas al contenido
@@ -34,11 +37,7 @@ namespace WinFormsProyectoFinal
                     {
                         DataTable table = new DataTable();
                         adapter.Fill(table);
-                        dataGridViewProducts.DataSource = table; // Asignar datos al DataGridView
-
-                        //dataGridViewProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                            
-                        //dataGridViewProducts.AutoResizeColumns();
+                        dataGridViewProducts.DataSource = table; 
                     }
                 }
 
@@ -48,10 +47,13 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("Error loading products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Button Refresh
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadProducts();
         }
+        #endregion
     }
 }

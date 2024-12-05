@@ -13,17 +13,15 @@ namespace WinFormsProyectoFinal
 {
     public partial class SalesConsultation : Form
     {
+        #region Constructor
         public SalesConsultation()
         {
             InitializeComponent();
             LoadSalesData();
         }
+        #endregion
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        #region Data Grid View Config
         private void LoadSalesData()
         {
             dataGridViewSales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Ajusta todas las columnas al contenido
@@ -72,11 +70,20 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("Error loading sales data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-
+        #region Button Refresh
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadSalesData();
         }
+        #endregion
+
+        #region Inutil por ahora
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
