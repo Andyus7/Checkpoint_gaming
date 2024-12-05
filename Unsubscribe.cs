@@ -36,7 +36,7 @@ namespace WinFormsProyectoFinal
                 // Consulta para obtener los datos del producto
                 string query = "SELECT * FROM consolesplay WHERE id = @id";
 
-                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection(db.GetConnection())))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
 
@@ -93,7 +93,7 @@ namespace WinFormsProyectoFinal
                     // Eliminar completamente el producto
                     string queryDelete = "DELETE FROM consolesplay WHERE id = @id";
 
-                    using (MySqlCommand cmd = new MySqlCommand(queryDelete, db.GetConnection()))
+                    using (MySqlCommand cmd = new MySqlCommand(queryDelete, db.GetConnection(db.GetConnection())))
                     {
                         cmd.Parameters.AddWithValue("@id", id);
                         cmd.ExecuteNonQuery();
@@ -110,7 +110,7 @@ namespace WinFormsProyectoFinal
                     {
                         string queryUpdate = "UPDATE consolesplay SET Existencias = Existencias - @reduceQuantity WHERE id = @id AND existencias >= @reduceQuantity";
 
-                        using (MySqlCommand cmd = new MySqlCommand(queryUpdate, db.GetConnection()))
+                        using (MySqlCommand cmd = new MySqlCommand(queryUpdate, db.GetConnection(db.GetConnection())))
                         {
                             cmd.Parameters.AddWithValue("@id", id);
                             cmd.Parameters.AddWithValue("@reduceQuantity", reduceQuantity);

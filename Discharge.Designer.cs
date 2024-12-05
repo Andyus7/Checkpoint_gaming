@@ -39,6 +39,7 @@
             txtBoxName = new TextBox();
             txtBoxId = new TextBox();
             bindingSource1 = new BindingSource(components);
+            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
@@ -164,6 +165,13 @@
             txtBoxId.TabIndex = 1;
             txtBoxId.TextAlign = HorizontalAlignment.Center;
             // 
+            // mySqlCommand1
+            // 
+            mySqlCommand1.CacheAge = 0;
+            mySqlCommand1.Connection = null;
+            mySqlCommand1.EnableCaching = false;
+            mySqlCommand1.Transaction = null;
+            // 
             // DischargeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -190,5 +198,6 @@
         private TextBox txtBoxId;
         private Button btnDischarge;
         private BindingSource bindingSource1;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }

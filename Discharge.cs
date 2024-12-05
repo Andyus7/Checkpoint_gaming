@@ -60,7 +60,7 @@ namespace WinFormsProyectoFinal
                                "VALUES (@id, @name, @description, @price, @stocks, @imageName)";
 
                 // Ejecutar la consulta con parámetros
-                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection(db.GetConnection())))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@name", name);

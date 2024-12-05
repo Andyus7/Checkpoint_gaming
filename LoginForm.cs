@@ -44,6 +44,13 @@ namespace WinFormsProyectoFinal
             }
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.label4.Text = DateTime.Now.ToString("hh:mm:ss");
+            this.label5.Text = DateTime.Now.ToLongDateString();
+        }
+
+        #region Inutil Por ahora
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -59,10 +66,7 @@ namespace WinFormsProyectoFinal
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            this.label4.Text = DateTime.Now.ToString("hh:mm:ss");
-            this.label5.Text = DateTime.Now.ToLongDateString();
-        }
+        #endregion
+
     }
 }

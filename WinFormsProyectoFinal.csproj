@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.1.0" />
+    <PackageReference Include="ScottPlot" Version="5.0.47" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,6 +62,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Images\Playstation6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Playstation7.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
