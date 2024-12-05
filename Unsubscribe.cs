@@ -14,11 +14,14 @@ namespace WinFormsProyectoFinal
 {
     public partial class Unsubscribe : Form
     {
+        #region Constructor
         public Unsubscribe()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Button search
         private void button1_Click(object sender, EventArgs e)
         {
             AdmonBD db = new AdmonBD();
@@ -50,7 +53,7 @@ namespace WinFormsProyectoFinal
                             lblPrice.Text = "Price: $" + reader["precio"].ToString();
                             lblStocks.Text = "Stocks: " + reader["existencias"].ToString();
 
-                            string imageName = reader["imagen"].ToString();
+                            string? imageName = reader["imagen"].ToString();
                             pictureBoxProduct.Image = System.Drawing.Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", imageName));
 
                             // Mostrar botón de eliminar
@@ -68,9 +71,9 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("Error while fetching the product: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-        // Evento del botón Eliminar
-        
+        #region Button Delete
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             AdmonBD db = new AdmonBD();
@@ -141,5 +144,6 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("Error while deleting/reducing stocks: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
     }
 }

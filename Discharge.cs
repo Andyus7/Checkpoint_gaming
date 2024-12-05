@@ -13,17 +13,14 @@ namespace WinFormsProyectoFinal
 {
     public partial class DischargeForm : Form
     {
+        #region Constructor
         public DischargeForm()
         {
             InitializeComponent();
         }
-        
+        #endregion
 
-        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        #region Btn Discharge Config
         private void btnDischarge_Click(object sender, EventArgs e)
         {
             AdmonBD db = new AdmonBD();
@@ -83,5 +80,13 @@ namespace WinFormsProyectoFinal
             }
 
         }
+        #endregion
+
+        #region Inutil por ahora
+        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\rama_osvaldo\\checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\rama_osvaldo\\checkpoint_gaming\\unsubscribe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:unsubscribe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\rama_osvaldo\\checkpoint_gaming\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\salesconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:salesconsultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\rama_osvaldo\\checkpoint_gaming\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\discharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:discharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\rama_osvaldo\\checkpoint_gaming\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +50,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "childForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\childForm.cs",
-              "RelativeDocumentMoniker": "childForm.cs",
-              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\childForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "childForm.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "Unsubscribe.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Unsubscribe.cs",
+              "RelativeDocumentMoniker": "Unsubscribe.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Unsubscribe.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Unsubscribe.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T00:52:10.651Z",
+              "WhenOpened": "2024-12-05T04:45:53.176Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MenuForm.cs",
-              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\MenuForm.cs",
-              "RelativeDocumentMoniker": "MenuForm.cs",
-              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\MenuForm.cs",
-              "RelativeToolTip": "MenuForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
+              "Title": "SalesConsultation.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\SalesConsultation.cs",
+              "RelativeDocumentMoniker": "SalesConsultation.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\SalesConsultation.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SalesConsultation.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T00:50:02.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T04:45:52.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "childForm.cs",
-              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\childForm.cs",
-              "RelativeDocumentMoniker": "childForm.cs",
-              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\childForm.cs",
-              "RelativeToolTip": "childForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAABAAASAAAA",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:53:15.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T04:45:49.599Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ProductList.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\ProductList.cs",
+              "RelativeDocumentMoniker": "ProductList.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\ProductList.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProductList.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T04:45:48.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MenuForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\MenuForm.cs",
               "RelativeDocumentMoniker": "MenuForm.cs",
               "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\MenuForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "MenuForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:27:16.582Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-05T04:45:48.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\LoginForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "LoginForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T04:45:47.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Discharge.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Discharge.cs",
+              "RelativeDocumentMoniker": "Discharge.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Discharge.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Discharge.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T04:45:45.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "childForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\childForm.cs",
+              "RelativeDocumentMoniker": "childForm.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\childForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "childForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T04:45:45.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Cart.cs",
+              "RelativeDocumentMoniker": "Cart.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Cart.cs",
+              "RelativeToolTip": "Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T04:42:11.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cart.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Cart.cs",
+              "RelativeDocumentMoniker": "Cart.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\Cart.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Cart.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T04:39:45.447Z"
             }
           ]
         }
