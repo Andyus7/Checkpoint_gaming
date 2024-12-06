@@ -57,6 +57,11 @@
             "ScottPlot": {
               "target": "Package",
               "version": "[5.0.47, )"
+            },
+            "iTextSharp.LGPLv2.Core": {
+              "target": "Package",
+              "version": "[3.4.24, )",
+              "generatePathProperty": true
             }
           },
           "imports": [

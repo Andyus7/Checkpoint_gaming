@@ -175,6 +175,7 @@ namespace WinFormsProyectoFinal
         #region Cart
         private void button1_Click_2(object sender, EventArgs e)
         {
+            currentUserId = adminBD.ObtenerId(usuario);
             openChildForm(new Cart(shoppingCart,adminBD,currentUserId));
             hideSubmenu();
         }

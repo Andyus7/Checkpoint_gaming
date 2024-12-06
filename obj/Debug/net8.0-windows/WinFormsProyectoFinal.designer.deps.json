@@ -6,11 +6,11 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "BouncyCastle.Cryptography/2.3.1": {
+      "BouncyCastle.Cryptography/2.5.0": {
         "runtime": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.3.1.17862"
+            "fileVersion": "2.5.0.6119"
           }
         }
       },
@@ -89,6 +89,19 @@
           }
         }
       },
+      "iTextSharp.LGPLv2.Core/3.4.24": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.5.0",
+          "SkiaSharp": "2.88.9",
+          "System.Text.Encoding.CodePages": "9.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/iTextSharp.LGPLv2.Core.dll": {
+            "assemblyVersion": "3.4.24.0",
+            "fileVersion": "3.4.24.0"
+          }
+        }
+      },
       "K4os.Compression.LZ4/1.3.8": {
         "runtime": {
           "lib/net6.0/K4os.Compression.LZ4.dll": {
@@ -122,7 +135,7 @@
       "Microsoft.NETCore.Targets/1.1.0": {},
       "MySql.Data/9.1.0": {
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.3.1",
+          "BouncyCastle.Cryptography": "2.5.0",
           "Google.Protobuf": "3.26.1",
           "K4os.Compression.LZ4.Streams": "1.3.8",
           "System.Buffers": "4.5.1",
@@ -131,7 +144,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Runtime.Loader": "4.3.0",
           "System.Security.Permissions": "8.0.0",
-          "System.Text.Encoding.CodePages": "8.0.0",
+          "System.Text.Encoding.CodePages": "9.0.0",
           "System.Text.Json": "8.0.4",
           "System.Threading.Tasks.Extensions": "4.5.4",
           "ZstdSharp.Port": "0.8.0"
@@ -392,19 +405,19 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Text.Encoding.CodePages/8.0.0": {
+      "System.Text.Encoding.CodePages/9.0.0": {
         "runtime": {
           "lib/net8.0/System.Text.Encoding.CodePages.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         },
         "runtimeTargets": {
           "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         }
       },
@@ -470,12 +483,12 @@
     }
   },
   "libraries": {
-    "BouncyCastle.Cryptography/2.3.1": {
+    "BouncyCastle.Cryptography/2.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-buwoISwecYke3CmgG1AQSg+sNZjJeIb93vTAtJiHZX35hP/teYMxsfg0NDXGUKjGx6BKBTNKc77O2M3vKvlXZQ==",
-      "path": "bouncycastle.cryptography/2.3.1",
-      "hashPath": "bouncycastle.cryptography.2.3.1.nupkg.sha512"
+      "sha512": "sha512-rc7vRCq/KD3GtIwSgRtjanGaBwTb9nLenFDZnEcauWlssuuEoxcbMfWA3QWWho6QDMSOSkWjs657McdHzEtEcw==",
+      "path": "bouncycastle.cryptography/2.5.0",
+      "hashPath": "bouncycastle.cryptography.2.5.0.nupkg.sha512"
     },
     "Google.Protobuf/3.26.1": {
       "type": "package",
@@ -511,6 +524,13 @@
       "sha512": "sha512-RPxRXD16KtSs8Yxr2RK9Qs7AwyN9MlpqZIYs0AvfaJwl7RAtVhC0+u2f2SKwX0uMYYd3O98Z+OBA1sj6aWVKQA==",
       "path": "harfbuzzsharp.nativeassets.win32/7.3.0.3",
       "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512"
+    },
+    "iTextSharp.LGPLv2.Core/3.4.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rb2jsP6Hc4A6OwmW5+mjb24COorlfKi8FEb6PV4D/7vivEFwwz26T0rrDzp0KZP/AQRxgfFbC1jI82/BQXWhtQ==",
+      "path": "itextsharp.lgplv2.core/3.4.24",
+      "hashPath": "itextsharp.lgplv2.core.3.4.24.nupkg.sha512"
     },
     "K4os.Compression.LZ4/1.3.8": {
       "type": "package",
@@ -694,12 +714,12 @@
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
     },
-    "System.Text.Encoding.CodePages/8.0.0": {
+    "System.Text.Encoding.CodePages/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OZIsVplFGaVY90G2SbpgU7EnCoOO5pw1t4ic21dBF3/1omrJFpAGoNAVpPyMVOC90/hvgkGG3VFqR13YgZMQfg==",
-      "path": "system.text.encoding.codepages/8.0.0",
-      "hashPath": "system.text.encoding.codepages.8.0.0.nupkg.sha512"
+      "sha512": "sha512-GxJTSFPQpoVd0vQRgq8hwesicxgZoHTbYMvR/UMM4IzhkHMT+ebZE11c2C1gUyxz55zWtGCWktMTHvmgLzob9g==",
+      "path": "system.text.encoding.codepages/9.0.0",
+      "hashPath": "system.text.encoding.codepages.9.0.0.nupkg.sha512"
     },
     "System.Text.Encodings.Web/8.0.0": {
       "type": "package",

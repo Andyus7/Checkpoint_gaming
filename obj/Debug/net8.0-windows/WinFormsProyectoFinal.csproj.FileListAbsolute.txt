@@ -247,3 +247,7 @@ C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows
 C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.ProductList.resources
 C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.SalesConsultation.resources
 C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.Unsubscribe.resources
+C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.creditCard.resources
+C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\bin\Debug\net8.0-windows\iTextSharp.LGPLv2.Core.dll
+C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\bin\Debug\net8.0-windows\System.Text.Encoding.CodePages.dll
+C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Text.Encoding.CodePages.dll
