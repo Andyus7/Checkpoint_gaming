@@ -2159,11 +2159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\WinFormsProyectoFinal.csproj",
+      "projectUniqueName": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\WinFormsProyectoFinal.csproj",
       "projectName": "WinFormsProyectoFinal",
-      "projectPath": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\WinFormsProyectoFinal.csproj",
+      "projectPath": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\WinFormsProyectoFinal.csproj",
       "packagesPath": "C:\\Users\\pache\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pache\\source\\repos\\Proyectos\\rama_Osvaldo\\Checkpoint_gaming\\obj\\",
+      "outputPath": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
