@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\pache\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgiTextSharp_LGPLv2_Core Condition=" '$(PkgiTextSharp_LGPLv2_Core)' == '' ">C:\Users\pache\.nuget\packages\itextsharp.lgplv2.core\3.4.24</PkgiTextSharp_LGPLv2_Core>
+  </PropertyGroup>
 </Project>

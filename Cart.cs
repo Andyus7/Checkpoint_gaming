@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +21,7 @@ namespace WinFormsProyectoFinal
 
         private List<CartItem> cartItems;
 
-        private AdmonBD db;
+        private AdmonBD db = new AdmonBD();
 
         private int currentUserId;
 
@@ -34,9 +36,58 @@ namespace WinFormsProyectoFinal
             this.currentUserId = userId;
             configListView();
             LoadCart();
-            ActualizarTotal();
         }
         #endregion
+
+        #region Button Buy
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProcessPayment("Efectivo");
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var creditCardForm = new creditCard();
+            creditCardForm.PaymentCompleted += method => ProcessPayment(method);
+            creditCardForm.ShowDialog(); // Show as pop-up window
+        }
+        private void ProcessPayment(string paymentMethod)
+        {
+            decimal total = cartItems.Sum(item => item.Price * item.Quantity);
+            int totalEntero = Convert.ToInt32(total);
+
+            try
+            {
+                foreach (var item in cartItems)
+                {
+                    string updateQuery = "UPDATE consolesplay SET Existencias = Existencias - @cantidad WHERE nombre = @nombre";
+                    using (var cmd = new MySqlCommand(updateQuery, db.GetConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@cantidad", item.Quantity);
+                        cmd.Parameters.AddWithValue("@nombre", item.Name);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @total WHERE id = @userId";
+                using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@total", total);
+                    cmd.Parameters.AddWithValue("@userId", currentUserId);
+                    cmd.ExecuteNonQuery();
+                }
+
+                shoppingCartUtils.GeneratePDF(cartItems,paymentMethod, currentUserId ,totalEntero,db);
+
+                MessageBox.Show("Successful purchase.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cartItems.Clear(); //Clean cart
+                LoadCart(); //Refresh the cart 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error during purchase: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion   
 
         #region ListView Config
         private void configListView()
@@ -66,13 +117,16 @@ namespace WinFormsProyectoFinal
             totalItem.SubItems.Add(""); // Columna vacía
             totalItem.SubItems.Add($"${total:F2}"); // Mostrar el total en la última columna
             totalItem.BackColor = Color.LightGray; // Resaltar la fila del total
-            totalItem.Font = new Font(cartListView.Font, FontStyle.Bold); // Negrita
+            totalItem.Font = new System.Drawing.Font(cartListView.Font, FontStyle.Bold);//Bold 
+
 
             // Agregar la fila del total
             cartListView.Items.Add(totalItem);
         }
         private void LoadCart()
         {
+            cartListView.Items.Clear();
+
             foreach (var item in cartItems)
             {
                 ListViewItem listItem = new ListViewItem(item.Name);
@@ -80,45 +134,17 @@ namespace WinFormsProyectoFinal
                 listItem.SubItems.Add(item.Quantity.ToString());
                 cartListView.Items.Add(listItem);
             }
+
+            ActualizarTotal();
+
         }
 
         #endregion
 
-        #region Button Buy
-        private void button1_Click(object sender, EventArgs e)
+        #region Inutil por ahora
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            decimal total = cartItems.Sum(item => item.Price * item.Quantity);
 
-            try
-            {
-                foreach (var item in cartItems)
-                {
-                    string updateQuery = "UPDATE consolesplay SET existencias = existencias - @cantidad WHERE nombre = @nombre";
-                    using (var cmd = new MySqlCommand(updateQuery, db.GetConnection()))
-                    {
-                        cmd.Parameters.AddWithValue("@cantidad", item.Quantity);
-                        cmd.Parameters.AddWithValue("@nombre", item.Name);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-
-                string userUpdateQuery = "UPDATE usuarios SET monto = monto + @total WHERE id = @userId";
-                using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
-                {
-                    cmd.Parameters.AddWithValue("@total", total);
-                    cmd.Parameters.AddWithValue("@userId", currentUserId);
-                    cmd.ExecuteNonQuery();
-                }
-
-                MessageBox.Show("Compra realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                cartItems.Clear(); // Limpiar el carrito
-                this.Close(); // Cerrar el formulario del carrito
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error durante la compra: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
         #endregion
     }

@@ -20,15 +20,9 @@ namespace WinFormsProyectoFinal
         #region Variables locales privadas
 
         private AdmonBD adminBD = new AdmonBD();
-
         private List<CartItem> shoppingCart;
-
         private List<Producto> productos = new List<Producto>();
-
         private string usuario;
-
-        private int userId;
-
         private string rol;
 
         #endregion
@@ -36,13 +30,12 @@ namespace WinFormsProyectoFinal
         #region Constructor
         public childForm(List<CartItem> shoppingCart, string rol, string usuario)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            initializeImageSwitcher();
             this.rol = rol;
-            this.usuario = usuario; 
+            this.usuario = usuario;
             this.shoppingCart = shoppingCart;
-            this.cargar_imagenes();
-            this.initializeImageSwitcher();
-            this.AsignarEventosCompra();
+            this.CargarImagenes();
         }
         #endregion
 
@@ -86,55 +79,53 @@ namespace WinFormsProyectoFinal
 
         #endregion
 
-        #region Load All
-        private void cargar_imagenes()
+        #region Cargar Productos en el Panel
+        private void CargarImagenes()
         {
             adminBD.Connect();
-            List<Producto> productos = new List<Producto>();
+            productos.Clear();
 
             try
             {
                 string query = "SELECT nombre, descripcion, precio, existencias, imagen FROM consolesplay";
-                MySqlCommand cmd = new MySqlCommand(query, adminBD.GetConnection(adminBD.GetConnection()));
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                using (MySqlCommand cmd = new MySqlCommand(query, adminBD.GetConnection()))
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    productos.Add(new Producto
+                    while (reader.Read())
                     {
-                        Nombre = reader.GetString("nombre"),
-                        Descripcion = reader.GetString("descripcion"),
-                        Precio = reader.GetDecimal("precio"),
-                        Existencias = reader.GetInt32("existencias"),
-                        Imagen = reader.GetString("imagen")
-                    });
+                        productos.Add(new Producto
+                        {
+                            Nombre = reader.GetString("nombre"),
+                            Descripcion = reader.GetString("descripcion"),
+                            Precio = reader.GetDecimal("precio"),
+                            Existencias = reader.GetInt32("existencias"),
+                            Imagen = reader.GetString("imagen")
+                        });
+                    }
                 }
 
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar los productos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Mostrar los productos en los controles
-            for (int i = 0; i < 10; i++)
-            {
-                Panel? panel = this.Controls.Find($"panel{i + 1}", true).FirstOrDefault() as Panel;
-                if (i < productos.Count)
+                // Mostrar los productos en los controles
+                for (int i = 0; i < 10; i++)
                 {
-                    Producto producto = productos[i];
-                    string rutaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", producto.Imagen);
+                    Panel? panel = this.Controls.Find($"panel{i + 1}", true).FirstOrDefault() as Panel;
 
-                    if (panel != null)
+                    if (i < productos.Count && panel != null)
                     {
-                        panel.Visible = true; // Mostrar el panel si se está usando
+                        Producto producto = productos[i];
+                        string rutaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", producto.Imagen);
+
+                        panel.Visible = true; // Mostrar el panel
 
                         PictureBox? pictureBox = panel.Controls.Find($"pictureBox{i + 1}", true).FirstOrDefault() as PictureBox;
                         if (pictureBox != null && File.Exists(rutaImagen))
                         {
                             pictureBox.Image = Image.FromFile(rutaImagen);
+                            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                            pictureBox.Tag = producto; // Asignar el producto al Tag
+                            if (rol != "admin")
+                            {
+                                pictureBox.Click += AbrirDetalleProducto; // Solo asignar el evento si no es admin
+                            }
                         }
 
                         Label? labelName = panel.Controls.Find($"labelName{i + 1}", true).FirstOrDefault() as Label;
@@ -142,120 +133,33 @@ namespace WinFormsProyectoFinal
                         {
                             labelName.Text = producto.Nombre;
                         }
-
-                        Label? labelDescription = panel.Controls.Find($"labelDescription{i + 1}", true).FirstOrDefault() as Label;
-                        if (labelDescription != null)
-                        {
-                            labelDescription.Text = producto.Descripcion;
-                        }
-
-                        Label? labelPrice = panel.Controls.Find($"labelPrice{i + 1}", true).FirstOrDefault() as Label;
-                        if (labelPrice != null)
-                        {
-                            labelPrice.Text = $"$ {producto.Precio:F2}";
-                        }
-
-                        Button? btnBuy = panel.Controls.Find($"btnBuy{i + 1}", true).FirstOrDefault() as Button;
-                        if (btnBuy != null)
-                        {
-                            btnBuy.Tag = producto;
-                            btnBuy.Click += BtnBuy_Click;
-                            btnBuy.Visible = rol != "admin";
-                        }
                     }
-                }
-                else
-                {
-                    if (panel != null) // Hide unused panels
+                    else if (panel != null)
                     {
-                        panel.Visible = false;
+                        panel.Visible = false; // Ocultar paneles no utilizados
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los productos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
-        #region Buton Buy Options
-        private void BtnBuy_Click(object sender, EventArgs e)
+        #region Abrir Formulario Detalle de Producto
+        private void AbrirDetalleProducto(object sender, EventArgs e)
         {
-            Button? btnBuy = sender as Button;
-            if (btnBuy?.Tag is Producto producto) // Recuperar el producto desde el Tag
+            if (sender is PictureBox pictureBox && pictureBox.Tag is Producto producto)
             {
-                if (producto.Existencias <= 0)
+                using (ProductDetailForm detailForm = new ProductDetailForm(producto, shoppingCart,usuario))
                 {
-                    MessageBox.Show($"No stock available for {producto.Nombre}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Agregar el producto al carrito
-                shoppingCart.Add(new CartItem
-                {
-                    Name = producto.Nombre,
-                    Price = producto.Precio,
-                    Image = producto.Imagen,
-                    Quantity = 1
-                });
-
-                // Actualizar existencias del producto
-                producto.Existencias--;
-
-                MessageBox.Show($"{producto.Nombre} added to the cart successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void AsignarEventosCompra()
-        {
-            for (int i = 1; i <= 10; i++)
-            {
-                Button? button = this.Controls.Find($"btnBuy{i}", true).FirstOrDefault() as Button;
-                if (button != null)
-                {
-                    button.Click -= AgregarAlCarrito; // Quitar cualquier suscripción previa
-                    button.Click += AgregarAlCarrito; // Agregar el evento una sola vez
+                    detailForm.ShowDialog(); // Mostrar el formulario emergente
                 }
             }
-        }
-
-        private void AgregarAlCarrito(object sender, EventArgs e)
-        {
-            Button? clickedButton = sender as Button;
-
-            if (clickedButton == null)
-                return;
-
-            int indice = int.Parse(clickedButton.Name.Replace("btnBuy", "")) - 1;
-
-            if (indice < 0 || indice >= productos.Count)
-                return;
-
-            Producto productoSeleccionado = productos[indice];
-
-            if (productoSeleccionado.Existencias <= 0)
-            {
-                MessageBox.Show("There is no stock available for this product.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            shoppingCart.Add(new CartItem
-            {
-                Name = productoSeleccionado.Nombre,
-                Price = productoSeleccionado.Precio,
-                Quantity = 1,
-                Image = productoSeleccionado.Imagen
-            });
-
-            productoSeleccionado.Existencias--; // Reducir las existencias locales
-
-            MessageBox.Show("Product successfully added to cart.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnCart_Click(object sender, EventArgs e)
-        {
-            userId = adminBD.ObtenerId(usuario);
-            Cart cartForm = new Cart(shoppingCart, adminBD, userId);
-            cartForm.ShowDialog();
         }
         #endregion
+
 
         #region Inutiles por ahora
         private void btnBuy1_Click(object sender, EventArgs e)
