@@ -14,6 +14,8 @@ namespace WinFormsProyectoFinal
 {
     public partial class PaymentForm : Form
     {
+        #region Variables locales privadas
+
         private AdmonBD db = new AdmonBD();
 
         private int currentUserId;
@@ -22,6 +24,9 @@ namespace WinFormsProyectoFinal
 
         private Producto producto;
 
+        #endregion
+
+        #region Constructor
         public PaymentForm(Producto producto, string usuario)
         {
             InitializeComponent();
@@ -29,15 +34,18 @@ namespace WinFormsProyectoFinal
             this.Usuario = usuario;
             CargarDatos();
         }
+        #endregion
 
+        #region Cargar nombre y precio
         private void CargarDatos()
         {
             // Mostrar los datos del producto
             labelProducto.Text = $"Producto: {producto.Nombre}";
             labelPrecio.Text = $"Precio: ${producto.Precio:F2}";
         }
+        #endregion
 
-
+        #region Tarjeta de credito
         private void button1_Click(object sender, EventArgs e)
         {
             using (creditCard creditCardForm = new creditCard())
@@ -49,13 +57,17 @@ namespace WinFormsProyectoFinal
             ProcessPaymentForSingleProduct("Tarjeta de Crédito o Debito");
             this.Close(); // Cerrar el formulario
         }
+        #endregion
 
+        #region boton regresar
         private void button2_Click(object sender, EventArgs e)
         {
             ProcessPaymentForSingleProduct("Efectivo");
             this.Close(); // Cerrar el formulario
         }
+        #endregion
 
+        #region Pagar
         private void ProcessPaymentForSingleProduct(string paymentMethod)
         {
             currentUserId = db.ObtenerId(Usuario);
@@ -103,8 +115,9 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"Error durante el proceso de compra: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-
+        #region Mandar llamar PDF
         private void GenerarPDFCompra(string metodoPago)
         {
             // Reutilizar lógica del carrito para generar PDF
@@ -119,5 +132,6 @@ namespace WinFormsProyectoFinal
             int total = (int)producto.Precio;
             shoppingCartUtils.GeneratePDF(new List<CartItem> {itemCompra},metodoPago,currentUserId,total,db);
         }
+        #endregion
     }
 }

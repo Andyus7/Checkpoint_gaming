@@ -87,10 +87,7 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"Error during purchase: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
-
-        //YA NO SE VA A USAR POR AHORA
-        
+        #endregion   
 
         #region ListView Config
         private void configListView()

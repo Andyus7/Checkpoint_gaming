@@ -122,7 +122,10 @@ namespace WinFormsProyectoFinal
                             pictureBox.Image = Image.FromFile(rutaImagen);
                             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                             pictureBox.Tag = producto; // Asignar el producto al Tag
-                            pictureBox.Click += AbrirDetalleProducto;
+                            if (rol != "admin")
+                            {
+                                pictureBox.Click += AbrirDetalleProducto; // Solo asignar el evento si no es admin
+                            }
                         }
 
                         Label? labelName = panel.Controls.Find($"labelName{i + 1}", true).FirstOrDefault() as Label;

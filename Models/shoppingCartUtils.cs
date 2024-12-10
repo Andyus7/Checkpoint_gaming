@@ -12,7 +12,7 @@ namespace WinFormsProyectoFinal.Models
 
     public static class shoppingCartUtils
     {
-        
+        #region Generar PDF
         public static void GeneratePDF(List<CartItem> items, string metodoPago, int currentUserId,decimal total,AdmonBD db)
         {
             string receiptDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Receipts");
@@ -59,8 +59,6 @@ namespace WinFormsProyectoFinal.Models
                 MessageBox.Show($"Error when generating the receipt: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
-
+        #endregion
     }
 }

@@ -13,6 +13,8 @@ namespace WinFormsProyectoFinal
 {
     public partial class ProductDetailForm : Form
     {
+        #region Variables locales privadas
+
         private Producto producto;
 
         private List<CartItem> shoppingCart;
@@ -21,8 +23,9 @@ namespace WinFormsProyectoFinal
 
         private AdmonBD db = new AdmonBD();
 
-        
+        #endregion
 
+        #region Constructor
         public ProductDetailForm(Producto producto, List<CartItem> shoppingCart,string usuario)
         {
             InitializeComponent();
@@ -31,7 +34,9 @@ namespace WinFormsProyectoFinal
             this.Usuario = usuario;
             CargarDatos();
         }
+        #endregion
 
+        #region Cargar Datos
         private void CargarDatos()
         {
             try
@@ -60,7 +65,9 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"Error al cargar los datos del producto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Tarjeta de credito
         private void button1_Click(object sender, EventArgs e)
         {
             if (producto.Existencias > 0)
@@ -76,7 +83,9 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("No hay existencias disponibles para realizar la compra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Añadir al carrito
         private void button2_Click(object sender, EventArgs e)
         {
             if (producto.Existencias > 0)
@@ -97,10 +106,13 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("No hay existencias disponibles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Boton Volver
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close(); // Cerrar el formulario actual
         }
+        #endregion
     }
 }
