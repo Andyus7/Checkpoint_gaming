@@ -1,12 +1,167 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\productdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:productdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\productdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:productdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\unsubscribe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:unsubscribe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|c:\\users\\pache\\source\\repos\\proyectos\\checkpoint_gaming\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B23026B-F30B-4BF7-8406-4FE8EA1D574C}|WinFormsProyectoFinal.csproj|solutionrelative:cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "creditCard.cs",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\creditCard.cs",
+              "RelativeDocumentMoniker": "creditCard.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\creditCard.cs",
+              "RelativeToolTip": "creditCard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:32:24.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "creditCard.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\creditCard.cs",
+              "RelativeDocumentMoniker": "creditCard.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\creditCard.cs [Dise\u00F1o]",
+              "RelativeToolTip": "creditCard.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:11:04.344Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductDetailForm.cs",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\ProductDetailForm.cs",
+              "RelativeDocumentMoniker": "ProductDetailForm.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\ProductDetailForm.cs",
+              "RelativeToolTip": "ProductDetailForm.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAkwHcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T19:58:06.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentForm.cs",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\PaymentForm.cs",
+              "RelativeDocumentMoniker": "PaymentForm.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\PaymentForm.cs",
+              "RelativeToolTip": "PaymentForm.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAkwC8AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:44:01.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\PaymentForm.cs",
+              "RelativeDocumentMoniker": "PaymentForm.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\PaymentForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PaymentForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:43:35.658Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\MenuForm.cs",
+              "RelativeDocumentMoniker": "MenuForm.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\MenuForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MenuForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:39:57.949Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductDetailForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\ProductDetailForm.cs",
+              "RelativeDocumentMoniker": "ProductDetailForm.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\ProductDetailForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProductDetailForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T17:41:14.636Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Unsubscribe.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\Unsubscribe.cs",
+              "RelativeDocumentMoniker": "Unsubscribe.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\Unsubscribe.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Unsubscribe.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T17:40:46.572Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cart.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\Cart.cs",
+              "RelativeDocumentMoniker": "Cart.cs",
+              "ToolTip": "C:\\Users\\pache\\source\\repos\\Proyectos\\Checkpoint_gaming\\Cart.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Cart.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T17:40:25.888Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
