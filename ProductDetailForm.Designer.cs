@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             labelStocks = new Label();
             labelPrice = new Label();
             labelDescription = new Label();
@@ -37,79 +36,62 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProcuct).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.AllowDrop = true;
-            panel1.BackColor = Color.FromArgb(19, 45, 70);
-            panel1.Controls.Add(labelStocks);
-            panel1.Controls.Add(labelPrice);
-            panel1.Controls.Add(labelDescription);
-            panel1.Controls.Add(pictureBoxProcuct);
-            panel1.Controls.Add(labelName);
-            panel1.Location = new Point(279, 44);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(242, 366);
-            panel1.TabIndex = 62;
             // 
             // labelStocks
             // 
             labelStocks.BackColor = Color.FromArgb(19, 45, 70);
             labelStocks.BorderStyle = BorderStyle.FixedSingle;
-            labelStocks.Dock = DockStyle.Top;
             labelStocks.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             labelStocks.ForeColor = Color.White;
-            labelStocks.Location = new Point(0, 335);
+            labelStocks.Location = new Point(100, 289);
             labelStocks.Margin = new Padding(0);
             labelStocks.Name = "labelStocks";
-            labelStocks.Size = new Size(242, 29);
+            labelStocks.Padding = new Padding(10, 0, 0, 0);
+            labelStocks.Size = new Size(380, 35);
             labelStocks.TabIndex = 59;
             labelStocks.Text = "1";
-            labelStocks.TextAlign = ContentAlignment.MiddleCenter;
+            labelStocks.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelPrice
             // 
             labelPrice.BackColor = Color.FromArgb(19, 45, 70);
             labelPrice.BorderStyle = BorderStyle.FixedSingle;
-            labelPrice.Dock = DockStyle.Top;
             labelPrice.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             labelPrice.ForeColor = Color.White;
-            labelPrice.Location = new Point(0, 306);
+            labelPrice.Location = new Point(100, 243);
             labelPrice.Margin = new Padding(0);
             labelPrice.Name = "labelPrice";
-            labelPrice.Size = new Size(242, 29);
+            labelPrice.Padding = new Padding(10, 0, 0, 0);
+            labelPrice.Size = new Size(380, 35);
             labelPrice.TabIndex = 58;
             labelPrice.Text = "$";
-            labelPrice.TextAlign = ContentAlignment.MiddleCenter;
+            labelPrice.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelDescription
             // 
             labelDescription.BackColor = Color.FromArgb(19, 45, 70);
             labelDescription.BorderStyle = BorderStyle.FixedSingle;
-            labelDescription.Dock = DockStyle.Top;
             labelDescription.FlatStyle = FlatStyle.Flat;
             labelDescription.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelDescription.ForeColor = Color.White;
-            labelDescription.Location = new Point(0, 256);
+            labelDescription.Location = new Point(100, 56);
             labelDescription.Margin = new Padding(0);
             labelDescription.Name = "labelDescription";
-            labelDescription.Size = new Size(242, 50);
+            labelDescription.Padding = new Padding(10);
+            labelDescription.Size = new Size(380, 177);
             labelDescription.TabIndex = 57;
             labelDescription.Text = "Label";
-            labelDescription.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBoxProcuct
             // 
-            pictureBoxProcuct.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxProcuct.BorderStyle = BorderStyle.Fixed3D;
             pictureBoxProcuct.Cursor = Cursors.Hand;
-            pictureBoxProcuct.Dock = DockStyle.Top;
-            pictureBoxProcuct.Location = new Point(0, 29);
+            pictureBoxProcuct.Location = new Point(497, 56);
             pictureBoxProcuct.Margin = new Padding(0);
             pictureBoxProcuct.Name = "pictureBoxProcuct";
-            pictureBoxProcuct.Size = new Size(242, 227);
+            pictureBoxProcuct.Size = new Size(294, 385);
             pictureBoxProcuct.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxProcuct.TabIndex = 41;
             pictureBoxProcuct.TabStop = false;
@@ -118,44 +100,53 @@
             // 
             labelName.BackColor = Color.FromArgb(19, 45, 70);
             labelName.BorderStyle = BorderStyle.FixedSingle;
-            labelName.Dock = DockStyle.Top;
             labelName.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelName.ForeColor = Color.White;
-            labelName.Location = new Point(0, 0);
+            labelName.Location = new Point(100, 9);
             labelName.Margin = new Padding(0);
             labelName.Name = "labelName";
-            labelName.Size = new Size(242, 29);
+            labelName.Size = new Size(691, 38);
             labelName.TabIndex = 39;
             labelName.Text = "Name";
             labelName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            button1.Location = new Point(55, 271);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = Properties.Resources.El_texto_del_párrafo__1_;
+            button1.Location = new Point(100, 375);
             button1.Name = "button1";
-            button1.Size = new Size(132, 29);
+            button1.Size = new Size(175, 48);
             button1.TabIndex = 60;
-            button1.Text = "Pagar Ahora";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(569, 163);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = Properties.Resources.Add_to_cart;
+            button2.Location = new Point(297, 375);
             button2.Name = "button2";
-            button2.Size = new Size(162, 48);
+            button2.Size = new Size(175, 48);
             button2.TabIndex = 63;
-            button2.Text = "Agregar al carrito";
+            button2.Text = "\r\n";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(45, 25);
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Image = Properties.Resources.FlechaC1;
+            button3.Location = new Point(0, -1);
             button3.Name = "button3";
-            button3.Size = new Size(104, 30);
+            button3.Size = new Size(84, 88);
             button3.TabIndex = 64;
-            button3.Text = "back";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -164,20 +155,23 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelName);
+            Controls.Add(labelDescription);
+            Controls.Add(labelPrice);
+            Controls.Add(labelStocks);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(panel1);
+            Controls.Add(pictureBoxProcuct);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ProductDetailForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ProductDetailForm";
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxProcuct).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel1;
         private Label labelPrice;
         private Label labelDescription;
         private PictureBox pictureBoxProcuct;

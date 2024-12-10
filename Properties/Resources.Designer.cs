@@ -63,6 +63,56 @@ namespace WinFormsProyectoFinal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_to_cart {
+            get {
+                object obj = ResourceManager.GetObject("Add_to_cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CreditCard {
+            get {
+                object obj = ResourceManager.GetObject("CreditCard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap El_texto_del_párrafo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("El texto del párrafo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FlechaC {
+            get {
+                object obj = ResourceManager.GetObject("FlechaC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FlechaC1 {
+            get {
+                object obj = ResourceManager.GetObject("FlechaC1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImageNotFound {
             get {
                 object obj = ResourceManager.GetObject("ImageNotFound", resourceCulture);
@@ -123,6 +173,16 @@ namespace WinFormsProyectoFinal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Money_F {
+            get {
+                object obj = ResourceManager.GetObject("Money_F", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Play1 {
             get {
                 object obj = ResourceManager.GetObject("Play1", resourceCulture);
@@ -136,6 +196,36 @@ namespace WinFormsProyectoFinal.Properties {
         internal static System.Drawing.Bitmap Play2 {
             get {
                 object obj = ResourceManager.GetObject("Play2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tarjetas {
+            get {
+                object obj = ResourceManager.GetObject("Tarjetas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tarjetas_Photoroom {
+            get {
+                object obj = ResourceManager.GetObject("Tarjetas-Photoroom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Visa {
+            get {
+                object obj = ResourceManager.GetObject("Visa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

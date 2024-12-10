@@ -59,7 +59,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region boton regresar
+        #region boton efectivo
         private void button2_Click(object sender, EventArgs e)
         {
             ProcessPaymentForSingleProduct("Efectivo");
@@ -106,13 +106,13 @@ namespace WinFormsProyectoFinal
         }, paymentMethod, currentUserId, totalEntero, db);
 
                 // Mostrar mensaje de éxito
-                MessageBox.Show("Compra realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successful purchase.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close(); // Cerrar el formulario actual
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error durante el proceso de compra: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error during the purchase process: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -130,7 +130,29 @@ namespace WinFormsProyectoFinal
 
             };
             int total = (int)producto.Precio;
-            shoppingCartUtils.GeneratePDF(new List<CartItem> {itemCompra},metodoPago,currentUserId,total,db);
+            shoppingCartUtils.GeneratePDF(new List<CartItem> { itemCompra }, metodoPago, currentUserId, total, db);
+        }
+        #endregion
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #region Inutil por ahora
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PaymentForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
         #endregion
     }

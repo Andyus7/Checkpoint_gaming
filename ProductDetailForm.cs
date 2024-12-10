@@ -67,20 +67,22 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Tarjeta de credito
+        #region Pagar Ahora
         private void button1_Click(object sender, EventArgs e)
         {
             if (producto.Existencias > 0)
             {
                 using (PaymentForm paymentForm = new PaymentForm(producto,Usuario))
                 {
+                    this.Close(); // Cerrar el formulario actual
                     paymentForm.ShowDialog(); // Abrir el formulario de pago
+                    
                 }
-                this.Close(); // Cerrar el formulario actual
+                
             }
             else
             {
-                MessageBox.Show("No hay existencias disponibles para realizar la compra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There is no stock available for purchase.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
