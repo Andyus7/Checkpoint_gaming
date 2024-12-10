@@ -32,7 +32,6 @@
             labelStocks = new Label();
             labelPrice = new Label();
             labelDescription = new Label();
-            btnBuy1 = new Button();
             pictureBoxProcuct = new PictureBox();
             labelName = new Label();
             button1 = new Button();
@@ -49,12 +48,11 @@
             panel1.Controls.Add(labelStocks);
             panel1.Controls.Add(labelPrice);
             panel1.Controls.Add(labelDescription);
-            panel1.Controls.Add(btnBuy1);
             panel1.Controls.Add(pictureBoxProcuct);
             panel1.Controls.Add(labelName);
             panel1.Location = new Point(279, 44);
             panel1.Name = "panel1";
-            panel1.Size = new Size(242, 402);
+            panel1.Size = new Size(242, 366);
             panel1.TabIndex = 62;
             // 
             // labelStocks
@@ -64,7 +62,7 @@
             labelStocks.Dock = DockStyle.Top;
             labelStocks.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             labelStocks.ForeColor = Color.White;
-            labelStocks.Location = new Point(0, 363);
+            labelStocks.Location = new Point(0, 335);
             labelStocks.Margin = new Padding(0);
             labelStocks.Name = "labelStocks";
             labelStocks.Size = new Size(242, 29);
@@ -79,7 +77,7 @@
             labelPrice.Dock = DockStyle.Top;
             labelPrice.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             labelPrice.ForeColor = Color.White;
-            labelPrice.Location = new Point(0, 334);
+            labelPrice.Location = new Point(0, 306);
             labelPrice.Margin = new Padding(0);
             labelPrice.Name = "labelPrice";
             labelPrice.Size = new Size(242, 29);
@@ -95,31 +93,13 @@
             labelDescription.FlatStyle = FlatStyle.Flat;
             labelDescription.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelDescription.ForeColor = Color.White;
-            labelDescription.Location = new Point(0, 284);
+            labelDescription.Location = new Point(0, 256);
             labelDescription.Margin = new Padding(0);
             labelDescription.Name = "labelDescription";
             labelDescription.Size = new Size(242, 50);
             labelDescription.TabIndex = 57;
             labelDescription.Text = "Label";
             labelDescription.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // btnBuy1
-            // 
-            btnBuy1.BackColor = Color.FromArgb(25, 30, 41);
-            btnBuy1.Cursor = Cursors.Hand;
-            btnBuy1.Dock = DockStyle.Top;
-            btnBuy1.FlatAppearance.BorderSize = 0;
-            btnBuy1.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
-            btnBuy1.FlatStyle = FlatStyle.Flat;
-            btnBuy1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBuy1.ForeColor = Color.White;
-            btnBuy1.Location = new Point(0, 256);
-            btnBuy1.Margin = new Padding(0);
-            btnBuy1.Name = "btnBuy1";
-            btnBuy1.Size = new Size(242, 28);
-            btnBuy1.TabIndex = 42;
-            btnBuy1.Text = "Agregar al carro";
-            btnBuy1.UseVisualStyleBackColor = false;
             // 
             // pictureBoxProcuct
             // 
@@ -153,19 +133,19 @@
             // 
             button1.Location = new Point(55, 271);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(132, 29);
             button1.TabIndex = 60;
-            button1.Text = "button1";
+            button1.Text = "Pagar Ahora";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(637, 163);
+            button2.Location = new Point(569, 163);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(162, 48);
             button2.TabIndex = 63;
-            button2.Text = "button2";
+            button2.Text = "Agregar al carrito";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -175,7 +155,7 @@
             button3.Name = "button3";
             button3.Size = new Size(104, 30);
             button3.TabIndex = 64;
-            button3.Text = "button3";
+            button3.Text = "back";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -200,7 +180,6 @@
         private Panel panel1;
         private Label labelPrice;
         private Label labelDescription;
-        private Button btnBuy1;
         private PictureBox pictureBoxProcuct;
         private Label labelName;
         private Label labelStocks;

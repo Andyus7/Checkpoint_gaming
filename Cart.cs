@@ -25,7 +25,6 @@ namespace WinFormsProyectoFinal
 
         private int currentUserId;
 
-
         #endregion
 
         #region Constructor
@@ -54,6 +53,7 @@ namespace WinFormsProyectoFinal
         private void ProcessPayment(string paymentMethod)
         {
             decimal total = cartItems.Sum(item => item.Price * item.Quantity);
+            int totalEntero = Convert.ToInt32(total);
 
             try
             {
@@ -76,7 +76,7 @@ namespace WinFormsProyectoFinal
                     cmd.ExecuteNonQuery();
                 }
 
-                GenerateReceipt(paymentMethod, total);
+                shoppingCartUtils.GeneratePDF(cartItems,paymentMethod, currentUserId ,totalEntero,db);
 
                 MessageBox.Show("Successful purchase.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cartItems.Clear(); //Clean cart
@@ -90,65 +90,7 @@ namespace WinFormsProyectoFinal
         #endregion
 
         //YA NO SE VA A USAR POR AHORA
-        #region Recibo PDF
-        private void GenerateReceipt(string paymentMethod, decimal total)
-        {
-            string receiptDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Receipts");
-            if (!Directory.Exists(receiptDirectory))
-            {
-                Directory.CreateDirectory(receiptDirectory);
-            }
-
-            string receiptPath = Path.Combine(receiptDirectory, $"Receipt_{DateTime.Now:yyyyMMddHHmmss}.pdf");
-            try
-            {
-                using (FileStream fs = new FileStream(receiptPath, FileMode.Create))
-                {
-                    Document doc = new Document();
-                    PdfWriter.GetInstance(doc, fs);
-
-                    doc.Open();
-                    doc.Add(new Paragraph("CHECKPOINT GAMES"));
-                    doc.Add(new Paragraph($"Nombre del cliente: {GetUserName(currentUserId)}"));
-                    doc.Add(new Paragraph($"Método de pago: {paymentMethod}"));
-                    doc.Add(new Paragraph($"Fecha: {DateTime.Now}"));
-                    doc.Add(new Paragraph("Productos comprados:"));
-
-                    foreach (var item in cartItems)
-                    {
-                        doc.Add(new Paragraph($"{item.Name} - ${item.Price} x {item.Quantity}"));
-                    }
-
-                    doc.Add(new Paragraph($"Total: ${total:F2}"));
-                    doc.Close();
-                }
-                /*In case you want to see in which path the file was created
-                if (File.Exists(receiptPath))
-                {
-                    MessageBox.Show($"Receipt successfully generated in:{receiptPath}.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("The PDF file could not be generated. Check permissions or path.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error when generating the receipt: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-        private string GetUserName(int userId)
-        {
-            string query = "SELECT nombre FROM usuarios WHERE id = @userId";
-            using (var cmd = new MySqlCommand(query, db.GetConnection()))
-            {
-                cmd.Parameters.AddWithValue("@userId", userId);
-                object result = cmd.ExecuteScalar();
-                return result?.ToString() ?? "Desconocido";
-            }
-        }
-        #endregion
+        
 
         #region ListView Config
         private void configListView()

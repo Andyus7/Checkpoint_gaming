@@ -149,7 +149,7 @@ namespace WinFormsProyectoFinal
         {
             if (sender is PictureBox pictureBox && pictureBox.Tag is Producto producto)
             {
-                using (ProductDetailForm detailForm = new ProductDetailForm(producto, shoppingCart))
+                using (ProductDetailForm detailForm = new ProductDetailForm(producto, shoppingCart,usuario))
                 {
                     detailForm.ShowDialog(); // Mostrar el formulario emergente
                 }

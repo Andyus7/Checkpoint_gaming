@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +17,16 @@ namespace WinFormsProyectoFinal
         private AdmonBD db = new AdmonBD();
 
         private int currentUserId;
-        
+
+        private string Usuario;
 
         private Producto producto;
 
-        public PaymentForm(Producto producto)
+        public PaymentForm(Producto producto, string usuario)
         {
             InitializeComponent();
             this.producto = producto;
-
+            this.Usuario = usuario;
             CargarDatos();
         }
 
@@ -44,17 +46,64 @@ namespace WinFormsProyectoFinal
             }
 
             // Validar que se completó el pago (puedes agregar lógica específica aquí)
-            GenerarPDFCompra("Tarjeta de Crédito");
-            MessageBox.Show("Compra realizada con éxito. Detalles guardados en el PDF.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ProcessPaymentForSingleProduct("Tarjeta de Crédito o Debito");
             this.Close(); // Cerrar el formulario
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GenerarPDFCompra("Efectivo");
-            MessageBox.Show("Compra realizada con éxito. Detalles guardados en el PDF.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ProcessPaymentForSingleProduct("Efectivo");
             this.Close(); // Cerrar el formulario
         }
+
+        private void ProcessPaymentForSingleProduct(string paymentMethod)
+        {
+            currentUserId = db.ObtenerId(Usuario);
+            decimal total = producto.Precio;
+            int totalEntero = Convert.ToInt32(total);
+
+            try
+            {
+                // Actualizar las existencias del producto en la base de datos
+                string updateQuery = "UPDATE consolesplay SET Existencias = Existencias - 1 WHERE nombre = @nombre";
+                using (var cmd = new MySqlCommand(updateQuery, db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", producto.Nombre);
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Actualizar el monto del usuario en la base de datos
+                string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @total WHERE id = @userId";
+                using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@total", total);
+                    cmd.Parameters.AddWithValue("@userId", currentUserId);
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Generar el PDF llamando al método existente
+                shoppingCartUtils.GeneratePDF(new List<CartItem>
+        {
+            new CartItem
+            {
+                Name = producto.Nombre,
+                Price = producto.Precio,
+                Quantity = 1,
+                Image = producto.Imagen
+            }
+        }, paymentMethod, currentUserId, totalEntero, db);
+
+                // Mostrar mensaje de éxito
+                MessageBox.Show("Compra realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close(); // Cerrar el formulario actual
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error durante el proceso de compra: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void GenerarPDFCompra(string metodoPago)
         {

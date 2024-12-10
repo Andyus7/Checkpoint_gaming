@@ -13,7 +13,7 @@ namespace WinFormsProyectoFinal.Models
     public static class shoppingCartUtils
     {
         
-        public static void GeneratePDF(List<CartItem> items, string metodoPago, int currentUserId,int total,AdmonBD db)
+        public static void GeneratePDF(List<CartItem> items, string metodoPago, int currentUserId,decimal total,AdmonBD db)
         {
             string receiptDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Receipts");
             if (!Directory.Exists(receiptDirectory))

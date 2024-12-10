@@ -14,125 +14,62 @@ namespace WinFormsProyectoFinal
 {
     public partial class chart : Form
     {
-        private AdmonBD db;
-
-        public chart(AdmonBD db)
+       
+        public chart()
         {
             InitializeComponent();
-            this.db = db;
-
-            ConfigurarGrafico();
-            CargarDatos();
+            Cargar_Grafica();
         }
 
-        private void ConfigurarGrafico()
+        private void Cargar_Grafica()
         {
-            // Crear un objeto Chart
-            Chart chart = new Chart
+            // Indicamos nuestra conexion a la base de datos
+            MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=proyecto; User=root; Password=; Sslmode=none;");
+            // Nos conectamos a nuestra base de datos
+            conexion.Open();
+
+            // Linea de comando SQL (solamente seleccionamos el monto de las cuentas que son clientes)
+            string consulta = "SELECT Nombre, Monto FROM usuarios WHERE Tipo = 1";
+            // Cargamos nuestro comando
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            // Ejecutamos nuestro comando
+            MySqlDataReader lector = comando.ExecuteReader();
+
+            // Al iniciar la grafica, se limpian los datos
+            chart_Admin.Series.Clear();
+            // Creamos nuestra serie para la grafica y la llamamos "Montos por Usuario"
+            Series serie = new Series("Montos por Usuario");
+            // Declaramos el tipo de grafico que vamos a usar, en este caso de pastel
+            serie.ChartType = SeriesChartType.Pie;
+
+            // Mientras haya algo que leer en nuestra base de datos
+            while (lector.Read())
             {
-                Name = "chartProductos",
-                Dock = DockStyle.None,
-                Width = 800,
-                Height = 400,
-                Location = new System.Drawing.Point(50, 20)
-            };
+                // Extraemos el valor Nombre de nuestra base de datos, el cual usaremos como nuestra leyenda
+                string nombre = lector["Nombre"].ToString();
+                // Extraemos el valor Monto de nuestra base de datos, el cual convertimos a double para que sea mejor trabajar con el en el grafico
+                double monto = Convert.ToDouble(lector["Monto"]);
 
-            // Crear el área del gráfico
-            ChartArea chartArea = new ChartArea
-            {
-                Name = "MainChartArea",
-                AxisX = { Title = "Productos", Interval = 1 },
-                AxisY = { Title = "Cantidad" }
-            };
-            chart.ChartAreas.Add(chartArea);
-
-            // Crear una serie para los datos
-            Series series = new Series
-            {
-                Name = "Cantidad",
-                ChartType = SeriesChartType.Column, // Barras verticales
-                XValueType = ChartValueType.String,
-                YValueType = ChartValueType.Int32
-            };
-            chart.Series.Add(series);
-
-            // Márgenes
-            chartArea.AxisX.LabelStyle.Angle = -45; // Rotar etiquetas en X si son muchas
-            chartArea.AxisX.MajorGrid.Enabled = false; // Deshabilitar líneas en el fondo
-            chartArea.AxisY.MajorGrid.Enabled = true; // Mostrar líneas del eje Y
-
-            this.Controls.Add(chart);
-
-            // Agregar un botón para refrescar debajo de la gráfica
-            Button refreshButton = new Button
-            {
-                Text = "Refrescar Gráfica",
-                Location = new System.Drawing.Point(50, 450), // Ajustar posición debajo del gráfico
-                Width = 200,
-                Height = 40
-            };
-            refreshButton.Click += (s, e) => RefrescarGrafico();
-            this.Controls.Add(refreshButton);
-        }
-
-        private void CargarDatos()
-        {
-            try
-            {
-                string query = "SELECT nombre, existencias FROM consolesplay";
-
-                using (var cmd = new MySqlCommand(query, db.GetConnection()))
-                {
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        Chart chart = this.Controls.OfType<Chart>().FirstOrDefault();
-                        if (chart == null)
-                        {
-                            throw new Exception("No se encontró ningún gráfico en el formulario.");
-                        }
-
-                        Series series = chart.Series["Cantidad"];
-                        series.Points.Clear(); // Limpiar puntos anteriores
-
-                        int maxCantidad = 0; // Para ajustar el eje Y
-                        bool datosEncontrados = false; // Verificar si hay datos
-
-                        while (reader.Read())
-                        {
-                            datosEncontrados = true;
-
-                            string producto = reader.GetString("nombre");
-                            int cantidad = reader.GetInt32("existencias");
-
-                            // Agregar datos a la gráfica
-                            series.Points.AddXY(producto, cantidad);
-
-                            // Encontrar el valor máximo
-                            if (cantidad > maxCantidad)
-                                maxCantidad = cantidad;
-                        }
-
-                        if (!datosEncontrados)
-                        {
-                            MessageBox.Show("No se encontraron datos en la base de datos.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-
-                        // Ajustar el eje Y con un margen adicional del 20%
-                        chart.ChartAreas["MainChartArea"].AxisY.Maximum = maxCantidad == 0 ? 10 : maxCantidad * 1.2;
-                    }
-                }
+                // Agregamos esta informacion a la grafica (creamos un nuevo punto para la grafica)
+                DataPoint punto = new DataPoint(0, monto);  // Al ser una grafica de pastel, no hay categorias por lo que se manda un "0"
+                punto.LegendText = nombre;  // Asignamos el nombre a la leyenda
+                serie.Points.Add(punto);    // Añadimos el punto al gráfico
             }
-            catch (Exception ex)
+
+            // Tras haber llenado nuestra serie con la informacion necesaria, la agregamos a la grafica para que esta se muestre
+            chart_Admin.Series.Add(serie);
+
+            // Mostramos la leyenda en la parte inferior
+            chart_Admin.Legends[0].Docking = Docking.Bottom;
+
+            // Quitamos los nombres (etiquetas) para que estos no se muestren sobre nuestra grafica
+            foreach (var point in serie.Points)
             {
-                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                point.IsValueShownAsLabel = false;
             }
         }
 
-        private void RefrescarGrafico()
-        {
-            CargarDatos();
-            MessageBox.Show("Gráfica actualizada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+
 
     }
 }

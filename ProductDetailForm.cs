@@ -17,12 +17,18 @@ namespace WinFormsProyectoFinal
 
         private List<CartItem> shoppingCart;
 
-        public ProductDetailForm(Producto producto, List<CartItem> shoppingCart)
+        private string Usuario;
+
+        private AdmonBD db = new AdmonBD();
+
+        
+
+        public ProductDetailForm(Producto producto, List<CartItem> shoppingCart,string usuario)
         {
             InitializeComponent();
             this.producto = producto;
             this.shoppingCart = shoppingCart;
-
+            this.Usuario = usuario;
             CargarDatos();
         }
 
@@ -59,7 +65,7 @@ namespace WinFormsProyectoFinal
         {
             if (producto.Existencias > 0)
             {
-                using (PaymentForm paymentForm = new PaymentForm(producto))
+                using (PaymentForm paymentForm = new PaymentForm(producto,Usuario))
                 {
                     paymentForm.ShowDialog(); // Abrir el formulario de pago
                 }

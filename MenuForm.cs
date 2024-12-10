@@ -158,7 +158,7 @@ namespace WinFormsProyectoFinal
         }
         private void btnGraphic_Click(object sender, EventArgs e)
         {
-            openChildForm(new chart(adminBD));
+            openChildForm(new chart());
             hideSubmenu();
         }
         #endregion
