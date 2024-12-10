@@ -89,6 +89,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
+        //YA NO SE VA A USAR POR AHORA
         #region Recibo PDF
         private void GenerateReceipt(string paymentMethod, decimal total)
         {

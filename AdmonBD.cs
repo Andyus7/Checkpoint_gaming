@@ -38,6 +38,16 @@ namespace WinFormsProyectoFinal
             }
         }
 
+        public string GetUserName(int userId, AdmonBD db)
+        {
+            string query = "SELECT nombre FROM usuarios WHERE id = @userId";
+            using (var cmd = new MySqlCommand(query, db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@userId", userId);
+                object result = cmd.ExecuteScalar();
+                return result?.ToString() ?? "Desconocido";
+            }
+        }
         public bool ValidarUsuario(string idUsuario, string password)
         {
             try

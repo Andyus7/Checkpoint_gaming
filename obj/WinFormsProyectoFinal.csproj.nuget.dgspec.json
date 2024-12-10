@@ -54,9 +54,9 @@
               "target": "Package",
               "version": "[9.1.0, )"
             },
-            "ScottPlot": {
+            "WinForms.DataVisualization": {
               "target": "Package",
-              "version": "[5.0.47, )"
+              "version": "[1.9.2, )"
             },
             "iTextSharp.LGPLv2.Core": {
               "target": "Package",

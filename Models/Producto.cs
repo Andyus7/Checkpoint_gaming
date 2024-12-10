@@ -14,5 +14,6 @@ namespace WinFormsProyectoFinal.Models
         public decimal Precio { get; set; }
         public int Existencias { get; set; }
         public string Imagen { get; set; }
+        
     }
 }
