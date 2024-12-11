@@ -40,7 +40,7 @@ namespace WinFormsProyectoFinal.Models
                     {
                         doc.Add(new Paragraph($"{item.Name} - ${item.Price} x {item.Quantity}"));
                     }
-
+                    total = ((6 * total)/100)+total;
                     doc.Add(new Paragraph($"Total: ${total:F2}"));
                     doc.Close();
                 }

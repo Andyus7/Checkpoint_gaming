@@ -101,11 +101,12 @@ namespace WinFormsProyectoFinal
                 });
 
                 producto.Existencias--;
-                MessageBox.Show($"{producto.Nombre} añadido al carrito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"{producto.Nombre} added to cart.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
-                MessageBox.Show("No hay existencias disponibles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No stock available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

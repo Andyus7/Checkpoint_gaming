@@ -28,25 +28,30 @@ namespace WinFormsProyectoFinal
             dataGridViewProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewProducts.ReadOnly = true; // Solo lectura
             AdmonBD db = new AdmonBD();
+
             try
             {
-                string query = "SELECT id, nombre, descripcion, precio, existencias, imagen FROM consolesplay";
+                // Consulta modificada para ordenar por existencias de menor a mayor
+                string query = "SELECT id, nombre, descripcion, precio, existencias, imagen FROM consolesplay ORDER BY existencias ASC";
+
                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection(db.GetConnection())))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                     {
                         DataTable table = new DataTable();
                         adapter.Fill(table);
-                        dataGridViewProducts.DataSource = table; 
+
+                        // Asignar la tabla al DataGridView
+                        dataGridViewProducts.DataSource = table;
                     }
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         #endregion
 
         #region Button Refresh

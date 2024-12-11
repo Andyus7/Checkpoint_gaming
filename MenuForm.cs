@@ -120,10 +120,13 @@ namespace WinFormsProyectoFinal
             if (rol == "admin")
             {
                 // Mostrar opciones de administrador
+                btnCart.Visible = false;
                 btnAdmin.Visible = true;
             }
             else
             {
+
+                btnCart.Visible = true;
                 btnAdmin.Visible = false;
             }
         }

@@ -31,6 +31,8 @@
             button1 = new Button();
             cartListView = new ListView();
             button2 = new Button();
+            txtProductDelete = new TextBox();
+            btnDelete = new Button();
             SuspendLayout();
             // 
             // button1
@@ -74,11 +76,36 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // txtProductDelete
+            // 
+            txtProductDelete.Location = new Point(400, 442);
+            txtProductDelete.Name = "txtProductDelete";
+            txtProductDelete.Size = new Size(236, 27);
+            txtProductDelete.TabIndex = 3;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(25, 30, 41);
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(703, 455);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(232, 63);
+            btnDelete.TabIndex = 4;
+            btnDelete.Text = "eliminate any product";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // Cart
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1639, 973);
+            Controls.Add(btnDelete);
+            Controls.Add(txtProductDelete);
             Controls.Add(button2);
             Controls.Add(cartListView);
             Controls.Add(button1);
@@ -86,6 +113,7 @@
             Name = "Cart";
             Text = "Cart";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -93,5 +121,7 @@
         private Button button1;
         private ListView cartListView;
         private Button button2;
+        private TextBox txtProductDelete;
+        private Button btnDelete;
     }
 }

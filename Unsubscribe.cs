@@ -80,6 +80,32 @@ namespace WinFormsProyectoFinal
 
             try
             {
+                int id = int.Parse(txtBoxIdToSearch.Text);
+
+                // Consultar existencias actuales
+                string queryCheckStocks = "SELECT existencias FROM consolesplay WHERE id = @id";
+                int currentStocks = 0;
+
+                using (MySqlCommand cmdCheck = new MySqlCommand(queryCheckStocks, db.GetConnection(db.GetConnection())))
+                {
+                    cmdCheck.Parameters.AddWithValue("@id", id);
+                    using (MySqlDataReader reader = cmdCheck.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            currentStocks = reader.GetInt32("existencias");
+                        }
+                    }
+                }
+
+                // Validar existencias mínimas
+                if (currentStocks < 6)
+                {
+                    MessageBox.Show("Cannot delete or reduce stocks. The product has less than 6 units available.",
+                                    "Insufficient Stocks", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Detener el proceso si las existencias son menores a 6
+                }
+
                 DialogResult result = MessageBox.Show("Do you want to delete all units of this product?\n" +
                                                       "Click 'Yes' to delete all, 'No' to reduce specific quantity.",
                                                       "Delete Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -88,8 +114,6 @@ namespace WinFormsProyectoFinal
                 {
                     return; // Cancelar operación
                 }
-
-                int id = int.Parse(txtBoxIdToSearch.Text);
 
                 if (result == DialogResult.Yes)
                 {
@@ -111,7 +135,14 @@ namespace WinFormsProyectoFinal
 
                     if (int.TryParse(input, out int reduceQuantity))
                     {
-                        string queryUpdate = "UPDATE consolesplay SET Existencias = Existencias - @reduceQuantity WHERE id = @id AND existencias >= @reduceQuantity";
+                        if (reduceQuantity > currentStocks)
+                        {
+                            MessageBox.Show("The quantity to remove exceeds current stocks.",
+                                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        string queryUpdate = "UPDATE consolesplay SET existencias = existencias - @reduceQuantity WHERE id = @id AND existencias >= @reduceQuantity";
 
                         using (MySqlCommand cmd = new MySqlCommand(queryUpdate, db.GetConnection(db.GetConnection())))
                         {
@@ -123,8 +154,8 @@ namespace WinFormsProyectoFinal
                             if (affectedRows > 0)
                             {
                                 MessageBox.Show("Stocks reduced successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                 // Actualizar label de existencias
-                                int currentStocks = int.Parse(lblStocks.Text.Split(':')[1].Trim());
                                 lblStocks.Text = "Stocks: " + (currentStocks - reduceQuantity).ToString();
                             }
                             else
@@ -144,6 +175,7 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("Error while deleting/reducing stocks: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         #endregion
     }
 }
