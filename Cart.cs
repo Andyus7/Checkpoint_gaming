@@ -76,7 +76,7 @@ namespace WinFormsProyectoFinal
                     cmd.ExecuteNonQuery();
                 }
 
-                shoppingCartUtils.GeneratePDF(cartItems,paymentMethod, currentUserId ,totalEntero,db);
+                shoppingCartUtils.GeneratePDF(cartItems, paymentMethod, currentUserId, totalEntero, db);
 
                 MessageBox.Show("Successful purchase.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cartItems.Clear(); //Clean cart
@@ -145,6 +145,38 @@ namespace WinFormsProyectoFinal
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
+        }
+        #endregion
+
+        #region Button Delete
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string productName = txtProductDelete.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                MessageBox.Show("Please enter the name of the product to remove.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var itemToRemove = cartItems.FirstOrDefault(item => item.Name.Equals(productName, StringComparison.OrdinalIgnoreCase));
+
+            if (itemToRemove != null)
+            {
+                DialogResult result = MessageBox.Show($"Are you sure you want to remove '{productName}' from your cart?",
+                                                      "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    cartItems.Remove(itemToRemove); // Remove the item from the cart
+                    MessageBox.Show($"'{productName}' has been removed from your cart.", "Item Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadCart(); // Refresh the cart display
+                }
+            }
+            else
+            {
+                MessageBox.Show($"The product '{productName}' was not found in your cart.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         #endregion
     }

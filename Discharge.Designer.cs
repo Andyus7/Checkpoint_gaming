@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             panelPrincipal = new Panel();
+            btnAdd = new Button();
+            txtAddStocks = new TextBox();
+            panel2 = new Panel();
+            lblStocks = new Label();
+            pictureBoxProduct = new PictureBox();
+            lblName = new Label();
+            btnSearch = new Button();
+            txtboxIdProduct = new TextBox();
             btnDischarge = new Button();
             labelTitle = new Label();
             txtBoxImageName = new TextBox();
@@ -38,14 +45,18 @@
             txtBoxDescription = new TextBox();
             txtBoxName = new TextBox();
             txtBoxId = new TextBox();
-            bindingSource1 = new BindingSource(components);
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             panelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).BeginInit();
             SuspendLayout();
             // 
             // panelPrincipal
             // 
+            panelPrincipal.Controls.Add(btnAdd);
+            panelPrincipal.Controls.Add(txtAddStocks);
+            panelPrincipal.Controls.Add(panel2);
+            panelPrincipal.Controls.Add(btnSearch);
+            panelPrincipal.Controls.Add(txtboxIdProduct);
             panelPrincipal.Controls.Add(btnDischarge);
             panelPrincipal.Controls.Add(labelTitle);
             panelPrincipal.Controls.Add(txtBoxImageName);
@@ -60,6 +71,107 @@
             panelPrincipal.Size = new Size(1652, 1033);
             panelPrincipal.TabIndex = 0;
             panelPrincipal.Paint += panelPrincipal_Paint;
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.FromArgb(19, 45, 70);
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatAppearance.BorderSize = 0;
+            btnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(1141, 655);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(94, 29);
+            btnAdd.TabIndex = 69;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // txtAddStocks
+            // 
+            txtAddStocks.Location = new Point(874, 655);
+            txtAddStocks.Name = "txtAddStocks";
+            txtAddStocks.Size = new Size(228, 27);
+            txtAddStocks.TabIndex = 68;
+            // 
+            // panel2
+            // 
+            panel2.AllowDrop = true;
+            panel2.BackColor = Color.FromArgb(19, 45, 70);
+            panel2.Controls.Add(lblStocks);
+            panel2.Controls.Add(pictureBoxProduct);
+            panel2.Controls.Add(lblName);
+            panel2.Location = new Point(942, 282);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(242, 287);
+            panel2.TabIndex = 67;
+            // 
+            // lblStocks
+            // 
+            lblStocks.BackColor = Color.FromArgb(19, 45, 70);
+            lblStocks.BorderStyle = BorderStyle.FixedSingle;
+            lblStocks.Dock = DockStyle.Top;
+            lblStocks.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblStocks.ForeColor = Color.White;
+            lblStocks.Location = new Point(0, 256);
+            lblStocks.Margin = new Padding(0);
+            lblStocks.Name = "lblStocks";
+            lblStocks.Size = new Size(242, 29);
+            lblStocks.TabIndex = 59;
+            lblStocks.Text = "Stocks";
+            lblStocks.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxProduct
+            // 
+            pictureBoxProduct.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxProduct.Cursor = Cursors.Hand;
+            pictureBoxProduct.Dock = DockStyle.Top;
+            pictureBoxProduct.Location = new Point(0, 29);
+            pictureBoxProduct.Margin = new Padding(0);
+            pictureBoxProduct.Name = "pictureBoxProduct";
+            pictureBoxProduct.Size = new Size(242, 227);
+            pictureBoxProduct.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxProduct.TabIndex = 41;
+            pictureBoxProduct.TabStop = false;
+            // 
+            // lblName
+            // 
+            lblName.BackColor = Color.FromArgb(19, 45, 70);
+            lblName.BorderStyle = BorderStyle.FixedSingle;
+            lblName.Dock = DockStyle.Top;
+            lblName.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.ForeColor = Color.White;
+            lblName.Location = new Point(0, 0);
+            lblName.Margin = new Padding(0);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(242, 29);
+            lblName.TabIndex = 39;
+            lblName.Text = "Name";
+            lblName.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.FromArgb(19, 45, 70);
+            btnSearch.Cursor = Cursors.Hand;
+            btnSearch.FlatAppearance.BorderSize = 0;
+            btnSearch.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(1141, 203);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(94, 29);
+            btnSearch.TabIndex = 66;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // txtboxIdProduct
+            // 
+            txtboxIdProduct.Location = new Point(884, 204);
+            txtboxIdProduct.Name = "txtboxIdProduct";
+            txtboxIdProduct.Size = new Size(228, 27);
+            txtboxIdProduct.TabIndex = 9;
             // 
             // btnDischarge
             // 
@@ -165,13 +277,6 @@
             txtBoxId.TabIndex = 1;
             txtBoxId.TextAlign = HorizontalAlignment.Center;
             // 
-            // mySqlCommand1
-            // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
-            // 
             // DischargeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -182,7 +287,8 @@
             Name = "DischargeForm";
             panelPrincipal.ResumeLayout(false);
             panelPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).EndInit();
             ResumeLayout(false);
         }
 
@@ -197,7 +303,13 @@
         private TextBox txtBoxName;
         private TextBox txtBoxId;
         private Button btnDischarge;
-        private BindingSource bindingSource1;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private TextBox txtboxIdProduct;
+        private Button btnSearch;
+        private Button btnAdd;
+        private TextBox txtAddStocks;
+        private Panel panel2;
+        private Label lblStocks;
+        private PictureBox pictureBoxProduct;
+        private Label lblName;
     }
 }

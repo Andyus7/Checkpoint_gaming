@@ -13,6 +13,7 @@ namespace WinFormsProyectoFinal
 {
     public partial class DischargeForm : Form
     {
+        AdmonBD db = new AdmonBD();
         #region Constructor
         public DischargeForm()
         {
@@ -23,7 +24,7 @@ namespace WinFormsProyectoFinal
         #region Btn Discharge Config
         private void btnDischarge_Click(object sender, EventArgs e)
         {
-            AdmonBD db = new AdmonBD();
+
             try
             {
                 // Verificar si algún campo está vacío
@@ -88,5 +89,79 @@ namespace WinFormsProyectoFinal
 
         }
         #endregion
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string id = txtboxIdProduct.Text.Trim();
+            try
+            {
+                string query = "SELECT nombre, existencias, imagen FROM consolesplay WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            lblName.Text = reader.GetString("nombre");
+                            lblStocks.Text = reader.GetInt32("existencias").ToString();
+
+                            string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", reader.GetString("imagen"));
+                            if (File.Exists(imagePath))
+                            {
+                                pictureBoxProduct.Image = Image.FromFile(imagePath);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Producto no encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string id = txtboxIdProduct.Text.Trim();
+            int addStock = int.TryParse(txtAddStocks.Text.Trim(), out int result) ? result : 0;
+
+            if (addStock <= 0)
+            {
+                MessageBox.Show("Please enter a valid number for the stock to be added.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            AdmonBD db = new AdmonBD();
+            try
+            {
+                string query = "UPDATE consolesplay SET existencias = existencias + @addStock WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@addStock", addStock);
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Stock successfully added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lblStocks.Text = ("Stocks: "+int.Parse(lblStocks.Text) + addStock).ToString(); // Actualiza visualmente
+                    }
+                    else
+                    {
+                        MessageBox.Show("The product could not be updated. Please check the ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error when adding stock: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
