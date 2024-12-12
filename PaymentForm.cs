@@ -72,7 +72,9 @@ namespace WinFormsProyectoFinal
         {
             currentUserId = db.ObtenerId(Usuario);
             decimal total = producto.Precio;
+            total = ((6 * total) / 100) + total;
             int totalEntero = Convert.ToInt32(total);
+           
 
             try
             {
@@ -134,10 +136,12 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
+        #region Btn Back
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
 
         #region Inutil por ahora
         private void button3_Click(object sender, EventArgs e)

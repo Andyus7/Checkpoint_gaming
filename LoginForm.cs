@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsProyectoFinal.Models;
 using Timer = System.Windows.Forms.Timer;
 
 namespace WinFormsProyectoFinal
@@ -16,6 +17,7 @@ namespace WinFormsProyectoFinal
         #region Variables locales privadas
 
         private AdmonBD adminBD;
+
 
         #endregion
 
@@ -53,6 +55,14 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
+        #region Btn Close
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+           Application.Exit();
+
+        }
+        #endregion
+
         #region Timer Config
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -78,6 +88,5 @@ namespace WinFormsProyectoFinal
         }
 
         #endregion
-
     }
 }

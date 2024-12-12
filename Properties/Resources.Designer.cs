@@ -203,6 +203,16 @@ namespace WinFormsProyectoFinal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Portada {
+            get {
+                object obj = ResourceManager.GetObject("Portada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tarjetas {
             get {
                 object obj = ResourceManager.GetObject("Tarjetas", resourceCulture);
@@ -216,6 +226,16 @@ namespace WinFormsProyectoFinal.Properties {
         internal static System.Drawing.Bitmap Tarjetas_Photoroom {
             get {
                 object obj = ResourceManager.GetObject("Tarjetas-Photoroom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Uaa {
+            get {
+                object obj = ResourceManager.GetObject("Uaa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

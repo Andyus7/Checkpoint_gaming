@@ -66,7 +66,9 @@
             // 
             button2.BackColor = Color.FromArgb(25, 69, 112);
             button2.Dock = DockStyle.Right;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Tahoma", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
             button2.Location = new Point(104, 0);
