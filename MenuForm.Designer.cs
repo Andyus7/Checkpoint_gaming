@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panelSideMenu = new Panel();
+            lblHour = new Label();
+            lblTime = new Label();
             btnCart = new Button();
             panelAdminSubMenu = new Panel();
             btnUnsubscribe = new Button();
@@ -48,10 +51,9 @@
             panel2 = new Panel();
             panel1 = new Panel();
             button5 = new Button();
-            label2 = new Label();
-            label1 = new Label();
             button3 = new Button();
             panelMenu2 = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
             panelSideMenu.SuspendLayout();
             panelAdminSubMenu.SuspendLayout();
             panelConsolesSubMenu.SuspendLayout();
@@ -66,6 +68,8 @@
             // 
             panelSideMenu.AutoScroll = true;
             panelSideMenu.BackColor = Color.FromArgb(25, 30, 41);
+            panelSideMenu.Controls.Add(lblHour);
+            panelSideMenu.Controls.Add(lblTime);
             panelSideMenu.Controls.Add(btnCart);
             panelSideMenu.Controls.Add(panelAdminSubMenu);
             panelSideMenu.Controls.Add(btnAdmin);
@@ -79,6 +83,32 @@
             panelSideMenu.Size = new Size(263, 973);
             panelSideMenu.TabIndex = 0;
             panelSideMenu.Paint += panelSideMenu_Paint;
+            // 
+            // lblHour
+            // 
+            lblHour.AutoSize = true;
+            lblHour.Dock = DockStyle.Bottom;
+            lblHour.Font = new Font("Times New Roman", 9F);
+            lblHour.ForeColor = Color.White;
+            lblHour.Location = new Point(0, 894);
+            lblHour.Name = "lblHour";
+            lblHour.Padding = new Padding(10, 0, 0, 0);
+            lblHour.Size = new Size(48, 17);
+            lblHour.TabIndex = 18;
+            lblHour.Text = "Hour";
+            // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Dock = DockStyle.Bottom;
+            lblTime.Font = new Font("Times New Roman", 9F);
+            lblTime.ForeColor = Color.White;
+            lblTime.Location = new Point(0, 911);
+            lblTime.Name = "lblTime";
+            lblTime.Padding = new Padding(10, 0, 0, 0);
+            lblTime.Size = new Size(47, 17);
+            lblTime.TabIndex = 7;
+            lblTime.Text = "Date";
             // 
             // btnCart
             // 
@@ -372,29 +402,6 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click_1;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(1379, 928);
-            label2.Name = "label2";
-            label2.Size = new Size(53, 20);
-            label2.TabIndex = 3;
-            label2.Text = "label2";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(1545, 928);
-            label1.Name = "label1";
-            label1.Size = new Size(53, 20);
-            label1.TabIndex = 2;
-            label1.Text = "label1";
-            label1.Click += label1_Click_1;
-            // 
             // button3
             // 
             button3.Location = new Point(0, 0);
@@ -407,14 +414,18 @@
             panelMenu2.AutoScroll = true;
             panelMenu2.BackColor = Color.White;
             panelMenu2.Controls.Add(panel2);
-            panelMenu2.Controls.Add(label1);
-            panelMenu2.Controls.Add(label2);
             panelMenu2.Dock = DockStyle.Fill;
             panelMenu2.Location = new Point(263, 0);
             panelMenu2.Name = "panelMenu2";
             panelMenu2.Size = new Size(1639, 973);
             panelMenu2.TabIndex = 1;
             panelMenu2.Paint += panelContenedor_Paint;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick_1;
             // 
             // MenuForm
             // 
@@ -429,6 +440,7 @@
             Text = "Menu";
             Load += MenuForm_Load;
             panelSideMenu.ResumeLayout(false);
+            panelSideMenu.PerformLayout();
             panelAdminSubMenu.ResumeLayout(false);
             panelConsolesSubMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
@@ -437,7 +449,6 @@
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panelMenu2.ResumeLayout(false);
-            panelMenu2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -458,7 +469,7 @@
         private Button btnAdmin;
         private Button btnUnsubscribe;
         private Label label2;
-        private Label label1;
+        private Label lblHour;
         private Panel panel2;
         private Button button5;
         private Panel panelLogo;
@@ -467,5 +478,8 @@
         private Panel panel1;
         private Button btnCart;
         private Label label3;
+        private Label label5;
+        private Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

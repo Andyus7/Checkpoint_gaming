@@ -14,7 +14,7 @@ namespace WinFormsProyectoFinal
 {
     public partial class SalesConsultation : Form
     {
-        #region Constructor
+        #region Builder
         public SalesConsultation()
         {
             InitializeComponent();
@@ -80,7 +80,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Inutil por ahora
+        #region Useless for now
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

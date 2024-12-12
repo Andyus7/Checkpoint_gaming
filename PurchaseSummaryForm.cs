@@ -8,65 +8,92 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsProyectoFinal.Models;
+using Timer = System.Windows.Forms.Timer;
 
 namespace WinFormsProyectoFinal
 {
     public partial class PurchaseSummaryForm : Form
     {
+        #region Private local variables
 
         private List<CartItem> cartItems = new List<CartItem>();
 
+        private DateTime purchaseDateTime;
+
+        #endregion
+
+        #region Builder
         public PurchaseSummaryForm(List<CartItem> items, decimal total, string paymentMethod, string clientName)
         {
             InitializeComponent();
             ConfigureListView();
-            LoadCart();
             this.cartItems = items;
 
-            lblTitle.Text = "Purchase Summary";
+            purchaseDateTime = DateTime.Now;
+
             lblClientName.Text = $"Client: {clientName}";
             lblPaymentMethod.Text = $"Payment Method: {paymentMethod}";
-            lblTotal.Text = $"Total: ${total:F2}";
-            listProducts.Items.Clear();
+            lblTotal.Text = $"Total with taxes: ${total:F2}";
+            lblDate.Text = $"Date: {purchaseDateTime.ToShortDateString()}";
+            lblTime.Text = $"Time: {purchaseDateTime.ToShortTimeString()}";
 
-            foreach (var item in items)
-            {
-                listProducts.Items.Add($"{item.Name} - ${item.Price} x {item.Quantity}");
-            }
+            // Poblar el ListView
+            LoadCart();
         }
 
+        #endregion
+
+        #region List view Config
         private void ConfigureListView()
         {
-            // Configurar el ListView para mostrar en vista de "Detalles"
+            // Configure the ListView to display in “Details” view
             listProducts.View = View.Details;
-            listProducts.FullRowSelect = true; // Selección completa del renglón
-            listProducts.GridLines = true; // Líneas entre los datos
+            listProducts.FullRowSelect = true;//Complete line selection
+            listProducts.GridLines = true;//Lines between data
 
-            // Agregar columnas al ListView
+            //Add columns to the ListView
             listProducts.Columns.Clear();
-            listProducts.Columns.Add("Products", 150, HorizontalAlignment.Left);
+            listProducts.Columns.Add("Products", 150, HorizontalAlignment.Left); //Product name
+            listProducts.Columns.Add("Price", 100, HorizontalAlignment.Right);   //Price
+            listProducts.Columns.Add("Quantity", 100, HorizontalAlignment.Center); //Quantity
+            listProducts.Columns.Add("Subtotal", 100, HorizontalAlignment.Right); //Subtotal
         }
-
         private void LoadCart()
         {
             listProducts.Items.Clear();
 
-            // Poblar el ListView con los datos de `cartItems`
+            //Populate the ListView with data from `cartItems`.
             foreach (var item in cartItems)
             {
-                var subtotal = item.Price * item.Quantity;
+                
+                decimal taxes = (item.Price*6)/100;
+                decimal total = item.Price+taxes;
+                var subtotal =total* item.Quantity;
 
-                ListViewItem row = new ListViewItem(item.Name);
-                row.SubItems.Add(item.Price.ToString("C2")); // Precio
-                row.SubItems.Add(item.Quantity.ToString()); // Cantidad
-                row.SubItems.Add(subtotal.ToString("C2")); // Subtotal
+                // Crear un renglón del ListView
+                ListViewItem row = new ListViewItem(item.Name); //Product column
+                row.SubItems.Add(item.Price.ToString("C2"));    // Price column
+                row.SubItems.Add(item.Quantity.ToString());     //Quantity column
+                row.SubItems.Add(subtotal.ToString("C2"));      //Subtotal column
 
+                //Add line to ListView
                 listProducts.Items.Add(row);
             }
         }
+        #endregion
+
+        #region Btn OK
         private void btnOk_Click(object sender, EventArgs e)
         {
             this.Close(); // Cierra el formulario
         }
+        #endregion
+
+        #region useless for now
+        private void lblClientName_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

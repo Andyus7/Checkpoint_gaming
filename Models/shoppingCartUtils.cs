@@ -13,8 +13,7 @@ namespace WinFormsProyectoFinal.Models
 
     public static class shoppingCartUtils
     {
-
-        #region Generar PDF
+        #region Generate PDF
         public static void GeneratePDF(List<CartItem> items, string metodoPago, int currentUserId, decimal total, AdmonBD db)
         {        
             string receiptDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Receipts");
@@ -38,8 +37,8 @@ namespace WinFormsProyectoFinal.Models
                     if (File.Exists(logoPath))
                     {
                         iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(logoPath);
-                        logo.ScaleToFit(100f, 100f); // Ajustar tamaño
-                        logo.Alignment = iTextSharp.text.Image.ALIGN_CENTER; // Centrar
+                        logo.ScaleToFit(100f, 100f); // Adjust size
+                        logo.Alignment = iTextSharp.text.Image.ALIGN_CENTER; // Center
                         doc.Add(logo);
                     }
                     else
@@ -66,7 +65,7 @@ namespace WinFormsProyectoFinal.Models
                     doc.Add(new Paragraph($"Total: ${totalWithTaxes:F2}"));
                     doc.Close();
                 }
-                //In case you want to see in which path the file was created
+                /*In case you want to see in which path the file was created
                 if (File.Exists(receiptPath))
                 {
                     MessageBox.Show($"Receipt successfully generated in:{receiptPath}.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -75,6 +74,7 @@ namespace WinFormsProyectoFinal.Models
                 {
                     MessageBox.Show("The PDF file could not be generated. Check permissions or path.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                */
             }
             catch (Exception ex)
             {

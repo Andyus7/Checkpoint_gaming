@@ -14,14 +14,13 @@ namespace WinFormsProyectoFinal
 {
     public partial class LogInForm : Form
     {
-        #region Variables locales privadas
+        #region Private local variables
 
         private AdmonBD adminBD;
 
-
         #endregion
 
-        #region Constructor
+        #region Builder
         public LogInForm()
         {
             InitializeComponent();
@@ -40,13 +39,13 @@ namespace WinFormsProyectoFinal
                 string rol = adminBD.ObtenerRol(usuario);
                 string nombre = adminBD.ObtenerNombre(usuario);
 
-                // Mensaje de bienvenida
+                // Welcome message
                 MessageBox.Show($"Welcome, {nombre}", "Successful login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Abrir el formulario correspondiente según el rol
+                // Open the corresponding form according to the role
                 MenuForm menu = new MenuForm(usuario, nombre, rol);
                 menu.Show();
-                this.Hide(); // Oculta el formulario de login
+                this.Hide(); //Hide login form
             }
             else
             {
@@ -58,20 +57,21 @@ namespace WinFormsProyectoFinal
         #region Btn Close
         private void btnBack_Click(object sender, EventArgs e)
         {
-           Application.Exit();
+            Application.Exit();
 
         }
         #endregion
 
         #region Timer Config
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             this.label4.Text = DateTime.Now.ToString("hh:mm:ss");
             this.label5.Text = DateTime.Now.ToLongDateString();
         }
+
         #endregion
 
-        #region Inutil Por ahora
+        #region Useless For now
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

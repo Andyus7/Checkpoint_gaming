@@ -18,7 +18,7 @@ namespace WinFormsProyectoFinal
 {
     public partial class Cart : Form
     {
-        #region Variables locales privadas
+        #region Private local variables
 
         private List<CartItem> cartItems;
 
@@ -26,9 +26,10 @@ namespace WinFormsProyectoFinal
 
         private int currentUserId;
 
+
         #endregion
 
-        #region Constructor
+        #region Builder
         public Cart(List<CartItem> shoppingCart, AdmonBD db, int userId)
         {
             InitializeComponent();
@@ -83,16 +84,16 @@ namespace WinFormsProyectoFinal
                     }
                 }
 
-                string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @total WHERE id = @userId";
+                string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @totalWithTaxes WHERE id = @userId";
                 using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
                 {
-                    cmd.Parameters.AddWithValue("@total", totalWithTaxes);
+                    cmd.Parameters.AddWithValue("@totalWithTaxes", totalWithTaxes);
                     cmd.Parameters.AddWithValue("@userId", currentUserId);
                     cmd.ExecuteNonQuery();
                 }
 
                 // Mostrar resumen de compra
-                var summaryForm = new PurchaseSummaryForm(cartItems, total, paymentMethod, db.GetUserName(currentUserId, db));
+                var summaryForm = new PurchaseSummaryForm(cartItems, totalWithTaxes, paymentMethod, db.GetUserName(currentUserId, db));
                 summaryForm.ShowDialog(); // Formulario emergente
 
                 shoppingCartUtils.GeneratePDF(cartItems, paymentMethod, currentUserId, totalWithTaxes, db);
@@ -111,15 +112,15 @@ namespace WinFormsProyectoFinal
         #region ListView Config
         private void configListView()
         {
-            // Limpiar cualquier configuración previa
+            // Clear any previous configuration
             cartListView.Clear();
 
             // Configurar las columnas
-            cartListView.View = View.Details; // Modo de detalles
-            cartListView.FullRowSelect = true; // Permite seleccionar toda la fila
-            cartListView.GridLines = true; // Líneas para mayor claridad
+            cartListView.View = View.Details; //Details mode
+            cartListView.FullRowSelect = true; //Allows selection of the entire row
+            cartListView.GridLines = true; //Lines for clarity
 
-            // Agregar columnas con anchos automáticos
+            //Add columns with automatic widths
             cartListView.Columns.Add("Product Name", 150, HorizontalAlignment.Left);
             cartListView.Columns.Add("Price", 80, HorizontalAlignment.Right);
             cartListView.Columns.Add("Quantity", 80, HorizontalAlignment.Center);
@@ -128,18 +129,18 @@ namespace WinFormsProyectoFinal
 
         private void ActualizarTotal()
         {
-            decimal total = cartItems.Sum(item => item.Price * item.Quantity); // Calcular el total
-
-            // Mostrar el total como una fila separada
-            ListViewItem totalItem = new ListViewItem("Total");
-            totalItem.SubItems.Add(""); // Columna vacía
-            totalItem.SubItems.Add(""); // Columna vacía
-            totalItem.SubItems.Add($"${total:F2}"); // Mostrar el total en la última columna
-            totalItem.BackColor = Color.LightGray; // Resaltar la fila del total
+            decimal total = cartItems.Sum(item => item.Price * item.Quantity); //Calculate total
+            decimal totalWithTaxes = ((total * 6) / 100)+total;
+            //Show total as a separate row
+            ListViewItem totalItem = new ListViewItem("Total with taxes");
+            totalItem.SubItems.Add(""); // Empty column
+            totalItem.SubItems.Add(""); // Empty column
+            totalItem.SubItems.Add($"${totalWithTaxes:F2}"); // Show the total in the last column
+            totalItem.BackColor = Color.LightGray; // Highlight the row of the total
             totalItem.Font = new System.Drawing.Font(cartListView.Font, FontStyle.Bold);//Bold 
 
 
-            // Agregar la fila del total
+            //Add total row
             cartListView.Items.Add(totalItem);
         }
         private void LoadCart()
@@ -158,13 +159,6 @@ namespace WinFormsProyectoFinal
 
         }
 
-        #endregion
-
-        #region Inutil por ahora
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
         #endregion
 
         #region Button Delete
@@ -196,6 +190,13 @@ namespace WinFormsProyectoFinal
             {
                 MessageBox.Show($"The product '{productName}' was not found in your cart.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+        #endregion
+
+        #region Useless for now
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
         #endregion
     }

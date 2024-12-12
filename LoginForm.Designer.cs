@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             txtBoxName = new TextBox();
             txtBoxPassword = new TextBox();
@@ -43,6 +44,7 @@
             btnBack = new Button();
             panel2 = new Panel();
             label3 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             panelPrincipal.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -128,7 +130,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(1591, 12);
+            label5.Location = new Point(1564, 12);
             label5.Name = "label5";
             label5.Size = new Size(53, 20);
             label5.TabIndex = 10;
@@ -139,7 +141,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(1826, 12);
+            label4.Location = new Point(1564, 43);
             label4.Name = "label4";
             label4.Size = new Size(53, 20);
             label4.TabIndex = 9;
@@ -224,6 +226,12 @@
             label3.TabIndex = 9;
             label3.Text = "Log In";
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick_1;
+            // 
             // LogInForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -266,5 +274,6 @@
         private Label label5;
         private Label label4;
         private Button btnBack;
+        private System.Windows.Forms.Timer timer1;
     }
 }
