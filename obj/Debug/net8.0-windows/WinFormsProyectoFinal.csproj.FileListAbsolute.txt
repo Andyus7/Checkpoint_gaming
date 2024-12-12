@@ -243,3 +243,4 @@ C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows
 C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.ProductDetailForm.resources
 C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\bin\Debug\net8.0-windows\Images\ImageNotFound.jpg
 C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.coverPage.resources
+C:\Users\pache\source\repos\Proyectos\Checkpoint_gaming\obj\Debug\net8.0-windows\WinFormsProyectoFinal.PurchaseSummaryForm.resources

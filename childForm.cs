@@ -160,7 +160,6 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-
         #region Inutiles por ahora
         private void btnBuy1_Click(object sender, EventArgs e)
         {

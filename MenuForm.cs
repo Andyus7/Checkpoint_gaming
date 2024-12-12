@@ -1,14 +1,14 @@
 using WinFormsProyectoFinal.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Timer = System.Windows.Forms.Timer;
 
 namespace WinFormsProyectoFinal
 {
     public partial class MenuForm : Form
     {
-        #region Variables locales Privadas
+        #region Private local variables
         //Everything to load child forms
         private Form? acitveForm = null;
-
         public List<CartItem> shoppingCart { get; private set; } = new List<CartItem>();
 
         private AdmonBD adminBD = new AdmonBD();
@@ -23,7 +23,7 @@ namespace WinFormsProyectoFinal
 
         #endregion
 
-        #region Constructor
+        #region Builder
         public MenuForm(string usuario, string nombre, string rol)
         {
             InitializeComponent();
@@ -80,11 +80,11 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Hora
-        private void timer1_Tick(object sender, EventArgs e)
+        #region Time
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
-            this.label1.Text = DateTime.Now.ToString("hh:mm:ss");
-            this.label2.Text = DateTime.Now.ToShortDateString();
+            this.lblHour.Text = DateTime.Now.ToString("hh:mm:ss");
+            this.lblTime.Text = DateTime.Now.ToShortDateString();
         }
         #endregion
 
@@ -93,7 +93,7 @@ namespace WinFormsProyectoFinal
         {
             MenuForm menu = new MenuForm(usuario, nombre, rol);
             menu.Show();
-            this.Close(); // Cierra el formulario actual
+            this.Close(); //Closes the current form
         }
         private void openChildForm(Form childForm)
         {
@@ -119,7 +119,7 @@ namespace WinFormsProyectoFinal
 
             if (rol == "admin")
             {
-                // Mostrar opciones de administrador
+                //Show administrator options
                 btnCart.Visible = false;
                 btnAdmin.Visible = true;
             }
@@ -169,10 +169,10 @@ namespace WinFormsProyectoFinal
         #region LogOut
         private void button10_Click(object sender, EventArgs e)
         {
-            // Volver al formulario de login
+            //Back to login form
             LogInForm loginForm = new LogInForm();
             loginForm.Show();
-            this.Close(); // Cierra el formulario actual
+            this.Close(); // Closes the current form
         }
         #endregion
 
@@ -185,7 +185,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Inutil Por ahora
+        #region Useless For now
         private void buttonName_Click(object sender, EventArgs e)
         {
 
@@ -291,7 +291,5 @@ namespace WinFormsProyectoFinal
 
 
         #endregion
-
-        
     }
 }

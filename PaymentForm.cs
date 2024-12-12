@@ -14,7 +14,7 @@ namespace WinFormsProyectoFinal
 {
     public partial class PaymentForm : Form
     {
-        #region Variables locales privadas
+        #region Private local variables
 
         private AdmonBD db = new AdmonBD();
 
@@ -26,7 +26,7 @@ namespace WinFormsProyectoFinal
 
         #endregion
 
-        #region Constructor
+        #region Builder
         public PaymentForm(Producto producto, string usuario)
         {
             InitializeComponent();
@@ -45,40 +45,39 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Tarjeta de credito
+        #region Credit Card
         private void button1_Click(object sender, EventArgs e)
         {
             using (creditCard creditCardForm = new creditCard())
             {
-                creditCardForm.ShowDialog(); // Abrir el formulario de tarjeta de crédito
+                creditCardForm.ShowDialog(); // Open the credit card form
             }
-
-            // Validar que se completó el pago (puedes agregar lógica específica aquí)
-            ProcessPaymentForSingleProduct("Tarjeta de Crédito o Debito");
-            this.Close(); // Cerrar el formulario
+            this.Close(); // Close the form
+            ProcessPaymentForSingleProduct("Credit or Debit Card");
+            
         }
         #endregion
 
-        #region boton efectivo
+        #region Btn Cash
         private void button2_Click(object sender, EventArgs e)
         {
-            ProcessPaymentForSingleProduct("Efectivo");
-            this.Close(); // Cerrar el formulario
+            this.Close();
+            ProcessPaymentForSingleProduct("Cash");
+            
         }
         #endregion
 
-        #region Pagar
+        #region Pay
         private void ProcessPaymentForSingleProduct(string paymentMethod)
         {
             currentUserId = db.ObtenerId(Usuario);
             decimal total = producto.Precio;
-            total = ((6 * total) / 100) + total;
-            int totalEntero = Convert.ToInt32(total);
-           
+            decimal taxes = (total*6)/100; // Tax calculation
+            decimal totalWithTaxes = taxes + total; // Total with taxes
 
             try
             {
-                // Actualizar las existencias del producto en la base de datos
+                // Update product stock in the database
                 string updateQuery = "UPDATE consolesplay SET Existencias = Existencias - 1 WHERE nombre = @nombre";
                 using (var cmd = new MySqlCommand(updateQuery, db.GetConnection()))
                 {
@@ -86,17 +85,17 @@ namespace WinFormsProyectoFinal
                     cmd.ExecuteNonQuery();
                 }
 
-                // Actualizar el monto del usuario en la base de datos
-                string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @total WHERE id = @userId";
+                // Update user amount in the database
+                string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @totalWithTaxes WHERE id = @userId";
                 using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
                 {
-                    cmd.Parameters.AddWithValue("@total", total);
+                    cmd.Parameters.AddWithValue("@totalWithTaxes", totalWithTaxes);
                     cmd.Parameters.AddWithValue("@userId", currentUserId);
                     cmd.ExecuteNonQuery();
                 }
 
-                // Generar el PDF llamando al método existente
-                shoppingCartUtils.GeneratePDF(new List<CartItem>
+                // Create a temporary list for the processed product
+                var singleProductList = new List<CartItem>
         {
             new CartItem
             {
@@ -105,24 +104,32 @@ namespace WinFormsProyectoFinal
                 Quantity = 1,
                 Image = producto.Imagen
             }
-        }, paymentMethod, currentUserId, totalEntero, db);
+        };
 
-                // Mostrar mensaje de éxito
+                this.Close(); // Close the current form
+                // Show purchase summary
+                var summaryForm = new PurchaseSummaryForm(singleProductList, totalWithTaxes, paymentMethod, db.GetUserName(currentUserId, db));
+                summaryForm.ShowDialog();
+
+                // PDF Generate
+                shoppingCartUtils.GeneratePDF(singleProductList, paymentMethod, currentUserId, total, db);
+
+                // Show success message
                 MessageBox.Show("Successful purchase.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                this.Close(); // Cerrar el formulario actual
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error during the purchase process: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         #endregion
 
-        #region Mandar llamar PDF
+        #region Send call PDF
         private void GenerarPDFCompra(string metodoPago)
         {
-            // Reutilizar lógica del carrito para generar PDF
+            // Reuse cart logic to generate PDFs
             CartItem itemCompra = new CartItem
             {
                 Name = producto.Nombre,
@@ -143,7 +150,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Inutil por ahora
+        #region Useless for now
         private void button3_Click(object sender, EventArgs e)
         {
 

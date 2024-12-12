@@ -13,7 +13,7 @@ namespace WinFormsProyectoFinal
 {
     public partial class ProductDetailForm : Form
     {
-        #region Variables locales privadas
+        #region Private local variables
 
         private Producto producto;
 
@@ -36,12 +36,12 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Cargar Datos
+        #region Load Data
         private void CargarDatos()
         {
             try
             {
-                // Verificar si el archivo existe antes de cargarlo
+                // Check if the file exists before uploading it
                 string rutaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", producto.Imagen);
                 if (!string.IsNullOrEmpty(rutaImagen) && File.Exists(rutaImagen))
                 {
@@ -50,33 +50,33 @@ namespace WinFormsProyectoFinal
                 }
                 else
                 {
-                    // Cargar una imagen predeterminada si no se encuentra la imagen
-                    pictureBoxProcuct.Image = Properties.Resources.ImageNotFound; // Asegúrate de tener una imagen en los recursos
+                    // Load a default image if the image is not found
+                    pictureBoxProcuct.Image = Properties.Resources.ImageNotFound; // Make sure you have an image in resources
                     pictureBoxProcuct.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
 
-                labelName.Text = producto.Nombre ?? "Nombre no disponible";
-                labelDescription.Text = producto.Descripcion ?? "Descripción no disponible";
-                labelStocks.Text = $"Existencias: {producto.Existencias}";
-                labelPrice.Text = $"Precio: ${producto.Precio:F2}";
+                labelName.Text = producto.Nombre ?? "Name not available";
+                labelDescription.Text = producto.Descripcion ?? "Description not available";
+                labelStocks.Text = $"Stocks: {producto.Existencias}";
+                labelPrice.Text = $"Price: ${producto.Precio:F2}";
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar los datos del producto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading product data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
 
-        #region Pagar Ahora
+        #region Pay Now
         private void button1_Click(object sender, EventArgs e)
         {
             if (producto.Existencias > 0)
             {
                 using (PaymentForm paymentForm = new PaymentForm(producto,Usuario))
                 {
-                    this.Close(); // Cerrar el formulario actual
-                    paymentForm.ShowDialog(); // Abrir el formulario de pago
-                    
+                    this.Close(); // Close the current form
+                    paymentForm.ShowDialog(); // Open the payment form
+
                 }
                 
             }
@@ -87,7 +87,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Añadir al carrito
+        #region Add to cart
         private void button2_Click(object sender, EventArgs e)
         {
             if (producto.Existencias > 0)
@@ -111,7 +111,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Boton Volver
+        #region BtnBack
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close(); // Cerrar el formulario actual

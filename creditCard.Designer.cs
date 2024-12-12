@@ -68,6 +68,7 @@
             // txtCardNumber
             // 
             txtCardNumber.Location = new Point(187, 216);
+            txtCardNumber.MaxLength = 16;
             txtCardNumber.Name = "txtCardNumber";
             txtCardNumber.Size = new Size(365, 27);
             txtCardNumber.TabIndex = 3;
@@ -75,6 +76,7 @@
             // txtExpirationDate
             // 
             txtExpirationDate.Location = new Point(187, 310);
+            txtExpirationDate.MaxLength = 4;
             txtExpirationDate.Name = "txtExpirationDate";
             txtExpirationDate.Size = new Size(164, 27);
             txtExpirationDate.TabIndex = 4;
@@ -82,6 +84,7 @@
             // txtCVV
             // 
             txtCVV.Location = new Point(409, 310);
+            txtCVV.MaxLength = 3;
             txtCVV.Name = "txtCVV";
             txtCVV.Size = new Size(143, 27);
             txtCVV.TabIndex = 5;

@@ -91,6 +91,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
+        #region Btn Search
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string id = txtboxIdProduct.Text.Trim();
@@ -116,17 +117,19 @@ namespace WinFormsProyectoFinal
                         }
                         else
                         {
-                            MessageBox.Show("Producto no encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Product not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error when searching for the product: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Btn Add
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string id = txtboxIdProduct.Text.Trim();
@@ -151,7 +154,7 @@ namespace WinFormsProyectoFinal
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Stock successfully added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lblStocks.Text = ("Stocks: "+int.Parse(lblStocks.Text) + addStock).ToString(); // Actualiza visualmente
+                        lblStocks.Text = ("Stocks: "+int.Parse(lblStocks.Text) + addStock).ToString(); // Visually updated
                     }
                     else
                     {
@@ -164,5 +167,6 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show("Error when adding stock: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
     }
 }
