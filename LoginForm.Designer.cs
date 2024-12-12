@@ -152,9 +152,9 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(315, 110);
             label2.Name = "label2";
-            label2.Size = new Size(384, 23);
+            label2.Size = new Size(294, 23);
             label2.TabIndex = 8;
-            label2.Text = "Donde los gamers encuentran su nivel";
+            label2.Text = "Where gamers find their level";
             // 
             // label1
             // 

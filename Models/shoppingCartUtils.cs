@@ -12,9 +12,11 @@ namespace WinFormsProyectoFinal.Models
 
     public static class shoppingCartUtils
     {
+
         #region Generar PDF
         public static void GeneratePDF(List<CartItem> items, string metodoPago, int currentUserId,decimal total,AdmonBD db)
         {
+            
             string receiptDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Receipts");
             if (!Directory.Exists(receiptDirectory))
             {
@@ -26,11 +28,13 @@ namespace WinFormsProyectoFinal.Models
             {
                 using (FileStream fs = new FileStream(receiptPath, FileMode.Create))
                 {
+
                     Document doc = new Document();
                     PdfWriter.GetInstance(doc, fs);
 
                     doc.Open();
                     doc.Add(new Paragraph("CHECKPOINT GAMES"));
+                    doc.Add(new Paragraph("Where gamers find their level"));
                     doc.Add(new Paragraph($"Nombre del cliente: {db.GetUserName(currentUserId,db)}"));
                     doc.Add(new Paragraph($"Método de pago: {metodoPago}"));
                     doc.Add(new Paragraph($"Fecha: {DateTime.Now}"));

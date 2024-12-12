@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsProyectoFinal.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
+using K4os.Compression.LZ4.Streams.Adapters;
 
 namespace WinFormsProyectoFinal
 {
@@ -42,17 +43,31 @@ namespace WinFormsProyectoFinal
         #region Button Buy
         private void button1_Click(object sender, EventArgs e)
         {
-            ProcessPayment("Efectivo");
+            if (cartItems is null)
+            {
+                MessageBox.Show("Error, empty cart", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ProcessPayment("Efectivo");
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            var creditCardForm = new creditCard();
-            creditCardForm.PaymentCompleted += method => ProcessPayment(method);
-            creditCardForm.ShowDialog(); // Show as pop-up window
+            if (cartItems is null) {
+                MessageBox.Show("Error, empty cart", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var creditCardForm = new creditCard();
+                creditCardForm.PaymentCompleted += method => ProcessPayment(method);
+                creditCardForm.ShowDialog(); // Show as pop-up window
+            }
         }
         private void ProcessPayment(string paymentMethod)
         {
             decimal total = cartItems.Sum(item => item.Price * item.Quantity);
+            total = ((6 * total) / 100) + total;
             int totalEntero = Convert.ToInt32(total);
 
             try

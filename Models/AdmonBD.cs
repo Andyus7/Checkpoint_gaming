@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace WinFormsProyectoFinal
+namespace WinFormsProyectoFinal.Models
 {
     public class AdmonBD
     {
@@ -27,7 +27,7 @@ namespace WinFormsProyectoFinal
 
         public AdmonBD()
         {
-            this.Connect();
+            Connect();
         }
 
         public void Disconnect()

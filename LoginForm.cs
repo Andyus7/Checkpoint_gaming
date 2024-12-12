@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsProyectoFinal.Models;
 using Timer = System.Windows.Forms.Timer;
 
 namespace WinFormsProyectoFinal

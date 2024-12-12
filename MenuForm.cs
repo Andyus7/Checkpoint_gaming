@@ -75,7 +75,7 @@ namespace WinFormsProyectoFinal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new childForm(this.shoppingCart,rol,usuario));
+            openChildForm(new childForm(this.shoppingCart, rol, usuario));
             hideSubmenu();
         }
         #endregion
@@ -180,13 +180,17 @@ namespace WinFormsProyectoFinal
         private void button1_Click_2(object sender, EventArgs e)
         {
             currentUserId = adminBD.ObtenerId(usuario);
-            openChildForm(new Cart(shoppingCart,adminBD,currentUserId));
+            openChildForm(new Cart(shoppingCart, adminBD, currentUserId));
             hideSubmenu();
         }
         #endregion
 
         #region Inutil Por ahora
         private void buttonName_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label3_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -286,6 +290,8 @@ namespace WinFormsProyectoFinal
         }
 
 
-        #endregion        
+        #endregion
+
+        
     }
 }

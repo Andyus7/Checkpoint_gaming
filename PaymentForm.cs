@@ -72,7 +72,9 @@ namespace WinFormsProyectoFinal
         {
             currentUserId = db.ObtenerId(Usuario);
             decimal total = producto.Precio;
+            total = ((6 * total) / 100) + total;
             int totalEntero = Convert.ToInt32(total);
+           
 
             try
             {

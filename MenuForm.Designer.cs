@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             panelSideMenu = new Panel();
             btnCart = new Button();
             panelAdminSubMenu = new Panel();
@@ -43,6 +42,7 @@
             btnPlayStation = new Button();
             btnConsoles = new Button();
             panelLogo = new Panel();
+            label3 = new Label();
             pictureBox1 = new PictureBox();
             buttonName = new Button();
             panel2 = new Panel();
@@ -52,7 +52,6 @@
             label1 = new Label();
             button3 = new Button();
             panelMenu2 = new Panel();
-            timer1 = new System.Windows.Forms.Timer(components);
             panelSideMenu.SuspendLayout();
             panelAdminSubMenu.SuspendLayout();
             panelConsolesSubMenu.SuspendLayout();
@@ -288,6 +287,7 @@
             // 
             panelLogo.BackColor = Color.FromArgb(25, 30, 41);
             panelLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelLogo.Controls.Add(label3);
             panelLogo.Controls.Add(pictureBox1);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
@@ -296,10 +296,23 @@
             panelLogo.TabIndex = 0;
             panelLogo.Paint += panelLogo_Paint_1;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 8F);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(29, 71);
+            label3.Name = "label3";
+            label3.Size = new Size(188, 19);
+            label3.TabIndex = 7;
+            label3.Text = "Where gamers find their level";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+            label3.Click += label3_Click_1;
+            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Logos3;
-            pictureBox1.Location = new Point(56, 16);
+            pictureBox1.Location = new Point(53, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(138, 70);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -403,12 +416,6 @@
             panelMenu2.TabIndex = 1;
             panelMenu2.Paint += panelContenedor_Paint;
             // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
-            // 
             // MenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -425,6 +432,7 @@
             panelAdminSubMenu.ResumeLayout(false);
             panelConsolesSubMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
+            panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -451,7 +459,6 @@
         private Button btnUnsubscribe;
         private Label label2;
         private Label label1;
-        private System.Windows.Forms.Timer timer1;
         private Panel panel2;
         private Button button5;
         private Panel panelLogo;
@@ -459,5 +466,6 @@
         private PictureBox pictureBox1;
         private Panel panel1;
         private Button btnCart;
+        private Label label3;
     }
 }
