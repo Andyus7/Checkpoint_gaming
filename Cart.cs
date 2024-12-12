@@ -43,7 +43,7 @@ namespace WinFormsProyectoFinal
         #region Button Buy
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cartItems is null)
+            if (cartItems == null || !cartItems.Any())
             {
                 MessageBox.Show("Error, empty cart", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -54,7 +54,7 @@ namespace WinFormsProyectoFinal
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (cartItems is null) {
+            if (cartItems == null || !cartItems.Any()) {
                 MessageBox.Show("Error, empty cart", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -67,8 +67,8 @@ namespace WinFormsProyectoFinal
         private void ProcessPayment(string paymentMethod)
         {
             decimal total = cartItems.Sum(item => item.Price * item.Quantity);
-            total = ((6 * total) / 100) + total;
-            int totalEntero = Convert.ToInt32(total);
+            decimal taxes = (6 * total) / 100; // Cálculo de impuestos
+            decimal totalWithTaxes = taxes + total; // Total con impuestos
 
             try
             {
@@ -86,12 +86,16 @@ namespace WinFormsProyectoFinal
                 string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @total WHERE id = @userId";
                 using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
                 {
-                    cmd.Parameters.AddWithValue("@total", total);
+                    cmd.Parameters.AddWithValue("@total", totalWithTaxes);
                     cmd.Parameters.AddWithValue("@userId", currentUserId);
                     cmd.ExecuteNonQuery();
                 }
 
-                shoppingCartUtils.GeneratePDF(cartItems, paymentMethod, currentUserId, totalEntero, db);
+                // Mostrar resumen de compra
+                var summaryForm = new PurchaseSummaryForm(cartItems, total, paymentMethod, db.GetUserName(currentUserId, db));
+                summaryForm.ShowDialog(); // Formulario emergente
+
+                shoppingCartUtils.GeneratePDF(cartItems, paymentMethod, currentUserId, totalWithTaxes, db);
 
                 MessageBox.Show("Successful purchase.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cartItems.Clear(); //Clean cart

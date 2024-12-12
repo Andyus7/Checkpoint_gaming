@@ -72,9 +72,8 @@ namespace WinFormsProyectoFinal
         {
             currentUserId = db.ObtenerId(Usuario);
             decimal total = producto.Precio;
-            total = ((6 * total) / 100) + total;
-            int totalEntero = Convert.ToInt32(total);
-           
+            decimal taxes = (6 * total) / 100; // Cálculo de impuestos
+            decimal totalWithTaxes = taxes + total; // Total con impuestos
 
             try
             {
@@ -90,13 +89,13 @@ namespace WinFormsProyectoFinal
                 string userUpdateQuery = "UPDATE usuarios SET Monto = Monto + @total WHERE id = @userId";
                 using (var cmd = new MySqlCommand(userUpdateQuery, db.GetConnection()))
                 {
-                    cmd.Parameters.AddWithValue("@total", total);
+                    cmd.Parameters.AddWithValue("@total", totalWithTaxes);
                     cmd.Parameters.AddWithValue("@userId", currentUserId);
                     cmd.ExecuteNonQuery();
                 }
 
-                // Generar el PDF llamando al método existente
-                shoppingCartUtils.GeneratePDF(new List<CartItem>
+                // Crear una lista temporal para el producto procesado
+                var singleProductList = new List<CartItem>
         {
             new CartItem
             {
@@ -105,7 +104,14 @@ namespace WinFormsProyectoFinal
                 Quantity = 1,
                 Image = producto.Imagen
             }
-        }, paymentMethod, currentUserId, totalEntero, db);
+        };
+
+                // Mostrar resumen de compra
+                var summaryForm = new PurchaseSummaryForm(singleProductList, totalWithTaxes, paymentMethod, db.GetUserName(currentUserId, db));
+                summaryForm.ShowDialog();
+
+                // Generar el PDF
+                shoppingCartUtils.GeneratePDF(singleProductList, paymentMethod, currentUserId, totalWithTaxes, db);
 
                 // Mostrar mensaje de éxito
                 MessageBox.Show("Successful purchase.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -117,6 +123,7 @@ namespace WinFormsProyectoFinal
                 MessageBox.Show($"Error during the purchase process: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         #endregion
 
         #region Mandar llamar PDF
