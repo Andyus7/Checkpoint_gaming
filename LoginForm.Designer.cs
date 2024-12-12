@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             txtBoxName = new TextBox();
             txtBoxPassword = new TextBox();
@@ -41,12 +40,13 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
+            btnBack = new Button();
             panel2 = new Panel();
             label3 = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
             panelPrincipal.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -180,10 +180,28 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(25, 30, 41);
+            panel3.Controls.Add(btnBack);
             panel3.Location = new Point(-8, 908);
             panel3.Name = "panel3";
             panel3.Size = new Size(1916, 65);
             panel3.TabIndex = 12;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.FromArgb(19, 45, 70);
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(29, 13);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(146, 40);
+            btnBack.TabIndex = 13;
+            btnBack.Text = "Close";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // panel2
             // 
@@ -206,12 +224,6 @@
             label3.TabIndex = 9;
             label3.Text = "Log In";
             // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
-            // 
             // LogInForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -219,6 +231,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1902, 973);
             Controls.Add(panelPrincipal);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
@@ -231,6 +244,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -251,6 +265,6 @@
         private Panel panel3;
         private Label label5;
         private Label label4;
-        private System.Windows.Forms.Timer timer1;
+        private Button btnBack;
     }
 }

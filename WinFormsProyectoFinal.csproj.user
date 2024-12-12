@@ -7,6 +7,9 @@
     <Compile Update="chart.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="coverPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="creditCard.cs">
       <SubType>Form</SubType>
     </Compile>

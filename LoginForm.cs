@@ -18,6 +18,7 @@ namespace WinFormsProyectoFinal
 
         private AdmonBD adminBD;
 
+
         #endregion
 
         #region Constructor
@@ -54,6 +55,14 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
+        #region Btn Close
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+           Application.Exit();
+
+        }
+        #endregion
+
         #region Timer Config
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -79,6 +88,5 @@ namespace WinFormsProyectoFinal
         }
 
         #endregion
-
     }
 }

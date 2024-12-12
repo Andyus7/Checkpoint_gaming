@@ -136,10 +136,12 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
+        #region Btn Back
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
 
         #region Inutil por ahora
         private void button3_Click(object sender, EventArgs e)
