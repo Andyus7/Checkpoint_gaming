@@ -105,7 +105,7 @@
             panelPrincipal.Dock = DockStyle.Fill;
             panelPrincipal.Location = new Point(0, 0);
             panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(1652, 1102);
+            panelPrincipal.Size = new Size(1616, 939);
             panelPrincipal.TabIndex = 6;
             panelPrincipal.Paint += panelPrincipal_Paint;
             // 
@@ -115,7 +115,7 @@
             panel10.BackColor = Color.FromArgb(19, 45, 70);
             panel10.Controls.Add(pictureBox10);
             panel10.Controls.Add(labelName10);
-            panel10.Location = new Point(1317, 690);
+            panel10.Location = new Point(1318, 607);
             panel10.Name = "panel10";
             panel10.Size = new Size(242, 256);
             panel10.TabIndex = 75;
@@ -150,9 +150,9 @@
             // 
             // pictureBoxPrincipal
             // 
-            pictureBoxPrincipal.Location = new Point(465, 18);
+            pictureBoxPrincipal.Location = new Point(42, 21);
             pictureBoxPrincipal.Name = "pictureBoxPrincipal";
-            pictureBoxPrincipal.Size = new Size(522, 253);
+            pictureBoxPrincipal.Size = new Size(556, 228);
             pictureBoxPrincipal.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxPrincipal.TabIndex = 72;
             pictureBoxPrincipal.TabStop = false;
@@ -164,7 +164,7 @@
             panel9.BackColor = Color.FromArgb(19, 45, 70);
             panel9.Controls.Add(pictureBox9);
             panel9.Controls.Add(labelName9);
-            panel9.Location = new Point(1014, 690);
+            panel9.Location = new Point(1018, 607);
             panel9.Name = "panel9";
             panel9.Size = new Size(242, 256);
             panel9.TabIndex = 74;
@@ -200,10 +200,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(28, 18);
+            label1.Font = new Font("Times New Roman", 40F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(1205, 21);
             label1.Name = "label1";
-            label1.Size = new Size(234, 50);
+            label1.Size = new Size(355, 75);
             label1.TabIndex = 71;
             label1.Text = "PlayStation";
             // 
@@ -213,7 +213,7 @@
             panel8.BackColor = Color.FromArgb(19, 45, 70);
             panel8.Controls.Add(pictureBox8);
             panel8.Controls.Add(labelName8);
-            panel8.Location = new Point(684, 690);
+            panel8.Location = new Point(688, 607);
             panel8.Name = "panel8";
             panel8.Size = new Size(242, 256);
             panel8.TabIndex = 72;
@@ -252,7 +252,7 @@
             panel5.BackColor = Color.FromArgb(19, 45, 70);
             panel5.Controls.Add(pictureBox5);
             panel5.Controls.Add(labelName5);
-            panel5.Location = new Point(1317, 303);
+            panel5.Location = new Point(1318, 291);
             panel5.Name = "panel5";
             panel5.Size = new Size(242, 256);
             panel5.TabIndex = 70;
@@ -291,7 +291,7 @@
             panel7.BackColor = Color.FromArgb(19, 45, 70);
             panel7.Controls.Add(pictureBox7);
             panel7.Controls.Add(labelName7);
-            panel7.Location = new Point(352, 690);
+            panel7.Location = new Point(356, 607);
             panel7.Name = "panel7";
             panel7.Size = new Size(242, 256);
             panel7.TabIndex = 73;
@@ -330,7 +330,7 @@
             panel4.BackColor = Color.FromArgb(19, 45, 70);
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(labelName4);
-            panel4.Location = new Point(1014, 303);
+            panel4.Location = new Point(1018, 291);
             panel4.Name = "panel4";
             panel4.Size = new Size(242, 256);
             panel4.TabIndex = 65;
@@ -369,7 +369,7 @@
             panel6.BackColor = Color.FromArgb(19, 45, 70);
             panel6.Controls.Add(pictureBox6);
             panel6.Controls.Add(labelName6);
-            panel6.Location = new Point(38, 690);
+            panel6.Location = new Point(42, 607);
             panel6.Name = "panel6";
             panel6.Size = new Size(242, 256);
             panel6.TabIndex = 71;
@@ -408,7 +408,7 @@
             panel3.BackColor = Color.FromArgb(19, 45, 70);
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(labelName3);
-            panel3.Location = new Point(684, 303);
+            panel3.Location = new Point(688, 291);
             panel3.Name = "panel3";
             panel3.Size = new Size(242, 256);
             panel3.TabIndex = 62;
@@ -447,7 +447,7 @@
             panel2.BackColor = Color.FromArgb(19, 45, 70);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(labelName2);
-            panel2.Location = new Point(352, 303);
+            panel2.Location = new Point(356, 291);
             panel2.Name = "panel2";
             panel2.Size = new Size(242, 256);
             panel2.TabIndex = 62;
@@ -486,7 +486,7 @@
             panel1.BackColor = Color.FromArgb(19, 45, 70);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(labelName1);
-            panel1.Location = new Point(38, 303);
+            panel1.Location = new Point(42, 291);
             panel1.Name = "panel1";
             panel1.Size = new Size(242, 256);
             panel1.TabIndex = 61;
@@ -524,7 +524,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
-            ClientSize = new Size(1652, 1102);
+            ClientSize = new Size(1616, 939);
             Controls.Add(panelPrincipal);
             FormBorderStyle = FormBorderStyle.None;
             Name = "childForm";

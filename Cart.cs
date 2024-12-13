@@ -100,7 +100,7 @@ namespace WinFormsProyectoFinal
 
                 MessageBox.Show("Successful purchase.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cartItems.Clear(); //Clean cart
-                LoadCart(); //Refresh the cart 
+                LoadCart(); //Refresh the cart
             }
             catch (Exception ex)
             {

@@ -114,7 +114,7 @@ namespace WinFormsProyectoFinal
         #region BtnBack
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close(); // Cerrar el formulario actual
+            this.Hide(); // Close the current form
         }
         #endregion
     }

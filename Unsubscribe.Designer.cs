@@ -37,6 +37,8 @@
             txtBoxIdToSearch = new TextBox();
             btnSearch = new Button();
             btnDelete = new Button();
+            lblCheckGame = new Label();
+            label1 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).BeginInit();
             SuspendLayout();
@@ -50,9 +52,9 @@
             panel2.Controls.Add(lblDescription);
             panel2.Controls.Add(pictureBoxProduct);
             panel2.Controls.Add(lblName);
-            panel2.Location = new Point(385, 254);
+            panel2.Location = new Point(933, 196);
             panel2.Name = "panel2";
-            panel2.Size = new Size(242, 366);
+            panel2.Size = new Size(354, 519);
             panel2.TabIndex = 63;
             // 
             // lblStocks
@@ -62,10 +64,10 @@
             lblStocks.Dock = DockStyle.Top;
             lblStocks.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblStocks.ForeColor = Color.White;
-            lblStocks.Location = new Point(0, 335);
+            lblStocks.Location = new Point(0, 485);
             lblStocks.Margin = new Padding(0);
             lblStocks.Name = "lblStocks";
-            lblStocks.Size = new Size(242, 29);
+            lblStocks.Size = new Size(354, 35);
             lblStocks.TabIndex = 59;
             lblStocks.Text = "1";
             lblStocks.TextAlign = ContentAlignment.MiddleCenter;
@@ -77,10 +79,10 @@
             lblPrice.Dock = DockStyle.Top;
             lblPrice.Font = new Font("Century Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblPrice.ForeColor = Color.White;
-            lblPrice.Location = new Point(0, 306);
+            lblPrice.Location = new Point(0, 450);
             lblPrice.Margin = new Padding(0);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(242, 29);
+            lblPrice.Size = new Size(354, 35);
             lblPrice.TabIndex = 58;
             lblPrice.Text = "$";
             lblPrice.TextAlign = ContentAlignment.MiddleCenter;
@@ -93,10 +95,10 @@
             lblDescription.FlatStyle = FlatStyle.Flat;
             lblDescription.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDescription.ForeColor = Color.White;
-            lblDescription.Location = new Point(0, 256);
+            lblDescription.Location = new Point(0, 350);
             lblDescription.Margin = new Padding(0);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(242, 50);
+            lblDescription.Size = new Size(354, 100);
             lblDescription.TabIndex = 57;
             lblDescription.Text = "Label";
             lblDescription.TextAlign = ContentAlignment.MiddleCenter;
@@ -106,10 +108,10 @@
             pictureBoxProduct.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxProduct.Cursor = Cursors.Hand;
             pictureBoxProduct.Dock = DockStyle.Top;
-            pictureBoxProduct.Location = new Point(0, 29);
+            pictureBoxProduct.Location = new Point(0, 50);
             pictureBoxProduct.Margin = new Padding(0);
             pictureBoxProduct.Name = "pictureBoxProduct";
-            pictureBoxProduct.Size = new Size(242, 227);
+            pictureBoxProduct.Size = new Size(354, 300);
             pictureBoxProduct.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxProduct.TabIndex = 41;
             pictureBoxProduct.TabStop = false;
@@ -124,17 +126,17 @@
             lblName.Location = new Point(0, 0);
             lblName.Margin = new Padding(0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(242, 29);
+            lblName.Size = new Size(354, 50);
             lblName.TabIndex = 39;
             lblName.Text = "Name";
             lblName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtBoxIdToSearch
             // 
-            txtBoxIdToSearch.Location = new Point(467, 109);
+            txtBoxIdToSearch.Location = new Point(460, 246);
             txtBoxIdToSearch.Name = "txtBoxIdToSearch";
             txtBoxIdToSearch.PlaceholderText = "Id to search";
-            txtBoxIdToSearch.Size = new Size(125, 27);
+            txtBoxIdToSearch.Size = new Size(297, 27);
             txtBoxIdToSearch.TabIndex = 64;
             txtBoxIdToSearch.TextAlign = HorizontalAlignment.Center;
             // 
@@ -146,9 +148,9 @@
             btnSearch.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(696, 109);
+            btnSearch.Location = new Point(537, 341);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(94, 29);
+            btnSearch.Size = new Size(143, 59);
             btnSearch.TabIndex = 65;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
@@ -162,20 +164,48 @@
             btnDelete.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(770, 479);
+            btnDelete.Location = new Point(788, 779);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(94, 29);
+            btnDelete.Size = new Size(177, 65);
             btnDelete.TabIndex = 66;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Visible = false;
             btnDelete.Click += btnDelete_Click_1;
             // 
+            // lblCheckGame
+            // 
+            lblCheckGame.AutoSize = true;
+            lblCheckGame.BorderStyle = BorderStyle.FixedSingle;
+            lblCheckGame.Font = new Font("Times New Roman", 30F);
+            lblCheckGame.ForeColor = Color.Black;
+            lblCheckGame.Location = new Point(665, 25);
+            lblCheckGame.Margin = new Padding(5, 0, 5, 0);
+            lblCheckGame.Name = "lblCheckGame";
+            lblCheckGame.Size = new Size(271, 59);
+            lblCheckGame.TabIndex = 73;
+            lblCheckGame.Text = "Unsubscribe";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 18F);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(992, 138);
+            label1.Margin = new Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(224, 34);
+            label1.TabIndex = 74;
+            label1.Text = "Data to be loaded";
+            // 
             // Unsubscribe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1634, 986);
+            Controls.Add(label1);
+            Controls.Add(lblCheckGame);
             Controls.Add(btnDelete);
             Controls.Add(btnSearch);
             Controls.Add(txtBoxIdToSearch);
@@ -200,5 +230,7 @@
         private Button btnSearch;
         private Label lblStocks;
         private Button btnDelete;
+        private Label lblCheckGame;
+        private Label label1;
     }
 }

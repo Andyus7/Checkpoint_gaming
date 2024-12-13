@@ -25,14 +25,14 @@ namespace WinFormsProyectoFinal
         #region DataGridView load
         private void LoadProducts()
         {
-            dataGridViewProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Ajusta todas las columnas al contenido
+            dataGridViewProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Adjusts all columns to the content
             dataGridViewProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewProducts.ReadOnly = true; // Solo lectura
+            dataGridViewProducts.ReadOnly = true; // Read only
             AdmonBD db = new AdmonBD();
 
             try
             {
-                // Consulta modificada para ordenar por existencias de menor a mayor
+                // Modified query to sort by stock from smallest to largest
                 string query = "SELECT id, nombre, descripcion, precio, existencias, imagen FROM consolesplay ORDER BY existencias ASC";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection(db.GetConnection())))
@@ -42,7 +42,7 @@ namespace WinFormsProyectoFinal
                         DataTable table = new DataTable();
                         adapter.Fill(table);
 
-                        // Asignar la tabla al DataGridView
+                        // Assign the table to the DataGridView
                         dataGridViewProducts.DataSource = table;
                     }
                 }

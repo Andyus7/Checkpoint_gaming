@@ -45,7 +45,7 @@ namespace WinFormsProyectoFinal
                 // Open the corresponding form according to the role
                 MenuForm menu = new MenuForm(usuario, nombre, rol);
                 menu.Show();
-                this.Hide(); //Hide login form
+                this.Close(); //Hide login form
             }
             else
             {

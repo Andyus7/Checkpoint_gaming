@@ -14,7 +14,7 @@ namespace WinFormsProyectoFinal
 {
     public partial class chart : Form
     {
-        #region Constructor
+        #region Builder
 
         public chart()
         {
@@ -23,7 +23,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Cargar Grafica
+        #region Graphic Load
         private void Cargar_Grafica()
         {
             try
@@ -74,6 +74,13 @@ namespace WinFormsProyectoFinal
             {
                 MessageBox.Show($"Error al cargar la gráfica: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        #endregion
+
+        #region Btn Refresh
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Cargar_Grafica();
         }
         #endregion
     }
