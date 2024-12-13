@@ -254,6 +254,7 @@
             // 
             button10.Dock = DockStyle.Bottom;
             button10.FlatAppearance.BorderSize = 0;
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
             button10.FlatStyle = FlatStyle.Flat;
             button10.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button10.ForeColor = Color.White;

@@ -32,6 +32,7 @@
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             dataGridViewProducts = new DataGridView();
             btnRefresh = new Button();
+            lblCheckGame = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
             SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             dataGridViewProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders;
             dataGridViewProducts.BackgroundColor = Color.White;
             dataGridViewProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProducts.Location = new Point(35, 12);
+            dataGridViewProducts.Location = new Point(28, 164);
             dataGridViewProducts.Name = "dataGridViewProducts";
             dataGridViewProducts.RowHeadersWidth = 51;
             dataGridViewProducts.Size = new Size(1572, 533);
@@ -64,8 +65,9 @@
             btnRefresh.FlatAppearance.BorderSize = 0;
             btnRefresh.FlatAppearance.MouseOverBackColor = Color.FromArgb(1, 195, 141);
             btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.Font = new Font("Segoe UI", 14F);
             btnRefresh.ForeColor = Color.White;
-            btnRefresh.Location = new Point(675, 677);
+            btnRefresh.Location = new Point(656, 726);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(199, 54);
             btnRefresh.TabIndex = 1;
@@ -73,11 +75,26 @@
             btnRefresh.UseVisualStyleBackColor = false;
             btnRefresh.Click += btnRefresh_Click;
             // 
+            // lblCheckGame
+            // 
+            lblCheckGame.AutoSize = true;
+            lblCheckGame.BorderStyle = BorderStyle.FixedSingle;
+            lblCheckGame.Font = new Font("Times New Roman", 30F);
+            lblCheckGame.ForeColor = Color.Black;
+            lblCheckGame.Location = new Point(590, 44);
+            lblCheckGame.Margin = new Padding(5, 0, 5, 0);
+            lblCheckGame.Name = "lblCheckGame";
+            lblCheckGame.Size = new Size(274, 59);
+            lblCheckGame.TabIndex = 12;
+            lblCheckGame.Text = "Product List";
+            // 
             // ProductList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1634, 986);
+            Controls.Add(lblCheckGame);
             Controls.Add(btnRefresh);
             Controls.Add(dataGridViewProducts);
             FormBorderStyle = FormBorderStyle.None;
@@ -85,6 +102,7 @@
             Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -92,5 +110,6 @@
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private DataGridView dataGridViewProducts;
         private Button btnRefresh;
+        private Label lblCheckGame;
     }
 }

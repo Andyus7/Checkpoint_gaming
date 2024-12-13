@@ -35,7 +35,7 @@ namespace WinFormsProyectoFinal
         {
             LogInForm logInForm = new LogInForm();
             logInForm.ShowDialog();
-            this.Close();
+            this.Hide();
         }
         #endregion
 
