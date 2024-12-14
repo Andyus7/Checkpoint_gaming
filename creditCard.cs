@@ -12,11 +12,11 @@ namespace WinFormsProyectoFinal
 {
     public partial class creditCard : Form
     {
-        #region Vatiables locales publicas
+        #region Private local variables
         public event Action<string> PaymentCompleted;
         #endregion
 
-        #region Constructor
+        #region Builder
         public creditCard()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Validar Campos
+        #region Validate Fields
         private void ValidateInputs()
         {
             //Enable or disable the button according to the status of fields
@@ -48,7 +48,7 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Botones formulario
+        # region Form buttons
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close(); // Simplemente cierra el formulario sin realizar acciones
