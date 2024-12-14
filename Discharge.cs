@@ -14,8 +14,11 @@ namespace WinFormsProyectoFinal
 {
     public partial class DischargeForm : Form
     {
-        AdmonBD db = new AdmonBD();
-        #region Constructor
+        #region Private local variables
+        private AdmonBD db = new AdmonBD();
+        #endregion
+
+        #region Builder
         public DischargeForm()
         {
             InitializeComponent();
@@ -84,13 +87,6 @@ namespace WinFormsProyectoFinal
         }
         #endregion
 
-        #region Inutil por ahora
-        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        #endregion
-
         #region Btn Search
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -141,10 +137,9 @@ namespace WinFormsProyectoFinal
                 return;
             }
 
-            AdmonBD db = new AdmonBD();
             try
             {
-                string query = "UPDATE consolesplay SET existencias = existencias + @addStock WHERE id = @id";
+                string query = "UPDATE consolesplay SET Existencias = Existencias + @addStock WHERE id = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                 {
                     cmd.Parameters.AddWithValue("@addStock", addStock);
@@ -154,7 +149,14 @@ namespace WinFormsProyectoFinal
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Stock successfully added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lblStocks.Text = ("Stocks: "+int.Parse(lblStocks.Text) + addStock).ToString(); // Visually updated
+
+                        // Extraer solo el número del texto actual
+                        string currentStockText = lblStocks.Text.Replace("Stocks: ", "").Trim();
+                        int currentStock = int.TryParse(currentStockText, out int stockResult) ? stockResult : 0;
+
+                        // Actualizar visualmente el stock
+                        int updatedStock = currentStock + addStock;
+                        lblStocks.Text = "Stocks: " + updatedStock;
                     }
                     else
                     {
@@ -166,6 +168,14 @@ namespace WinFormsProyectoFinal
             {
                 MessageBox.Show("Error when adding stock: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        #endregion
+
+        #region Useless for now
+        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
         }
         #endregion
     }

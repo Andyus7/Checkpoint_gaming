@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2024 a las 19:39:29
+-- Tiempo de generación: 14-12-2024 a las 21:32:33
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -41,12 +41,12 @@ CREATE TABLE `consolesplay` (
 --
 
 INSERT INTO `consolesplay` (`Id`, `nombre`, `descripcion`, `precio`, `Existencias`, `imagen`) VALUES
-(349, 'Playstation 5', 'La consola mas poderosa de playstation hasta el momento', 11500, 20, 'Playstation5.jpg'),
-(3455, 'PlayStation 4', 'La consola que definió una generación de jugadores.', 8249, 23, 'PlayStation4.jpg'),
-(87653, 'PSP', 'the best portable console of sony', 1200, 7, 'Playstation6.jpg'),
-(302547, 'PlayStation 2', 'La consola más vendida de todos los tiempos.', 3831, 20, 'PlayStation2.jpg'),
-(302548, 'PlayStation 3', 'La primera consola de PlayStation con soporte para juegos en alta definición.', 4446, 12, 'PlayStation3.jpg'),
-(302550, 'PlayStation 1', 'La consola que revolucionó la industria de los videojuegos.', 3524, 18, 'PlayStation1.jpg');
+(349, 'Playstation 5', 'PlayStation 5 is the fifth desktop video game console developed by Sony Interactive Entertainment, while being the third Sony console to be designed by Mark Cerny. It was announced in December 2019 as the successor to the PlayStation 4.', 11500, 19, 'Playstation5.jpg'),
+(3455, 'PlayStation 4', 'PlayStation 4 (Playstation 4, officially abbreviated as PS4) is the fourth desktop game console produced by Sony Computer Entertainment. It was designed by Mark Cerny and is part of the eighth-generation game consoles. It was officially announced on February 20, 2013 at the PlayStation Meeting 2013 event, although the console\'s design was not unveiled until June 10 at E3 2013.', 5600, 22, 'PlayStation4.jpg'),
+(87653, 'PSP', 'PlayStation Portable (PSP) is a portable video game console of the Japanese multinational company, and the fourth Sony console to be designed by Ken Kutaragi, PSP served for video games, connecting to the Internet and playing and watching multimedia. It is the first portable console worldwide Sony and the second launched in Japan.', 4164, 7, 'Playstation6.jpg'),
+(302547, 'PlayStation 2', 'PlayStation 2 (Japanese: プレイステーション2 Pureisutēshon Tsu, officially abbreviated as PS2) is the second tabletop video game console produced by Sony Computer Entertainment. It was the third Sony console to be designed by Japanese Ken Kutaragi, as well as being the successor to the PlayStation. It competed with Dreamcast, GameCube and the first Xbox.', 3386, 20, 'PlayStation2.jpg'),
+(302548, 'PlayStation 3', 'The PlayStation 3 is the third discontinued desktop video game console produced by Sony Computer Entertainment. It was Sony\'s fifth and final console to be designed by Ken Kutaragi and was part of the seventh-generation game consoles and its competitors were Microsoft\'s Xbox 360 and Nintendo\'s Wii.', 8030, 21, 'PlayStation3.jpg'),
+(302550, 'PlayStation 1', 'PlayStation is the first discontinued desktop video game console produced by Sony Computer Entertainment. It was released in Japan on December 3, 1994,6 in North America on September 9, 1995, in Europe on September 29, 1995, and in Australia on November 15, 1995. As a fifth-generation console, PlayStation competed primarily with Nintendo 64 and the Sega Saturn.', 9300, 18, 'PlayStation1.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,11 +68,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID`, `Nombre`, `Contraseña`, `rol`, `Monto`, `Cuenta`) VALUES
-(0, 'Invitado', '1234Invitado', 'usuario', 12300, ''),
-(302545, 'Andres Joseph Pacheco Carlos', 'joseph44', 'admin', 0, 'pache.andy@gmail.com'),
-(386282, 'Osvaldo Yahir Serna Salazar', 'osvaldo81', 'usuario', 3000, 'osvaldoyairserna@gmail.com'),
-(457704, 'Obed Alejandro Loera Quiroz', 'obed03', 'usuario', 2400, 'obedloera21@gmail.com'),
-(514826, 'Brayan Alejandro Pamila Torres', 'alejandro25', 'usuario', 14000, 'alejandro.cuabe@gmail.com');
+(0, 'guest', '1234Invitado', 'usuario', 500, ''),
+(45, 'admin', '1234Admin', 'admin', 0, 'admin@gmail.com'),
+(302545, 'Andres Joseph Pacheco Carlos', 'joseph44', 'usuario', 0, 'pache.andy@gmail.com'),
+(386282, 'Osvaldo Yahir Serna Salazar', 'osvaldo81', 'usuario', 1000, 'osvaldoyairserna@gmail.com'),
+(457704, 'Obed Alejandro Loera Quiroz', 'obed03', 'usuario', 28638, 'osvaldoyairserna@gmail.com'),
+(514826, 'Brayan Alejandro Pamila Torres', 'alejandro25', 'usuario', 3000, 'alejandro.cuabe@gmail.com');
 
 --
 -- Índices para tablas volcadas
