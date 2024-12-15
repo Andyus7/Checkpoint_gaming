@@ -17,7 +17,7 @@ namespace WinFormsProyectoFinal
 {
     public partial class childForm : Form
     {
-        #region Variables locales privadas
+        #region Private local variables
 
         private AdmonBD adminBD = new AdmonBD();
         private List<CartItem> shoppingCart;
@@ -27,7 +27,7 @@ namespace WinFormsProyectoFinal
 
         #endregion
 
-        #region Constructor
+        #region Builder
         public childForm(List<CartItem> shoppingCart, string rol, string usuario)
         {
             InitializeComponent(); 
@@ -79,7 +79,7 @@ namespace WinFormsProyectoFinal
 
         #endregion
 
-        #region Cargar Productos en el Panel
+        #region Upload Products to the Panel
         private void CargarImagenes()
         {
             adminBD.Connect();
@@ -104,7 +104,7 @@ namespace WinFormsProyectoFinal
                     }
                 }
 
-                // Mostrar los productos en los controles
+                // Show the products in the controls
                 for (int i = 0; i < 10; i++)
                 {
                     Panel? panel = this.Controls.Find($"panel{i + 1}", true).FirstOrDefault() as Panel;
@@ -121,10 +121,10 @@ namespace WinFormsProyectoFinal
                         {
                             pictureBox.Image = Image.FromFile(rutaImagen);
                             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                            pictureBox.Tag = producto; // Asignar el producto al Tag
+                            pictureBox.Tag = producto; // Assign the product to the Tag
                             if (rol != "admin")
                             {
-                                pictureBox.Click += AbrirDetalleProducto; // Solo asignar el evento si no es admin
+                                pictureBox.Click += AbrirDetalleProducto; // Only assign the event if not admin.
                             }
                         }
 
@@ -136,31 +136,31 @@ namespace WinFormsProyectoFinal
                     }
                     else if (panel != null)
                     {
-                        panel.Visible = false; // Ocultar paneles no utilizados
+                        panel.Visible = false; // Hide unused panels
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar los productos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error when loading products: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
 
-        #region Abrir Formulario Detalle de Producto
+        #region Open Product Detail Form
         private void AbrirDetalleProducto(object sender, EventArgs e)
         {
             if (sender is PictureBox pictureBox && pictureBox.Tag is Producto producto)
             {
                 using (ProductDetailForm detailForm = new ProductDetailForm(producto, shoppingCart,usuario))
                 {
-                    detailForm.ShowDialog(); // Mostrar el formulario emergente
+                    detailForm.ShowDialog(); //Show pop-up form
                 }
             }
         }
         #endregion
 
-        #region Inutiles por ahora
+        #region Useless for now
         private void btnBuy1_Click(object sender, EventArgs e)
         {
 

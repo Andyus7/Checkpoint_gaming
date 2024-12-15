@@ -43,7 +43,7 @@
             chart_Admin.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chart_Admin.Legends.Add(legend1);
-            chart_Admin.Location = new Point(380, 87);
+            chart_Admin.Location = new Point(371, 109);
             chart_Admin.Name = "chart_Admin";
             chart_Admin.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
@@ -82,12 +82,12 @@
             lblCheckGame.BorderStyle = BorderStyle.FixedSingle;
             lblCheckGame.Font = new Font("Times New Roman", 30F);
             lblCheckGame.ForeColor = Color.Black;
-            lblCheckGame.Location = new Point(758, 25);
+            lblCheckGame.Location = new Point(455, 26);
             lblCheckGame.Margin = new Padding(5, 0, 5, 0);
             lblCheckGame.Name = "lblCheckGame";
-            lblCheckGame.Size = new Size(138, 59);
+            lblCheckGame.Size = new Size(680, 59);
             lblCheckGame.TabIndex = 72;
-            lblCheckGame.Text = "Chart";
+            lblCheckGame.Text = "Graph of total sales by consumer";
             // 
             // chart
             // 
