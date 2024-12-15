@@ -74,6 +74,7 @@ namespace WinFormsProyectoFinal
             {
                 using (PaymentForm paymentForm = new PaymentForm(producto,Usuario))
                 {
+                    producto.Existencias--;
                     this.Close(); // Close the current form
                     paymentForm.ShowDialog(); // Open the payment form
 
@@ -106,7 +107,7 @@ namespace WinFormsProyectoFinal
             }
             else
             {
-                MessageBox.Show("No stock available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There is no stock available for purchase.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

@@ -62,7 +62,7 @@ namespace WinFormsProyectoFinal.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al validar las credenciales: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error validating credentials: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -80,7 +80,7 @@ namespace WinFormsProyectoFinal.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al obtener el rol: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error when obtaining the role: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "usuario";
             }
         }
@@ -98,7 +98,7 @@ namespace WinFormsProyectoFinal.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al obtener el ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error obtaining the ID: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1; // -1 indica un error al obtener el ID.
             }
         }
@@ -112,12 +112,12 @@ namespace WinFormsProyectoFinal.Models
                 cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
 
                 object result = cmd.ExecuteScalar();
-                return result?.ToString() ?? "Desconocido";
+                return result?.ToString() ?? "Unknown";
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al obtener el nombre: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return "Desconocido";
+                MessageBox.Show($"Error getting the name: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "Unknown";
             }
         }
 
@@ -131,7 +131,7 @@ namespace WinFormsProyectoFinal.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al conectar con la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error connecting to the database: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

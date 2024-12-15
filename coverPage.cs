@@ -12,11 +12,11 @@ namespace WinFormsProyectoFinal
 {
     public partial class coverPage : Form
     {
-        #region Variables privadas locales
+        #region Local private variables
 
         #endregion
 
-        #region Constructor
+        #region Builder
         public coverPage()
         {
             InitializeComponent();
